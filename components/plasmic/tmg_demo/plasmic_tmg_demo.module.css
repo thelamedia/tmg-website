@@ -38,10 +38,11 @@
   --mixin-duW8jgTcObTF_white-space: pre-wrap;
   --mixin-FM_EnQU2yCC1_color: #0070f3;
   --mixin-FM_EnQU2yCC1_white-space: pre-wrap;
-  --mixin-HP7Fj8FSQS6u_color: #000000;
+  --mixin-HP7Fj8FSQS6u_color: #ffffff;
   --mixin-HP7Fj8FSQS6u_font-size: 32px;
   --mixin-HP7Fj8FSQS6u_font-weight: 600;
   --mixin-HP7Fj8FSQS6u_line-height: 1.2;
+  --mixin-HP7Fj8FSQS6u_font-family: "Inter", sans-serif;
   --mixin-HP7Fj8FSQS6u_white-space: pre-wrap;
   --mixin-KJOOhRiySSvm_color: #000000;
   --mixin-KJOOhRiySSvm_font-size: 24px;
@@ -138,6 +139,10 @@
   --mixin-WOLpcKIToXt6_white-space: pre-wrap;
   --plasmic-mixin-header-button_white-space: var(
     --mixin-WOLpcKIToXt6_white-space
+  );
+  --mixin-svYxYjABhLav_white-space: pre-wrap;
+  --plasmic-mixin-testimonial-text_white-space: var(
+    --mixin-svYxYjABhLav_white-space
   );
 }
 
@@ -503,6 +508,7 @@ h3:where(.root_reset_tags) {
   font-size: var(--mixin-HP7Fj8FSQS6u_font-size);
   font-weight: var(--mixin-HP7Fj8FSQS6u_font-weight);
   line-height: var(--mixin-HP7Fj8FSQS6u_line-height);
+  font-family: var(--mixin-HP7Fj8FSQS6u_font-family);
 }
 
 :where(.root_reset) h4:where(.h4),

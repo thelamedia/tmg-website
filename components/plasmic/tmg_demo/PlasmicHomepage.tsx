@@ -37,6 +37,8 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Button2 from "../../Button2"; // plasmic-import: t4Ewn2gBSIli/component
+import { SliderWrapper } from "@plasmicpkgs/react-slick";
+import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
 
 import { useScreenVariants as useScreenVariantswtDzL3SdIaL } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: WtDzL_3SDIaL/globalVariant
 
@@ -49,6 +51,7 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: XpeFIiBi7NnY/
 
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: 8Ydc_EtyRQKt/icon
 import Icon38Icon from "./icons/PlasmicIcon__Icon38"; // plasmic-import: fV2xAdFtCCM7/icon
+import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: NpEGyspG1WV_/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: WWKN1zpTsehN/icon
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: g0aZxbzKHlNV/icon
 
@@ -73,10 +76,14 @@ export type PlasmicHomepage__OverridesType = {
   heroDescription?: p.Flex<"div">;
   heroCta?: p.Flex<typeof Button2>;
   columns?: p.Flex<"section">;
-  h3?: p.Flex<"h3">;
+  clients?: p.Flex<"section">;
+  imageGrid?: p.Flex<"div">;
   background2?: p.Flex<"div">;
   copy?: p.Flex<"div">;
+  checklist?: p.Flex<"section">;
   foreground?: p.Flex<"div">;
+  testimonials?: p.Flex<"section">;
+  sliderCarousel2?: p.Flex<typeof SliderWrapper>;
   medical?: p.Flex<"section">;
   _3Columns?: p.Flex<"div">;
   amt?: p.Flex<"div">;
@@ -116,6 +123,30 @@ function PlasmicHomepage__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
+
+  const stateSpecs: Parameters<typeof p.useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "sliderCarousel2.currentSlide",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0,
+
+        refName: "sliderCarousel2",
+        onMutate: p.generateOnMutateForSpec(
+          "currentSlide",
+          SliderWrapper_Helpers
+        )
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $state = p.useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantswtDzL3SdIaL()
@@ -395,7 +426,7 @@ function PlasmicHomepage__RenderFunc(props: {
               )}
             >
               {
-                "Thela Media Group (TMG) was founded in 2010 with the goal of helping businesses of all sizes and industries achieve their marketing goals and reach their target audiences through innovative and effective strategies. Since then, we have grown into a full-service marketing and advertising agency with a team of experienced professionals and a proven track record of success"
+                "Thela Media Group (TMG) was founded in 2010 with the goal of helping businesses of all sizes and industries achieve their marketing goals and reach their target audiences through innovative and effective strategies. Since then, we have grown into a full-service marketing and advertising agency with a team of experienced professionals and a proven track record of success."
               }
             </div>
             <Button2
@@ -434,26 +465,124 @@ function PlasmicHomepage__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.columns__dQdhn)}
             >
-              <div className={classNames(projectcss.all, sty.column__v2XK)} />
-
-              <div className={classNames(projectcss.all, sty.column___3XLiD)} />
-
-              <div className={classNames(projectcss.all, sty.column__tOkUa)} />
+              <div className={classNames(projectcss.all, sty.column__v2XK)}>
+                <div className={classNames(projectcss.all, sty.columns__nAqvg)}>
+                  <div className={classNames(projectcss.all, sty.column__elDl)}>
+                    <Icon4Icon
+                      className={classNames(projectcss.all, sty.svg__gwQGj)}
+                      role={"img"}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.column___3SgRu)}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__m3UPi
+                      )}
+                    >
+                      {"Marketing Strategy & Implementation"}
+                    </h3>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___5HhXy
+                      )}
+                    >
+                      {"This is where block text goes about strategy. "}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={classNames(projectcss.all, sty.column__aNw0)}>
+                <div className={classNames(projectcss.all, sty.columns__hG8Uk)}>
+                  <div
+                    className={classNames(projectcss.all, sty.column__nTl2A)}
+                  >
+                    <Icon4Icon
+                      className={classNames(projectcss.all, sty.svg__wVix7)}
+                      role={"img"}
+                    />
+                  </div>
+                  <div className={classNames(projectcss.all, sty.column__ucjY)}>
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__bZj
+                      )}
+                    >
+                      {"Full-Scale Creative Development"}
+                    </h3>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__wiotx
+                      )}
+                    >
+                      {"This is where block text goes about strategy. "}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={classNames(projectcss.all, sty.column__mDjcO)}>
+                <div className={classNames(projectcss.all, sty.columns__b1Bmo)}>
+                  <div
+                    className={classNames(projectcss.all, sty.column__t9P1L)}
+                  >
+                    <Icon4Icon
+                      className={classNames(projectcss.all, sty.svg__xGdQ7)}
+                      role={"img"}
+                    />
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.column__wqJxZ)}
+                  >
+                    <h3
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h3,
+                        projectcss.__wab_text,
+                        sty.h3__gHDxf
+                      )}
+                    >
+                      {"Advertising Deployment"}
+                    </h3>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__kSkzV
+                      )}
+                    >
+                      {"This is where block text goes about strategy. "}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </p.Stack>
           </section>
-          <section className={classNames(projectcss.all, sty.section__cBgN4)}>
-            <h3
-              data-plasmic-name={"h3"}
-              data-plasmic-override={overrides.h3}
+          <section
+            data-plasmic-name={"clients"}
+            data-plasmic-override={overrides.clients}
+            className={classNames(projectcss.all, sty.clients)}
+          >
+            <h2
               className={classNames(
                 projectcss.all,
-                projectcss.h3,
+                projectcss.h2,
                 projectcss.__wab_text,
-                sty.h3
+                sty.h2___4RNtx
               )}
             >
               {"Trusted By 600+ Companies Worldwide"}
-            </h3>
+            </h2>
             <p.Stack
               as={"div"}
               hasGap={true}
@@ -462,7 +591,7 @@ function PlasmicHomepage__RenderFunc(props: {
               <div className={classNames(projectcss.all, sty.column__h1DO2)}>
                 <p.PlasmicImg
                   alt={""}
-                  className={classNames(sty.img___4YuMy)}
+                  className={classNames(sty.img__rSya3)}
                   displayHeight={"auto"}
                   displayMaxHeight={"none"}
                   displayMaxWidth={"100%"}
@@ -471,7 +600,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"auto"}
                   loading={"lazy"}
                   src={
-                    "https://www.thelamedia.com/wp-content/uploads/2023/02/restart-logo.png"
+                    "https://www.thelamedia.com/wp-content/uploads/2021/11/Forcepoint-Logo.png"
                   }
                 />
               </div>
@@ -510,7 +639,7 @@ function PlasmicHomepage__RenderFunc(props: {
               <div className={classNames(projectcss.all, sty.column__wBNpM)}>
                 <p.PlasmicImg
                   alt={""}
-                  className={classNames(sty.img__geyzG)}
+                  className={classNames(sty.img__mDyhm)}
                   displayHeight={"auto"}
                   displayMaxHeight={"none"}
                   displayMaxWidth={"100%"}
@@ -519,43 +648,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"auto"}
                   loading={"lazy"}
                   src={
-                    "https://www.thelamedia.com/wp-content/uploads/2021/11/THS-Logo.png"
+                    "https://www.thelamedia.com/wp-content/uploads/2021/11/Qualico-logo-2.png"
                   }
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__qXdDz)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img___5H7K)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://www.thelamedia.com/wp-content/uploads/2021/11/Artboard-3amt.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column___32EM)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__rSya3)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://www.thelamedia.com/wp-content/uploads/2021/11/Forcepoint-Logo.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__zVYw)}>
                 <p.PlasmicImg
                   alt={""}
                   className={classNames(sty.img__jrbM5)}
@@ -571,10 +668,10 @@ function PlasmicHomepage__RenderFunc(props: {
                   }
                 />
               </div>
-              <div className={classNames(projectcss.all, sty.column__kXDyO)}>
+              <div className={classNames(projectcss.all, sty.column___32EM)}>
                 <p.PlasmicImg
                   alt={""}
-                  className={classNames(sty.img__mDyhm)}
+                  className={classNames(sty.img___5H7K)}
                   displayHeight={"auto"}
                   displayMaxHeight={"none"}
                   displayMaxWidth={"100%"}
@@ -583,7 +680,39 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayWidth={"auto"}
                   loading={"lazy"}
                   src={
-                    "https://www.thelamedia.com/wp-content/uploads/2021/11/Qualico-logo-2.png"
+                    "https://www.thelamedia.com/wp-content/uploads/2021/11/Artboard-3amt.png"
+                  }
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__zVYw)}>
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img___4YuMy)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={
+                    "https://www.thelamedia.com/wp-content/uploads/2023/02/restart-logo.png"
+                  }
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__kXDyO)}>
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__geyzG)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={
+                    "https://www.thelamedia.com/wp-content/uploads/2021/11/THS-Logo.png"
                   }
                 />
               </div>
@@ -652,8 +781,10 @@ function PlasmicHomepage__RenderFunc(props: {
           </section>
           <p.Stack
             as={"div"}
+            data-plasmic-name={"imageGrid"}
+            data-plasmic-override={overrides.imageGrid}
             hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox___7DCtg)}
+            className={classNames(projectcss.all, sty.imageGrid)}
           >
             <div className={classNames(projectcss.all, sty.columns__f00V1)}>
               <div className={classNames(projectcss.all, sty.column__qbodC)}>
@@ -810,8 +941,10 @@ function PlasmicHomepage__RenderFunc(props: {
           </p.Stack>
           <p.Stack
             as={"section"}
+            data-plasmic-name={"checklist"}
+            data-plasmic-override={overrides.checklist}
             hasGap={true}
-            className={classNames(projectcss.all, sty.section__vzF61)}
+            className={classNames(projectcss.all, sty.checklist)}
           >
             <p.Stack
               as={"div"}
@@ -987,6 +1120,152 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </p.Stack>
           </p.Stack>
+          <section
+            data-plasmic-name={"testimonials"}
+            data-plasmic-override={overrides.testimonials}
+            className={classNames(projectcss.all, sty.testimonials)}
+          >
+            <div className={classNames(projectcss.all, sty.columns__ybObN)}>
+              <div className={classNames(projectcss.all, sty.column___0JEUh)}>
+                <h2
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2__mdY1Q
+                  )}
+                >
+                  {"What Our Clients Think:"}
+                </h2>
+              </div>
+              <div className={classNames(projectcss.all, sty.column__hXuWl)}>
+                {(() => {
+                  const child$Props = {
+                    beforeChange: p.generateStateOnChangePropForCodeComponents(
+                      $state,
+                      "currentSlide",
+                      ["sliderCarousel2", "currentSlide"],
+                      SliderWrapper_Helpers
+                    ),
+                    className: classNames(
+                      "__wab_instance",
+                      sty.sliderCarousel2
+                    ),
+                    initialSlide: p.generateStateValueProp($state, [
+                      "sliderCarousel2",
+                      "currentSlide"
+                    ]),
+                    ref: ref => {
+                      $refs["sliderCarousel2"] = ref;
+                    },
+                    sliderScopeClassName: sty["sliderCarousel2__slider"]
+                  };
+                  p.initializeCodeComponentStates(
+                    $state,
+                    [
+                      {
+                        name: "currentSlide",
+                        plasmicStateName: "sliderCarousel2.currentSlide"
+                      }
+                    ],
+                    [],
+                    SliderWrapper_Helpers ?? {},
+                    child$Props
+                  );
+
+                  return (
+                    <SliderWrapper
+                      data-plasmic-name={"sliderCarousel2"}
+                      data-plasmic-override={overrides.sliderCarousel2}
+                      {...child$Props}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__whQtJ
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__om0D6
+                          )}
+                        >
+                          {
+                            '"We engaged 5 different digital marketing agencies whom promised a lot, but failed to deliver.  By the end of my first meeting with TMG, I was impressed with their depth of knowledge and subject matter expertise.  TMG\'s approach to business can be expressed in 2 words, trusted partnership.  We were absolutely delighted with the business results TMG helped us achieve."'
+                          }
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__rbv7R
+                          )}
+                        >
+                          {"Carl\nCMO - Fintech Startup"}
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__hyqdw
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__o3Nuj
+                          )}
+                        >
+                          {
+                            '"Thela Media Group\u2019s reputation management system has helped us catch 100% of the actionable feedback that ends up online instead of in our team\u2019s hands. They\u2019ve never missed a thing, work 24/7, and have increased our response velocity to just under the speed of light!"'
+                          }
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__eaCL
+                          )}
+                        >
+                          {"Mandy\nCEO - Corporate Property Management"}
+                        </div>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__m9LzC
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__wzXf7
+                          )}
+                        >
+                          {
+                            '"Thela Media Group\u2019s reputation management system has helped us catch 100% of the actionable feedback that ends up online instead of in our team\u2019s hands. They\u2019ve never missed a thing, work 24/7, and have increased our response velocity to just under the speed of light!"'
+                          }
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__gwRcs
+                          )}
+                        >
+                          {"Mandy\nCEO - Corporate Property Management"}
+                        </div>
+                      </div>
+                    </SliderWrapper>
+                  );
+                })()}
+              </div>
+            </div>
+          </section>
           <p.Stack
             as={"section"}
             data-plasmic-name={"medical"}
@@ -1045,7 +1324,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Vitae sed sem a justo mauris potenti a primis vivamus justo tempor viverra adipiscing convallis fusce odio condimentum mi parturient ultricies."
+                        "Strategy and multi-channel advertising implementation for clinical trial patient recruitment across multiple geographies."
                       }
                     </div>
                     <Button2
@@ -1117,7 +1396,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Vitae sed sem a justo mauris potenti a primis vivamus justo tempor viverra adipiscing convallis fusce odio condimentum mi parturient ultricies."
+                        "Brand standards implementation and comprehensive marketing and advertising strategy for patented protocol."
                       }
                     </div>
                     <Button2
@@ -1186,7 +1465,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Vitae sed sem a justo mauris potenti a primis vivamus justo tempor viverra adipiscing convallis fusce odio condimentum mi parturient ultricies."
+                        "Fractional CMO implementation, website development and focused new patient recruitment for ancillary service lines."
                       }
                     </div>
                     <Button2
@@ -1242,10 +1521,14 @@ const PlasmicDescendants = {
     "heroDescription",
     "heroCta",
     "columns",
-    "h3",
+    "clients",
+    "imageGrid",
     "background2",
     "copy",
+    "checklist",
     "foreground",
+    "testimonials",
+    "sliderCarousel2",
     "medical",
     "_3Columns",
     "amt",
@@ -1268,10 +1551,14 @@ const PlasmicDescendants = {
   heroDescription: ["heroDescription"],
   heroCta: ["heroCta"],
   columns: ["columns"],
-  h3: ["h3"],
+  clients: ["clients"],
+  imageGrid: ["imageGrid", "background2", "copy"],
   background2: ["background2"],
   copy: ["copy"],
+  checklist: ["checklist", "foreground"],
   foreground: ["foreground"],
+  testimonials: ["testimonials", "sliderCarousel2"],
+  sliderCarousel2: ["sliderCarousel2"],
   medical: ["medical", "_3Columns", "amt", "amt2", "amt3"],
   _3Columns: ["_3Columns", "amt", "amt2", "amt3"],
   amt: ["amt"],
@@ -1291,10 +1578,14 @@ type NodeDefaultElementType = {
   heroDescription: "div";
   heroCta: typeof Button2;
   columns: "section";
-  h3: "h3";
+  clients: "section";
+  imageGrid: "div";
   background2: "div";
   copy: "div";
+  checklist: "section";
   foreground: "div";
+  testimonials: "section";
+  sliderCarousel2: typeof SliderWrapper;
   medical: "section";
   _3Columns: "div";
   amt: "div";
@@ -1370,10 +1661,14 @@ export const PlasmicHomepage = Object.assign(
     heroDescription: makeNodeComponent("heroDescription"),
     heroCta: makeNodeComponent("heroCta"),
     columns: makeNodeComponent("columns"),
-    h3: makeNodeComponent("h3"),
+    clients: makeNodeComponent("clients"),
+    imageGrid: makeNodeComponent("imageGrid"),
     background2: makeNodeComponent("background2"),
     copy: makeNodeComponent("copy"),
+    checklist: makeNodeComponent("checklist"),
     foreground: makeNodeComponent("foreground"),
+    testimonials: makeNodeComponent("testimonials"),
+    sliderCarousel2: makeNodeComponent("sliderCarousel2"),
     medical: makeNodeComponent("medical"),
     _3Columns: makeNodeComponent("_3Columns"),
     amt: makeNodeComponent("amt"),
