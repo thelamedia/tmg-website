@@ -77,6 +77,11 @@ export type PlasmicHomepage__OverridesType = {
   background2?: p.Flex<"div">;
   copy?: p.Flex<"div">;
   foreground?: p.Flex<"div">;
+  medical?: p.Flex<"section">;
+  _3Columns?: p.Flex<"div">;
+  amt?: p.Flex<"div">;
+  amt2?: p.Flex<"div">;
+  amt3?: p.Flex<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -982,6 +987,244 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </p.Stack>
           </p.Stack>
+          <p.Stack
+            as={"section"}
+            data-plasmic-name={"medical"}
+            data-plasmic-override={overrides.medical}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.medical)}
+          >
+            <div className={classNames(projectcss.all, sty.freeBox__yOjOv)}>
+              <h2
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h2,
+                  projectcss.__wab_text,
+                  sty.h2___7EXZp
+                )}
+              >
+                {"Medical Industry"}
+              </h2>
+              <p.Stack
+                as={"div"}
+                data-plasmic-name={"_3Columns"}
+                data-plasmic-override={overrides._3Columns}
+                hasGap={true}
+                className={classNames(projectcss.all, sty._3Columns)}
+              >
+                <div
+                  data-plasmic-name={"amt"}
+                  data-plasmic-override={overrides.amt}
+                  className={classNames(projectcss.all, sty.amt)}
+                >
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__c85OY)}
+                  >
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__dbCCp)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"90px"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={
+                        "https://www.thelamedia.com/wp-content/uploads/2021/11/Artboard-3amt.png"
+                      }
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__w3Pi3
+                      )}
+                    >
+                      {
+                        "Vitae sed sem a justo mauris potenti a primis vivamus justo tempor viverra adipiscing convallis fusce odio condimentum mi parturient ultricies."
+                      }
+                    </div>
+                    <Button2
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button2__aAzSs
+                      )}
+                      endIcon={
+                        <IconIcon
+                          className={classNames(projectcss.all, sty.svg__nebo4)}
+                          role={"img"}
+                        />
+                      }
+                      showEndIcon={true}
+                      size={"minimal"}
+                      startIcon={
+                        <ChecksvgIcon
+                          className={classNames(
+                            projectcss.all,
+                            sty.svg___9QnZ8
+                          )}
+                          role={"img"}
+                        />
+                      }
+                      submitsForm={true}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___85TMj
+                        )}
+                      >
+                        {"View the case study"}
+                      </div>
+                    </Button2>
+                  </p.Stack>
+                </div>
+                <div
+                  data-plasmic-name={"amt2"}
+                  data-plasmic-override={overrides.amt2}
+                  className={classNames(projectcss.all, sty.amt2)}
+                >
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__dvoEo)}
+                  >
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__j2AyT)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"90px"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={
+                        "https://wellcellglobal.com/wp-content/uploads/2023/12/WellCellGlobalLogo-1.png"
+                      }
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__e4Ptt
+                      )}
+                    >
+                      {
+                        "Vitae sed sem a justo mauris potenti a primis vivamus justo tempor viverra adipiscing convallis fusce odio condimentum mi parturient ultricies."
+                      }
+                    </div>
+                    <Button2
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button2__c9Fr1
+                      )}
+                      endIcon={
+                        <IconIcon
+                          className={classNames(projectcss.all, sty.svg__adiWo)}
+                          role={"img"}
+                        />
+                      }
+                      showEndIcon={true}
+                      size={"minimal"}
+                      startIcon={
+                        <ChecksvgIcon
+                          className={classNames(projectcss.all, sty.svg__xsR6X)}
+                          role={"img"}
+                        />
+                      }
+                      submitsForm={true}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__q2V33
+                        )}
+                      >
+                        {"View the case study"}
+                      </div>
+                    </Button2>
+                  </p.Stack>
+                </div>
+                <div
+                  data-plasmic-name={"amt3"}
+                  data-plasmic-override={overrides.amt3}
+                  className={classNames(projectcss.all, sty.amt3)}
+                >
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__wxktk)}
+                  >
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__wM4L)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"90px"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={
+                        "https://familymedicineaustin.com/wp-content/uploads/2021/03/logo_new__1___1_-1-400x84.png"
+                      }
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__yPXxs
+                      )}
+                    >
+                      {
+                        "Vitae sed sem a justo mauris potenti a primis vivamus justo tempor viverra adipiscing convallis fusce odio condimentum mi parturient ultricies."
+                      }
+                    </div>
+                    <Button2
+                      className={classNames(
+                        "__wab_instance",
+                        sty.button2__axQt7
+                      )}
+                      endIcon={
+                        <IconIcon
+                          className={classNames(projectcss.all, sty.svg__ripci)}
+                          role={"img"}
+                        />
+                      }
+                      showEndIcon={true}
+                      size={"minimal"}
+                      startIcon={
+                        <ChecksvgIcon
+                          className={classNames(projectcss.all, sty.svg__wiDnM)}
+                          role={"img"}
+                        />
+                      }
+                      submitsForm={true}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__sCviq
+                        )}
+                      >
+                        {"View the case study"}
+                      </div>
+                    </Button2>
+                  </p.Stack>
+                </div>
+              </p.Stack>
+            </div>
+          </p.Stack>
         </div>
       </div>
     </React.Fragment>
@@ -1002,7 +1245,12 @@ const PlasmicDescendants = {
     "h3",
     "background2",
     "copy",
-    "foreground"
+    "foreground",
+    "medical",
+    "_3Columns",
+    "amt",
+    "amt2",
+    "amt3"
   ],
   homeHero: [
     "homeHero",
@@ -1023,7 +1271,12 @@ const PlasmicDescendants = {
   h3: ["h3"],
   background2: ["background2"],
   copy: ["copy"],
-  foreground: ["foreground"]
+  foreground: ["foreground"],
+  medical: ["medical", "_3Columns", "amt", "amt2", "amt3"],
+  _3Columns: ["_3Columns", "amt", "amt2", "amt3"],
+  amt: ["amt"],
+  amt2: ["amt2"],
+  amt3: ["amt3"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1042,6 +1295,11 @@ type NodeDefaultElementType = {
   background2: "div";
   copy: "div";
   foreground: "div";
+  medical: "section";
+  _3Columns: "div";
+  amt: "div";
+  amt2: "div";
+  amt3: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1116,6 +1374,11 @@ export const PlasmicHomepage = Object.assign(
     background2: makeNodeComponent("background2"),
     copy: makeNodeComponent("copy"),
     foreground: makeNodeComponent("foreground"),
+    medical: makeNodeComponent("medical"),
+    _3Columns: makeNodeComponent("_3Columns"),
+    amt: makeNodeComponent("amt"),
+    amt2: makeNodeComponent("amt2"),
+    amt3: makeNodeComponent("amt3"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
