@@ -602,6 +602,7 @@
   width: 100%;
   padding-left: 0;
   padding-right: 0;
+  background: #ffffff;
   grid-column-start: 3 !important;
   grid-column-end: -3 !important;
   grid-template-columns:
