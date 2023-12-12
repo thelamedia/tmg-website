@@ -591,6 +591,16 @@
           "id": "XSEfUiqEjKia",
           "name": "image 5",
           "filePath": "../public/plasmic/tmg_website/images/image5.png"
+        },
+        {
+          "id": "f7oxY_owTBtV",
+          "name": "image 6",
+          "filePath": "../public/plasmic/tmg_website/images/image6.png"
+        },
+        {
+          "id": "Mew5UV2G5Qo2",
+          "name": "image 7",
+          "filePath": "../public/plasmic/tmg_website/images/image7.png"
         }
       ],
       "indirect": false,

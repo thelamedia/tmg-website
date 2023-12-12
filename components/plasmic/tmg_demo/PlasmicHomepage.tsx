@@ -20,13 +20,6 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 
-
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
-
-
 import {
   hasVariant,
   classNames,
@@ -44,7 +37,6 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Button2 from "../../Button2"; // plasmic-import: t4Ewn2gBSIli/component
-import Tilt from "@plasmicpkgs/react-parallax-tilt";
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
@@ -83,7 +75,6 @@ export type PlasmicHomepage__OverridesType = {
   heroCta2?: p.Flex<typeof Button2>;
   homeHero?: p.Flex<"section">;
   heroText?: p.Flex<"h1">;
-  tilt?: p.Flex<typeof Tilt>;
   heroText2?: p.Flex<"h1">;
   heroDescription?: p.Flex<"div">;
   heroCta?: p.Flex<typeof Button2>;
@@ -120,8 +111,6 @@ function useNextRouter() {
   return undefined;
 }
 
-
-
 function PlasmicHomepage__RenderFunc(props: {
   variants: PlasmicHomepage__VariantsArgs;
   args: PlasmicHomepage__ArgsType;
@@ -136,59 +125,6 @@ function PlasmicHomepage__RenderFunc(props: {
     ...args,
     ...variants
   };
-  React.useEffect(() => {
-    // Import scripts dynamically
-    const threeScript = document.createElement('script');
-    threeScript.src = '/vanta/three.min.js';
-    threeScript.onload = () => {
-      const vantaScript1 = document.createElement('script');
-      const vantaScript2 = document.createElement('script');
-      vantaScript1.src = '/vanta/vanta.clouds.min.js';
-      vantaScript2.src = '/vanta/vanta.fog.min.js';
-      vantaScript1.onload = () => {
-        if (VANTA && typeof VANTA.CLOUDS === 'function') {
-          VANTA.CLOUDS({
-            el: "#homeHero",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            skyColor: 0x0,
-            cloudColor: 0x181818
-          });
-        }
-      };
-      document.body.appendChild(vantaScript1);
-      vantaScript2.onload = () => {
-        if (VANTA && typeof VANTA.FOG === 'function') {
-          VANTA.FOG({
-            el: "#none",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            highlightColor: 0x503107,
-            midtoneColor: 0x0,
-            lowlightColor: 0x50505,
-            baseColor: 0x0,
-            speed: 1.20,
-            zoom: 0.40
-          });
-        }
-      };
-      document.body.appendChild(vantaScript2);
-    };
-    document.body.appendChild(threeScript);
-
-    // Clean up effect if the component unmounts
-    return () => {
-      if (window.VANTA) {
-        window.VANTA.effect && window.VANTA.effect.destroy();
-      }
-    };
-  }, []);
 
   const __nextRouter = useNextRouter();
   const $ctx = ph.useDataEnv?.() || {};
@@ -277,9 +213,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMinWidth={"0"}
                 displayWidth={"160px"}
                 src={{
-                  src: "/plasmic/tmg_website/images/image4.png",
-                  fullWidth: 4643,
-                  fullHeight: 1300,
+                  src: "/plasmic/tmg_website/images/image7.png",
+                  fullWidth: 908,
+                  fullHeight: 254,
                   aspectRatio: undefined
                 }}
               />
@@ -354,6 +290,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       role={"img"}
                     />
                   }
+                  link={"tel:+15125721800"}
                   showEndIcon={true}
                 >
                   {"Let's Talk"}
@@ -381,27 +318,17 @@ function PlasmicHomepage__RenderFunc(props: {
                 {"Your Brand,"}
               </h1>
               <h1
-                  data-plasmic-name={"heroText2"}
-                  data-plasmic-override={overrides.heroText2}
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.h1,
-                    projectcss.__wab_text,
-                    sty.heroText2
-                  )}
-                >
-                  {"ELEVATED"}
-                </h1>
-              <Tilt
-                data-plasmic-name={"tilt"}
-                data-plasmic-override={overrides.tilt}
-                className={classNames("__wab_instance", sty.tilt)}
-                glareEnable={false}
-                tiltReverse={true}
-                trackOnWindow={true}
+                data-plasmic-name={"heroText2"}
+                data-plasmic-override={overrides.heroText2}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.heroText2
+                )}
               >
-               
-              </Tilt>
+                {"ELEVATED"}
+              </h1>
             </div>
             <div
               data-plasmic-name={"heroDescription"}
@@ -427,6 +354,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   role={"img"}
                 />
               }
+              link={"tel:+15125721800"}
               showEndIcon={true}
             >
               {"Let's Talk"}
@@ -909,6 +837,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               role={"img"}
                             />
                           }
+                          link={"tel:+15125721800"}
                           showEndIcon={true}
                           startIcon={
                             <ChecksvgIcon
@@ -1603,6 +1532,35 @@ function PlasmicHomepage__RenderFunc(props: {
             >
               {"Go ahead and drop us a line.  It's time to get you noticed. "}
             </div>
+            <Button2
+              className={classNames("__wab_instance", sty.button2__qZdq)}
+              color={"sand"}
+              endIcon={
+                <Icon38Icon
+                  className={classNames(projectcss.all, sty.svg__wleEr)}
+                  role={"img"}
+                />
+              }
+              link={"tel:+15125721800"}
+              showEndIcon={true}
+              startIcon={
+                <ChecksvgIcon
+                  className={classNames(projectcss.all, sty.svg__aluS6)}
+                  role={"img"}
+                />
+              }
+              submitsForm={true}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__yPdbm
+                )}
+              >
+                {"Let's Talk"}
+              </div>
+            </Button2>
           </section>
         </div>
       </div>
@@ -1618,7 +1576,6 @@ const PlasmicDescendants = {
     "heroCta2",
     "homeHero",
     "heroText",
-    "tilt",
     "heroText2",
     "heroDescription",
     "heroCta",
@@ -1646,16 +1603,8 @@ const PlasmicDescendants = {
   menu: ["menu", "menuElements", "heroCta2"],
   menuElements: ["menuElements", "heroCta2"],
   heroCta2: ["heroCta2"],
-  homeHero: [
-    "homeHero",
-    "heroText",
-    "tilt",
-    "heroText2",
-    "heroDescription",
-    "heroCta"
-  ],
+  homeHero: ["homeHero", "heroText", "heroText2", "heroDescription", "heroCta"],
   heroText: ["heroText"],
-  tilt: ["tilt", "heroText2"],
   heroText2: ["heroText2"],
   heroDescription: ["heroDescription"],
   heroCta: ["heroCta"],
@@ -1690,7 +1639,6 @@ type NodeDefaultElementType = {
   heroCta2: typeof Button2;
   homeHero: "section";
   heroText: "h1";
-  tilt: typeof Tilt;
   heroText2: "h1";
   heroDescription: "div";
   heroCta: typeof Button2;
@@ -1781,7 +1729,6 @@ export const PlasmicHomepage = Object.assign(
     heroCta2: makeNodeComponent("heroCta2"),
     homeHero: makeNodeComponent("homeHero"),
     heroText: makeNodeComponent("heroText"),
-    tilt: makeNodeComponent("tilt"),
     heroText2: makeNodeComponent("heroText2"),
     heroDescription: makeNodeComponent("heroDescription"),
     heroCta: makeNodeComponent("heroCta"),
