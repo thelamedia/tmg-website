@@ -1139,130 +1139,133 @@ function PlasmicHomepage__RenderFunc(props: {
                 </h2>
               </div>
               <div className={classNames(projectcss.all, sty.column__hXuWl)}>
-                {(() => {
-                  const child$Props = {
-                    beforeChange: p.generateStateOnChangePropForCodeComponents(
+                <div className={classNames(projectcss.all, sty.freeBox__y0Lu0)}>
+                  {(() => {
+                    const child$Props = {
+                      beforeChange:
+                        p.generateStateOnChangePropForCodeComponents(
+                          $state,
+                          "currentSlide",
+                          ["sliderCarousel2", "currentSlide"],
+                          SliderWrapper_Helpers
+                        ),
+                      className: classNames(
+                        "__wab_instance",
+                        sty.sliderCarousel2
+                      ),
+                      initialSlide: p.generateStateValueProp($state, [
+                        "sliderCarousel2",
+                        "currentSlide"
+                      ]),
+                      ref: ref => {
+                        $refs["sliderCarousel2"] = ref;
+                      },
+                      sliderScopeClassName: sty["sliderCarousel2__slider"]
+                    };
+                    p.initializeCodeComponentStates(
                       $state,
-                      "currentSlide",
-                      ["sliderCarousel2", "currentSlide"],
-                      SliderWrapper_Helpers
-                    ),
-                    className: classNames(
-                      "__wab_instance",
-                      sty.sliderCarousel2
-                    ),
-                    initialSlide: p.generateStateValueProp($state, [
-                      "sliderCarousel2",
-                      "currentSlide"
-                    ]),
-                    ref: ref => {
-                      $refs["sliderCarousel2"] = ref;
-                    },
-                    sliderScopeClassName: sty["sliderCarousel2__slider"]
-                  };
-                  p.initializeCodeComponentStates(
-                    $state,
-                    [
-                      {
-                        name: "currentSlide",
-                        plasmicStateName: "sliderCarousel2.currentSlide"
-                      }
-                    ],
-                    [],
-                    SliderWrapper_Helpers ?? {},
-                    child$Props
-                  );
+                      [
+                        {
+                          name: "currentSlide",
+                          plasmicStateName: "sliderCarousel2.currentSlide"
+                        }
+                      ],
+                      [],
+                      SliderWrapper_Helpers ?? {},
+                      child$Props
+                    );
 
-                  return (
-                    <SliderWrapper
-                      data-plasmic-name={"sliderCarousel2"}
-                      data-plasmic-override={overrides.sliderCarousel2}
-                      {...child$Props}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__whQtJ
-                        )}
+                    return (
+                      <SliderWrapper
+                        data-plasmic-name={"sliderCarousel2"}
+                        data-plasmic-override={overrides.sliderCarousel2}
+                        {...child$Props}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__om0D6
+                            sty.freeBox__whQtJ
                           )}
                         >
-                          {
-                            '"We engaged 5 different digital marketing agencies whom promised a lot, but failed to deliver.  By the end of my first meeting with TMG, I was impressed with their depth of knowledge and subject matter expertise.  TMG\'s approach to business can be expressed in 2 words, trusted partnership.  We were absolutely delighted with the business results TMG helped us achieve."'
-                          }
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__om0D6
+                            )}
+                          >
+                            {
+                              '"We engaged 5 different digital marketing agencies whom promised a lot, but failed to deliver.  By the end of my first meeting with TMG, I was impressed with their depth of knowledge and subject matter expertise.  TMG\'s approach to business can be expressed in 2 words, trusted partnership.  We were absolutely delighted with the business results TMG helped us achieve."'
+                            }
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__rbv7R
+                            )}
+                          >
+                            {"Carl\nCMO - Fintech Startup"}
+                          </div>
                         </div>
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__rbv7R
+                            sty.freeBox__hyqdw
                           )}
                         >
-                          {"Carl\nCMO - Fintech Startup"}
-                        </div>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__hyqdw
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__o3Nuj
-                          )}
-                        >
-                          {
-                            '"Thela Media Group\u2019s reputation management system has helped us catch 100% of the actionable feedback that ends up online instead of in our team\u2019s hands. They\u2019ve never missed a thing, work 24/7, and have increased our response velocity to just under the speed of light!"'
-                          }
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__eaCL
-                          )}
-                        >
-                          {"Mandy\nCEO - Corporate Property Management"}
-                        </div>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__m9LzC
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__wzXf7
-                          )}
-                        >
-                          {
-                            '"Thela Media Group\u2019s reputation management system has helped us catch 100% of the actionable feedback that ends up online instead of in our team\u2019s hands. They\u2019ve never missed a thing, work 24/7, and have increased our response velocity to just under the speed of light!"'
-                          }
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__o3Nuj
+                            )}
+                          >
+                            {
+                              '"Thela Media Group\u2019s reputation management system has helped us catch 100% of the actionable feedback that ends up online instead of in our team\u2019s hands. They\u2019ve never missed a thing, work 24/7, and have increased our response velocity to just under the speed of light!"'
+                            }
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__eaCL
+                            )}
+                          >
+                            {"Mandy\nCEO - Corporate Property Management"}
+                          </div>
                         </div>
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__gwRcs
+                            sty.freeBox__m9LzC
                           )}
                         >
-                          {"Mandy\nCEO - Corporate Property Management"}
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__wzXf7
+                            )}
+                          >
+                            {
+                              '"Thela Media Group\u2019s reputation management system has helped us catch 100% of the actionable feedback that ends up online instead of in our team\u2019s hands. They\u2019ve never missed a thing, work 24/7, and have increased our response velocity to just under the speed of light!"'
+                            }
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__gwRcs
+                            )}
+                          >
+                            {"Mandy\nCEO - Corporate Property Management"}
+                          </div>
                         </div>
-                      </div>
-                    </SliderWrapper>
-                  );
-                })()}
+                      </SliderWrapper>
+                    );
+                  })()}
+                </div>
               </div>
             </div>
           </section>
