@@ -52,6 +52,8 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: XpeFIiBi7NnY/
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: 8Ydc_EtyRQKt/icon
 import Icon38Icon from "./icons/PlasmicIcon__Icon38"; // plasmic-import: fV2xAdFtCCM7/icon
 import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: NpEGyspG1WV_/icon
+import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: mYDiiUwNMA_x/icon
+import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: uNTZAlN07UAX/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: WWKN1zpTsehN/icon
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: g0aZxbzKHlNV/icon
 
@@ -76,6 +78,7 @@ export type PlasmicHomepage__OverridesType = {
   heroDescription?: p.Flex<"div">;
   heroCta?: p.Flex<typeof Button2>;
   columns?: p.Flex<"section">;
+  vanta?: p.Flex<"section">;
   clients?: p.Flex<"section">;
   imageGrid?: p.Flex<"div">;
   background2?: p.Flex<"div">;
@@ -548,7 +551,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <div
                     className={classNames(projectcss.all, sty.column__nTl2A)}
                   >
-                    <Icon4Icon
+                    <Icon5Icon
                       className={classNames(projectcss.all, sty.svg__wVix7)}
                       role={"img"}
                     />
@@ -581,7 +584,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <div
                     className={classNames(projectcss.all, sty.column__t9P1L)}
                   >
-                    <Icon4Icon
+                    <Icon6Icon
                       className={classNames(projectcss.all, sty.svg__xGdQ7)}
                       role={"img"}
                     />
@@ -613,6 +616,13 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </p.Stack>
           </section>
+          <section
+            data-plasmic-name={"vanta"}
+            data-plasmic-override={overrides.vanta}
+            className={classNames(projectcss.all, sty.vanta)}
+            id={"vanta"}
+          />
+
           <section
             data-plasmic-name={"clients"}
             data-plasmic-override={overrides.clients}
@@ -1185,130 +1195,133 @@ function PlasmicHomepage__RenderFunc(props: {
                 </h2>
               </div>
               <div className={classNames(projectcss.all, sty.column__hXuWl)}>
-                {(() => {
-                  const child$Props = {
-                    beforeChange: p.generateStateOnChangePropForCodeComponents(
+                <div className={classNames(projectcss.all, sty.freeBox__y0Lu0)}>
+                  {(() => {
+                    const child$Props = {
+                      beforeChange:
+                        p.generateStateOnChangePropForCodeComponents(
+                          $state,
+                          "currentSlide",
+                          ["sliderCarousel2", "currentSlide"],
+                          SliderWrapper_Helpers
+                        ),
+                      className: classNames(
+                        "__wab_instance",
+                        sty.sliderCarousel2
+                      ),
+                      initialSlide: p.generateStateValueProp($state, [
+                        "sliderCarousel2",
+                        "currentSlide"
+                      ]),
+                      ref: ref => {
+                        $refs["sliderCarousel2"] = ref;
+                      },
+                      sliderScopeClassName: sty["sliderCarousel2__slider"]
+                    };
+                    p.initializeCodeComponentStates(
                       $state,
-                      "currentSlide",
-                      ["sliderCarousel2", "currentSlide"],
-                      SliderWrapper_Helpers
-                    ),
-                    className: classNames(
-                      "__wab_instance",
-                      sty.sliderCarousel2
-                    ),
-                    initialSlide: p.generateStateValueProp($state, [
-                      "sliderCarousel2",
-                      "currentSlide"
-                    ]),
-                    ref: ref => {
-                      $refs["sliderCarousel2"] = ref;
-                    },
-                    sliderScopeClassName: sty["sliderCarousel2__slider"]
-                  };
-                  p.initializeCodeComponentStates(
-                    $state,
-                    [
-                      {
-                        name: "currentSlide",
-                        plasmicStateName: "sliderCarousel2.currentSlide"
-                      }
-                    ],
-                    [],
-                    SliderWrapper_Helpers ?? {},
-                    child$Props
-                  );
+                      [
+                        {
+                          name: "currentSlide",
+                          plasmicStateName: "sliderCarousel2.currentSlide"
+                        }
+                      ],
+                      [],
+                      SliderWrapper_Helpers ?? {},
+                      child$Props
+                    );
 
-                  return (
-                    <SliderWrapper
-                      data-plasmic-name={"sliderCarousel2"}
-                      data-plasmic-override={overrides.sliderCarousel2}
-                      {...child$Props}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__whQtJ
-                        )}
+                    return (
+                      <SliderWrapper
+                        data-plasmic-name={"sliderCarousel2"}
+                        data-plasmic-override={overrides.sliderCarousel2}
+                        {...child$Props}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__om0D6
+                            sty.freeBox__whQtJ
                           )}
                         >
-                          {
-                            '"We engaged 5 different digital marketing agencies whom promised a lot, but failed to deliver.  By the end of my first meeting with TMG, I was impressed with their depth of knowledge and subject matter expertise.  TMG\'s approach to business can be expressed in 2 words, trusted partnership.  We were absolutely delighted with the business results TMG helped us achieve."'
-                          }
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__om0D6
+                            )}
+                          >
+                            {
+                              '"We engaged 5 different digital marketing agencies whom promised a lot, but failed to deliver.  By the end of my first meeting with TMG, I was impressed with their depth of knowledge and subject matter expertise.  TMG\'s approach to business can be expressed in 2 words, trusted partnership.  We were absolutely delighted with the business results TMG helped us achieve."'
+                            }
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__rbv7R
+                            )}
+                          >
+                            {"Carl\nCMO - Fintech Startup"}
+                          </div>
                         </div>
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__rbv7R
+                            sty.freeBox__hyqdw
                           )}
                         >
-                          {"Carl\nCMO - Fintech Startup"}
-                        </div>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__hyqdw
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__o3Nuj
-                          )}
-                        >
-                          {
-                            '"Thela Media Group\u2019s reputation management system has helped us catch 100% of the actionable feedback that ends up online instead of in our team\u2019s hands. They\u2019ve never missed a thing, work 24/7, and have increased our response velocity to just under the speed of light!"'
-                          }
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__eaCL
-                          )}
-                        >
-                          {"Mandy\nCEO - Corporate Property Management"}
-                        </div>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__m9LzC
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__wzXf7
-                          )}
-                        >
-                          {
-                            '"Thela Media Group\u2019s reputation management system has helped us catch 100% of the actionable feedback that ends up online instead of in our team\u2019s hands. They\u2019ve never missed a thing, work 24/7, and have increased our response velocity to just under the speed of light!"'
-                          }
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__o3Nuj
+                            )}
+                          >
+                            {
+                              '"Thela Media Group\u2019s reputation management system has helped us catch 100% of the actionable feedback that ends up online instead of in our team\u2019s hands. They\u2019ve never missed a thing, work 24/7, and have increased our response velocity to just under the speed of light!"'
+                            }
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__eaCL
+                            )}
+                          >
+                            {"Mandy\nCEO - Corporate Property Management"}
+                          </div>
                         </div>
                         <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__gwRcs
+                            sty.freeBox__m9LzC
                           )}
                         >
-                          {"Mandy\nCEO - Corporate Property Management"}
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__wzXf7
+                            )}
+                          >
+                            {
+                              '"Thela Media Group\u2019s reputation management system has helped us catch 100% of the actionable feedback that ends up online instead of in our team\u2019s hands. They\u2019ve never missed a thing, work 24/7, and have increased our response velocity to just under the speed of light!"'
+                            }
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__gwRcs
+                            )}
+                          >
+                            {"Mandy\nCEO - Corporate Property Management"}
+                          </div>
                         </div>
-                      </div>
-                    </SliderWrapper>
-                  );
-                })()}
+                      </SliderWrapper>
+                    );
+                  })()}
+                </div>
               </div>
             </div>
           </section>
@@ -1567,6 +1580,7 @@ const PlasmicDescendants = {
     "heroDescription",
     "heroCta",
     "columns",
+    "vanta",
     "clients",
     "imageGrid",
     "background2",
@@ -1597,6 +1611,7 @@ const PlasmicDescendants = {
   heroDescription: ["heroDescription"],
   heroCta: ["heroCta"],
   columns: ["columns"],
+  vanta: ["vanta"],
   clients: ["clients"],
   imageGrid: ["imageGrid", "background2", "copy"],
   background2: ["background2"],
@@ -1624,6 +1639,7 @@ type NodeDefaultElementType = {
   heroDescription: "div";
   heroCta: typeof Button2;
   columns: "section";
+  vanta: "section";
   clients: "section";
   imageGrid: "div";
   background2: "div";
@@ -1707,6 +1723,7 @@ export const PlasmicHomepage = Object.assign(
     heroDescription: makeNodeComponent("heroDescription"),
     heroCta: makeNodeComponent("heroCta"),
     columns: makeNodeComponent("columns"),
+    vanta: makeNodeComponent("vanta"),
     clients: makeNodeComponent("clients"),
     imageGrid: makeNodeComponent("imageGrid"),
     background2: makeNodeComponent("background2"),
