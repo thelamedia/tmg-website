@@ -165,7 +165,7 @@ function PlasmicHomepage__RenderFunc(props: {
       vantaScript.onload = () => {
         if (VANTA && typeof VANTA.FOG === 'function') {
           VANTA.FOG({
-            el: "#homeHero",
+            el: "#vanta",
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
