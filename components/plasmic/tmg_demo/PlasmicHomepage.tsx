@@ -110,6 +110,41 @@ function PlasmicHomepage__RenderFunc(props: {
   overrides: PlasmicHomepage__OverridesType;
   forNode?: string;
 }) {
+
+  React.useEffect(() => {
+    // Import scripts dynamically
+    const threeScript = document.createElement('script');
+    threeScript.src = '/vanta/three.min.js';
+    threeScript.onload = () => {
+      const vantaScript = document.createElement('script');
+      vantaScript.src = '/vanta/vanta.clouds.min.js';
+      vantaScript.onload = () => {
+        if (VANTA && typeof VANTA.CLOUDS === 'function') {
+          VANTA.CLOUDS({
+            el: "#homeHero",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            skyColor: 0x0,
+            cloudColor: 0x181818
+          });
+        }
+      };
+      document.body.appendChild(vantaScript);
+    };
+    document.body.appendChild(threeScript);
+
+    // Clean up effect if the component unmounts
+    return () => {
+      if (window.VANTA) {
+        window.VANTA.effect && window.VANTA.effect.destroy();
+      }
+    };
+  }, []);
+
+  
   const { variants, overrides, forNode } = props;
 
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
