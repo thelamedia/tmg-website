@@ -70,16 +70,14 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
-  homeHero?: p.Flex<"section">;
   menu?: p.Flex<"div">;
   menuElements?: p.Flex<"div">;
+  homeHero?: p.Flex<"section">;
   heroText?: p.Flex<"h1">;
   span?: p.Flex<"span">;
   heroDescription?: p.Flex<"div">;
   heroCta?: p.Flex<typeof Button2>;
   columns?: p.Flex<"section">;
-  vanta?: p.Flex<"section">;
-  h1?: p.Flex<"h1">;
   clients?: p.Flex<"section">;
   imageGrid?: p.Flex<"div">;
   background2?: p.Flex<"div">;
@@ -183,212 +181,212 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <p.Stack
+            as={"div"}
+            data-plasmic-name={"menu"}
+            data-plasmic-override={overrides.menu}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.menu)}
+          >
+            <p.Stack
+              as={"div"}
+              data-plasmic-name={"menuElements"}
+              data-plasmic-override={overrides.menuElements}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.menuElements)}
+            >
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__jt5Sm)}
+                displayHeight={"40px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"none"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"40px"}
+                src={{
+                  src: "/plasmic/tmg_demo/images/tmgIconpng.png",
+                  fullWidth: 64,
+                  fullHeight: 64,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox__o4Rsw)}
+              >
+                <Button2
+                  className={classNames("__wab_instance", sty.button2__mfYp)}
+                  color={"clear"}
+                  endIcon={
+                    <Icon38Icon
+                      className={classNames(projectcss.all, sty.svg___6DwpF)}
+                      role={"img"}
+                    />
+                  }
+                  startIcon={
+                    <ChecksvgIcon
+                      className={classNames(projectcss.all, sty.svg__ck3U9)}
+                      role={"img"}
+                    />
+                  }
+                  submitsForm={true}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__aVfAp
+                    )}
+                  >
+                    {"Services"}
+                  </div>
+                </Button2>
+                <Button2
+                  className={classNames("__wab_instance", sty.button2__wwR6I)}
+                  color={"clear"}
+                  endIcon={
+                    <Icon38Icon
+                      className={classNames(projectcss.all, sty.svg__oWyq8)}
+                      role={"img"}
+                    />
+                  }
+                  startIcon={
+                    <ChecksvgIcon
+                      className={classNames(projectcss.all, sty.svg__j8Ykx)}
+                      role={"img"}
+                    />
+                  }
+                  submitsForm={true}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__qxRi4
+                    )}
+                  >
+                    {"Features"}
+                  </div>
+                </Button2>
+                <Button2
+                  className={classNames("__wab_instance", sty.button2__bohK6)}
+                  color={"clear"}
+                  endIcon={
+                    <Icon38Icon
+                      className={classNames(projectcss.all, sty.svg__h9HIi)}
+                      role={"img"}
+                    />
+                  }
+                  startIcon={
+                    <ChecksvgIcon
+                      className={classNames(projectcss.all, sty.svg__eeWmU)}
+                      role={"img"}
+                    />
+                  }
+                  submitsForm={true}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__dplwI
+                    )}
+                  >
+                    {"Company"}
+                  </div>
+                </Button2>
+                <Button2
+                  className={classNames("__wab_instance", sty.button2___1MC)}
+                  color={"clear"}
+                  endIcon={
+                    <Icon38Icon
+                      className={classNames(projectcss.all, sty.svg__qrtC7)}
+                      role={"img"}
+                    />
+                  }
+                  startIcon={
+                    <ChecksvgIcon
+                      className={classNames(projectcss.all, sty.svg__uWwZ1)}
+                      role={"img"}
+                    />
+                  }
+                  submitsForm={true}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__mnXlM
+                    )}
+                  >
+                    {"Contact"}
+                  </div>
+                </Button2>
+                <Button2
+                  className={classNames("__wab_instance", sty.button2__zuxZ9)}
+                  color={"clear"}
+                  endIcon={
+                    <Icon38Icon
+                      className={classNames(projectcss.all, sty.svg__sFa1F)}
+                      role={"img"}
+                    />
+                  }
+                  startIcon={
+                    <ChecksvgIcon
+                      className={classNames(projectcss.all, sty.svg__aAy)}
+                      role={"img"}
+                    />
+                  }
+                  submitsForm={true}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__kQwzy
+                    )}
+                  >
+                    {"Log in"}
+                  </div>
+                </Button2>
+                <Button2
+                  className={classNames("__wab_instance", sty.button2__sLtE)}
+                  endIcon={
+                    <Icon38Icon
+                      className={classNames(projectcss.all, sty.svg___0EhI)}
+                      role={"img"}
+                    />
+                  }
+                  startIcon={
+                    <ChecksvgIcon
+                      className={classNames(projectcss.all, sty.svg__nOZg)}
+                      role={"img"}
+                    />
+                  }
+                  submitsForm={true}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__tglgF
+                    )}
+                  >
+                    {"Sign up"}
+                  </div>
+                </Button2>
+              </p.Stack>
+            </p.Stack>
+          </p.Stack>
           <section
             data-plasmic-name={"homeHero"}
             data-plasmic-override={overrides.homeHero}
             className={classNames(projectcss.all, sty.homeHero)}
             id={"homeHero"}
           >
-            <p.Stack
-              as={"div"}
-              data-plasmic-name={"menu"}
-              data-plasmic-override={overrides.menu}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.menu)}
-            >
-              <p.Stack
-                as={"div"}
-                data-plasmic-name={"menuElements"}
-                data-plasmic-override={overrides.menuElements}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.menuElements)}
-              >
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__jt5Sm)}
-                  displayHeight={"40px"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"none"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"40px"}
-                  src={{
-                    src: "/plasmic/tmg_demo/images/tmgIconpng.png",
-                    fullWidth: 64,
-                    fullHeight: 64,
-                    aspectRatio: undefined
-                  }}
-                />
-
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__o4Rsw)}
-                >
-                  <Button2
-                    className={classNames("__wab_instance", sty.button2__mfYp)}
-                    color={"clear"}
-                    endIcon={
-                      <Icon38Icon
-                        className={classNames(projectcss.all, sty.svg___6DwpF)}
-                        role={"img"}
-                      />
-                    }
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__ck3U9)}
-                        role={"img"}
-                      />
-                    }
-                    submitsForm={true}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__aVfAp
-                      )}
-                    >
-                      {"Services"}
-                    </div>
-                  </Button2>
-                  <Button2
-                    className={classNames("__wab_instance", sty.button2__wwR6I)}
-                    color={"clear"}
-                    endIcon={
-                      <Icon38Icon
-                        className={classNames(projectcss.all, sty.svg__oWyq8)}
-                        role={"img"}
-                      />
-                    }
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__j8Ykx)}
-                        role={"img"}
-                      />
-                    }
-                    submitsForm={true}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__qxRi4
-                      )}
-                    >
-                      {"Features"}
-                    </div>
-                  </Button2>
-                  <Button2
-                    className={classNames("__wab_instance", sty.button2__bohK6)}
-                    color={"clear"}
-                    endIcon={
-                      <Icon38Icon
-                        className={classNames(projectcss.all, sty.svg__h9HIi)}
-                        role={"img"}
-                      />
-                    }
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__eeWmU)}
-                        role={"img"}
-                      />
-                    }
-                    submitsForm={true}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__dplwI
-                      )}
-                    >
-                      {"Company"}
-                    </div>
-                  </Button2>
-                  <Button2
-                    className={classNames("__wab_instance", sty.button2___1MC)}
-                    color={"clear"}
-                    endIcon={
-                      <Icon38Icon
-                        className={classNames(projectcss.all, sty.svg__qrtC7)}
-                        role={"img"}
-                      />
-                    }
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__uWwZ1)}
-                        role={"img"}
-                      />
-                    }
-                    submitsForm={true}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__mnXlM
-                      )}
-                    >
-                      {"Contact"}
-                    </div>
-                  </Button2>
-                  <Button2
-                    className={classNames("__wab_instance", sty.button2__zuxZ9)}
-                    color={"clear"}
-                    endIcon={
-                      <Icon38Icon
-                        className={classNames(projectcss.all, sty.svg__sFa1F)}
-                        role={"img"}
-                      />
-                    }
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__aAy)}
-                        role={"img"}
-                      />
-                    }
-                    submitsForm={true}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__kQwzy
-                      )}
-                    >
-                      {"Log in"}
-                    </div>
-                  </Button2>
-                  <Button2
-                    className={classNames("__wab_instance", sty.button2__sLtE)}
-                    endIcon={
-                      <Icon38Icon
-                        className={classNames(projectcss.all, sty.svg___0EhI)}
-                        role={"img"}
-                      />
-                    }
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__nOZg)}
-                        role={"img"}
-                      />
-                    }
-                    submitsForm={true}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__tglgF
-                      )}
-                    >
-                      {"Sign up"}
-                    </div>
-                  </Button2>
-                </p.Stack>
-              </p.Stack>
-            </p.Stack>
             <h1
               data-plasmic-name={"heroText"}
               data-plasmic-override={overrides.heroText}
@@ -572,25 +570,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
             </p.Stack>
-          </section>
-          <section
-            data-plasmic-name={"vanta"}
-            data-plasmic-override={overrides.vanta}
-            className={classNames(projectcss.all, sty.vanta)}
-            id={"vanta"}
-          >
-            <h1
-              data-plasmic-name={"h1"}
-              data-plasmic-override={overrides.h1}
-              className={classNames(
-                projectcss.all,
-                projectcss.h1,
-                projectcss.__wab_text,
-                sty.h1
-              )}
-            >
-              {"You won't believe what happens next."}
-            </h1>
           </section>
           <section
             data-plasmic-name={"clients"}
@@ -1540,16 +1519,14 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
-    "homeHero",
     "menu",
     "menuElements",
+    "homeHero",
     "heroText",
     "span",
     "heroDescription",
     "heroCta",
     "columns",
-    "vanta",
-    "h1",
     "clients",
     "imageGrid",
     "background2",
@@ -1564,24 +1541,14 @@ const PlasmicDescendants = {
     "amt2",
     "amt3"
   ],
-  homeHero: [
-    "homeHero",
-    "menu",
-    "menuElements",
-    "heroText",
-    "span",
-    "heroDescription",
-    "heroCta"
-  ],
   menu: ["menu", "menuElements"],
   menuElements: ["menuElements"],
+  homeHero: ["homeHero", "heroText", "span", "heroDescription", "heroCta"],
   heroText: ["heroText", "span"],
   span: ["span"],
   heroDescription: ["heroDescription"],
   heroCta: ["heroCta"],
   columns: ["columns"],
-  vanta: ["vanta", "h1"],
-  h1: ["h1"],
   clients: ["clients"],
   imageGrid: ["imageGrid", "background2", "copy"],
   background2: ["background2"],
@@ -1601,16 +1568,14 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  homeHero: "section";
   menu: "div";
   menuElements: "div";
+  homeHero: "section";
   heroText: "h1";
   span: "span";
   heroDescription: "div";
   heroCta: typeof Button2;
   columns: "section";
-  vanta: "section";
-  h1: "h1";
   clients: "section";
   imageGrid: "div";
   background2: "div";
@@ -1686,16 +1651,14 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    homeHero: makeNodeComponent("homeHero"),
     menu: makeNodeComponent("menu"),
     menuElements: makeNodeComponent("menuElements"),
+    homeHero: makeNodeComponent("homeHero"),
     heroText: makeNodeComponent("heroText"),
     span: makeNodeComponent("span"),
     heroDescription: makeNodeComponent("heroDescription"),
     heroCta: makeNodeComponent("heroCta"),
     columns: makeNodeComponent("columns"),
-    vanta: makeNodeComponent("vanta"),
-    h1: makeNodeComponent("h1"),
     clients: makeNodeComponent("clients"),
     imageGrid: makeNodeComponent("imageGrid"),
     background2: makeNodeComponent("background2"),
