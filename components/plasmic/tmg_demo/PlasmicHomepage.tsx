@@ -206,16 +206,16 @@ function PlasmicHomepage__RenderFunc(props: {
               <p.PlasmicImg
                 alt={""}
                 className={classNames(sty.img__jt5Sm)}
-                displayHeight={"40px"}
+                displayHeight={"auto"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"40px"}
+                displayWidth={"160px"}
                 src={{
-                  src: "/plasmic/tmg_demo/images/tmgIconpng.png",
-                  fullWidth: 64,
-                  fullHeight: 64,
+                  src: "/plasmic/tmg_website/images/image4.png",
+                  fullWidth: 4643,
+                  fullHeight: 1300,
                   aspectRatio: undefined
                 }}
               />
@@ -314,9 +314,7 @@ function PlasmicHomepage__RenderFunc(props: {
               )}
             >
               <React.Fragment>
-                <React.Fragment>
-                  {"AN AGENCY CRAFTED\nBY ENTREPRENEURS\n"}
-                </React.Fragment>
+                <React.Fragment>{"YOUR BRAND,\n"}</React.Fragment>
                 {
                   <span
                     data-plasmic-name={"span"}
@@ -329,7 +327,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.span
                     )}
                   >
-                    {"FOR ENTREPRENEURS"}
+                    {"ELEVATED"}
                   </span>
                 }
                 <React.Fragment>{""}</React.Fragment>
@@ -345,7 +343,7 @@ function PlasmicHomepage__RenderFunc(props: {
               )}
             >
               {
-                "Thela Media Group (TMG) was founded in 2010 with the goal of helping businesses of all sizes and industries achieve their marketing goals and reach their target audiences through innovative and effective strategies. Since then, we have grown into a full-service marketing and advertising agency with a team of experienced professionals and a proven track record of success."
+                "It's time to take your rightful place in the spotlight.  Here at TMG, our blend of forward thinking strategies, insightful analysis and creative artistry converge to help you cut through the noise and captivate the audience you deserve."
               }
             </div>
             <Button2
@@ -1504,26 +1502,6 @@ function PlasmicHomepage__RenderFunc(props: {
               </p.Stack>
             </div>
           </p.Stack>
-          <div className={classNames(projectcss.all, sty.freeBox__rK5Mp)}>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__edY50
-              )}
-            >
-              {"1,000,000+"}
-            </div>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__bFfCx
-              )}
-            >
-              {"Leads Generated"}
-            </div>
-          </div>
         </div>
       </div>
     </React.Fragment>

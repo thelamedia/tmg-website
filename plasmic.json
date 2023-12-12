@@ -566,6 +566,26 @@
           "id": "yIpYcN4MSPez",
           "name": "TMGIcon.png",
           "filePath": "../public/plasmic/tmg_demo/images/tmgIconpng.png"
+        },
+        {
+          "id": "Jvsi5LEJ0hv0",
+          "name": "TMG Logo White.png",
+          "filePath": "../public/plasmic/tmg_website/images/tmgLogoWhitepng.png"
+        },
+        {
+          "id": "-p8EJVBY-fu-",
+          "name": "image 2",
+          "filePath": "../public/plasmic/tmg_website/images/image2.png"
+        },
+        {
+          "id": "idUErNihnW_E",
+          "name": "image 3",
+          "filePath": "../public/plasmic/tmg_website/images/image3.png"
+        },
+        {
+          "id": "8XTMMWiPjrxK",
+          "name": "image 4",
+          "filePath": "../public/plasmic/tmg_website/images/image4.png"
         }
       ],
       "indirect": false,
@@ -657,7 +677,8 @@
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "szjgMQpPpxhmkjnaBvZQJG",
@@ -679,7 +700,8 @@
           "componentImportPath": "@plasmicpkgs/react-parallax-tilt"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
