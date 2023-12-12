@@ -57,9 +57,6 @@ import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: mYDiiUwNM
 import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: uNTZAlN07UAX/icon
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: g0aZxbzKHlNV/icon
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { SpeedInsights} from"@vercel/speed-insights/next"
 createPlasmicElementProxy;
 
 export type PlasmicHomepage__VariantMembers = {};
@@ -128,60 +125,7 @@ function PlasmicHomepage__RenderFunc(props: {
     ...args,
     ...variants
   };
-  React.useEffect(() => {
-    // Import scripts dynamically
-    const threeScript = document.createElement('script');
-    threeScript.src = '/vanta/three.min.js';
-    threeScript.onload = () => {
-      const vantaScript1 = document.createElement('script');
-      const vantaScript2 = document.createElement('script');
-      vantaScript1.src = '/vanta/vanta.clouds.min.js';
-      vantaScript2.src = '/vanta/vanta.fog.min.js';
-      vantaScript1.onload = () => {
-        if (VANTA && typeof VANTA.CLOUDS === 'function') {
-          VANTA.CLOUDS({
-            el: "#homeHero",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            skyColor: 0x0,
-            cloudColor: 0x181818,
-            speed: .7
-          });
-        }
-      };
-      document.body.appendChild(vantaScript1);
-      vantaScript2.onload = () => {
-        if (VANTA && typeof VANTA.FOG === 'function') {
-          VANTA.FOG({
-            el: "#none",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            highlightColor: 0x503107,
-            midtoneColor: 0x0,
-            lowlightColor: 0x50505,
-            baseColor: 0x0,
-            speed: 1.20,
-            zoom: 0.40
-          });
-        }
-      };
-      document.body.appendChild(vantaScript2);
-    };
-    document.body.appendChild(threeScript);
 
-    // Clean up effect if the component unmounts
-    return () => {
-      if (window.VANTA) {
-        window.VANTA.effect && window.VANTA.effect.destroy();
-      }
-    };
-  }, []);
   const __nextRouter = useNextRouter();
   const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
@@ -220,14 +164,14 @@ function PlasmicHomepage__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head></Head>
-    
+
       <style>{`
         body {
           margin: 0;
         }
       `}</style>
+
       <div className={projectcss.plasmic_page_wrapper}>
-      <SpeedInsights />
         <div
           data-plasmic-name={"homepage"}
           data-plasmic-override={overrides.homepage}
@@ -432,11 +376,10 @@ function PlasmicHomepage__RenderFunc(props: {
               {"What We Do"}
             </h2>
             <Reveal
-              cascade={false}
+              cascade={true}
               className={classNames("__wab_instance", sty.reveal__mXo7B)}
               damping={0.8}
-              duration={1000}
-              delay={200}
+              duration={1500}
               triggerOnce={true}
             >
               <p.Stack

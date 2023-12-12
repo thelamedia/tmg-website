@@ -927,6 +927,20 @@
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 0;
+    margin-top: calc(0px - var(--token-oW80B2Q_Cufz));
+    height: calc(100% + var(--token-oW80B2Q_Cufz));
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .columns___4UlzU > :global(.__wab_flex-container) > *,
+  .columns___4UlzU > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .columns___4UlzU > :global(.__wab_flex-container) > picture > img,
+  .columns___4UlzU
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-top: var(--token-oW80B2Q_Cufz);
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
