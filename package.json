@@ -16,6 +16,8 @@
     "@plasmicpkgs/antd5": "^0.0.200",
     "@plasmicpkgs/plasmic-embed-css": "^0.1.170",
     "@plasmicpkgs/plasmic-rich-components": "^1.0.171",
+    "@plasmicpkgs/react-awesome-reveal": "^3.8.186",
+    "@plasmicpkgs/react-parallax-tilt": "^0.0.185",
     "@plasmicpkgs/react-slick": "^0.0.205",
     "next": "^14.0.4",
     "react": "^18",

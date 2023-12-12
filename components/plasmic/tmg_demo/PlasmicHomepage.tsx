@@ -37,9 +37,9 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Button2 from "../../Button2"; // plasmic-import: t4Ewn2gBSIli/component
+import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
-import Statistic from "../../Statistic"; // plasmic-import: BR6TGahQO5AP/component
 
 import { useScreenVariants as useScreenVariantswtDzL3SdIaL } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: WtDzL_3SDIaL/globalVariant
 
@@ -93,6 +93,11 @@ export type PlasmicHomepage__OverridesType = {
   amt?: p.Flex<"div">;
   amt2?: p.Flex<"div">;
   amt3?: p.Flex<"div">;
+  medical2?: p.Flex<"section">;
+  _3Columns2?: p.Flex<"div">;
+  amt4?: p.Flex<"div">;
+  amt5?: p.Flex<"div">;
+  amt6?: p.Flex<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -374,113 +379,138 @@ function PlasmicHomepage__RenderFunc(props: {
             >
               {"What We Do"}
             </h2>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.columns__dQdhn)}
+            <Reveal
+              cascade={true}
+              className={classNames("__wab_instance", sty.reveal__mXo7B)}
+              damping={0.8}
+              direction={"up"}
+              duration={1500}
+              triggerOnce={true}
             >
-              <div className={classNames(projectcss.all, sty.column__v2XK)}>
-                <div className={classNames(projectcss.all, sty.columns__nAqvg)}>
-                  <div className={classNames(projectcss.all, sty.column__elDl)}>
-                    <Icon4Icon
-                      className={classNames(projectcss.all, sty.svg__gwQGj)}
-                      role={"img"}
-                    />
-                  </div>
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.columns__dQdhn)}
+              >
+                <div className={classNames(projectcss.all, sty.column__v2XK)}>
                   <div
-                    className={classNames(projectcss.all, sty.column___3SgRu)}
+                    className={classNames(projectcss.all, sty.columns__nAqvg)}
                   >
-                    <h3
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h3,
-                        projectcss.__wab_text,
-                        sty.h3__m3UPi
-                      )}
-                    >
-                      {"Marketing Strategy & Implementation"}
-                    </h3>
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___5HhXy
-                      )}
+                      className={classNames(projectcss.all, sty.column__elDl)}
                     >
-                      {"This is where block text goes about strategy. "}
+                      <Icon4Icon
+                        className={classNames(projectcss.all, sty.svg__gwQGj)}
+                        role={"img"}
+                      />
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column___3SgRu)}
+                    >
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3__m3UPi
+                        )}
+                      >
+                        {"Marketing Strategy & Implementation"}
+                      </h3>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___5HhXy
+                        )}
+                      >
+                        {
+                          "At the heart of every successful brand is a deliberate and thoughtfully crafted marketing strategy. Our approach begins with in-depth market research and analysis, enabling us to create innovative strategies that resonate with your target audience. We don\u2019t just stop at planning; we bring these strategies to life, ensuring flawless implementation for measurable results."
+                        }
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.column__aNw0)}>
-                <div className={classNames(projectcss.all, sty.columns__hG8Uk)}>
+                <div className={classNames(projectcss.all, sty.column__aNw0)}>
                   <div
-                    className={classNames(projectcss.all, sty.column__nTl2A)}
+                    className={classNames(projectcss.all, sty.columns__hG8Uk)}
                   >
-                    <Icon5Icon
-                      className={classNames(projectcss.all, sty.svg__wVix7)}
-                      role={"img"}
-                    />
-                  </div>
-                  <div className={classNames(projectcss.all, sty.column__ucjY)}>
-                    <h3
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h3,
-                        projectcss.__wab_text,
-                        sty.h3__bZj
-                      )}
-                    >
-                      {"Full-Scale Creative Development"}
-                    </h3>
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__wiotx
-                      )}
+                      className={classNames(projectcss.all, sty.column__nTl2A)}
                     >
-                      {"This is where block text goes about strategy. "}
+                      <Icon5Icon
+                        className={classNames(projectcss.all, sty.svg__wVix7)}
+                        role={"img"}
+                      />
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column__ucjY)}
+                    >
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3__bZj
+                        )}
+                      >
+                        {"Full-Scale Creative Development"}
+                      </h3>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__wiotx
+                        )}
+                      >
+                        {
+                          "Creativity is our currency in the realm of impact-making. From the spark of an idea to the final touch of polish, our team of creative professionals works to develop and refine your vision. We offer comprehensive services including branding, design, content creation, and multimedia production \u2013 all tailored to elevate your brand\u2019s narrative and aesthetic."
+                        }
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.column__mDjcO)}>
-                <div className={classNames(projectcss.all, sty.columns__b1Bmo)}>
+                <div className={classNames(projectcss.all, sty.column__mDjcO)}>
                   <div
-                    className={classNames(projectcss.all, sty.column__t9P1L)}
+                    className={classNames(projectcss.all, sty.columns__b1Bmo)}
                   >
-                    <Icon6Icon
-                      className={classNames(projectcss.all, sty.svg__xGdQ7)}
-                      role={"img"}
-                    />
-                  </div>
-                  <div
-                    className={classNames(projectcss.all, sty.column__wqJxZ)}
-                  >
-                    <h3
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h3,
-                        projectcss.__wab_text,
-                        sty.h3__gHDxf
-                      )}
-                    >
-                      {"Omni-Channel Advertising Deployment"}
-                    </h3>
                     <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__kSkzV
-                      )}
+                      className={classNames(projectcss.all, sty.column__t9P1L)}
                     >
-                      {"This is where block text goes about strategy. "}
+                      <Icon6Icon
+                        className={classNames(projectcss.all, sty.svg__xGdQ7)}
+                        role={"img"}
+                      />
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.column__wqJxZ)}
+                    >
+                      <h3
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h3,
+                          projectcss.__wab_text,
+                          sty.h3__gHDxf
+                        )}
+                      >
+                        {"Advertising Deployment & Attribution "}
+                      </h3>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__kSkzV
+                        )}
+                      >
+                        {
+                          "Leveraging the power of digital precision alongside the reach of traditional media, we craft unified advertising narratives that create a cohesive and powerful brand presence at every touchpoint.  Utilizing sophisticated attribution models, we fine-tune campaigns in real-time, ensuring your advertising efforts are not just seen but are also driving tangible results."
+                        }
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </p.Stack>
+              </p.Stack>
+            </Reveal>
           </section>
           <section
             data-plasmic-name={"clients"}
@@ -702,20 +732,25 @@ function PlasmicHomepage__RenderFunc(props: {
           >
             <div className={classNames(projectcss.all, sty.columns__f00V1)}>
               <div className={classNames(projectcss.all, sty.column__qbodC)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__yuUnU)}
-                  displayHeight={"100%"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"none"}
-                  displayMinHeight={"320px"}
-                  displayMinWidth={"0"}
-                  displayWidth={"100%"}
-                  src={
-                    "https://www.thelamedia.com/wp-content/uploads/2023/01/marketing-campaign-41-1146x1536.jpg"
-                  }
-                />
-
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__bGqmU)}
+                  delay={1}
+                  triggerOnce={true}
+                >
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__yuUnU)}
+                    displayHeight={"100%"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"none"}
+                    displayMinHeight={"320px"}
+                    displayMinWidth={"0"}
+                    displayWidth={"100%"}
+                    src={
+                      "https://www.thelamedia.com/wp-content/uploads/2023/01/marketing-campaign-41-1146x1536.jpg"
+                    }
+                  />
+                </Reveal>
                 <div
                   data-plasmic-name={"background2"}
                   data-plasmic-override={overrides.background2}
@@ -735,78 +770,94 @@ function PlasmicHomepage__RenderFunc(props: {
                     hasGap={true}
                     className={classNames(projectcss.all, sty.copy)}
                   >
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__skYbl)}
+                    <Reveal
+                      cascade={false}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.reveal__sM0Be
+                      )}
+                      damping={0.8}
+                      delay={1}
+                      direction={"down"}
+                      duration={2000}
+                      triggerOnce={true}
                     >
-                      <div
+                      <p.Stack
+                        as={"div"}
+                        hasGap={true}
                         className={classNames(
                           projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__vDLlD
+                          sty.freeBox__skYbl
                         )}
-                      >
-                        {"OUR BACKGROUND"}
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__ev1V
-                        )}
-                      >
-                        {"Full Service At Scale"}
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__rNr1P
-                        )}
-                      >
-                        {
-                          "We pride ourselves on our ability to craft and implement comprehensive strategies that deliver real results for our clients. \n\nAs a high-end and exclusive firm, we have a proven track record of success working with top companies in industries such as healthcare, real estate, energy, and fintech to name a few.  "
-                        }
-                      </div>
-                      <Button2
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button2__zJpK3
-                        )}
-                        color={"sand"}
-                        endIcon={
-                          <Icon38Icon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__jFpwN
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        showEndIcon={true}
-                        startIcon={
-                          <ChecksvgIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__uIt5K
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        submitsForm={true}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__o6NKn
+                            sty.text__vDLlD
                           )}
                         >
-                          {"Let's Talk"}
+                          {"OUR BACKGROUND"}
                         </div>
-                      </Button2>
-                    </p.Stack>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__ev1V
+                          )}
+                        >
+                          {"Full Service at Scale"}
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__rNr1P
+                          )}
+                        >
+                          {
+                            "We take pride in our approach to crafting and implementing strategies that not only promise but also deliver real-world results.\n\nSpecializing in high-end, exclusive engagements, we've achieved an enviable track record with industry leaders across healthcare, real estate, energy, and fintech. Our commitment is not just in meeting expectations but exceeding them, consistently."
+                          }
+                        </div>
+                        <Button2
+                          className={classNames(
+                            "__wab_instance",
+                            sty.button2__zJpK3
+                          )}
+                          color={"sand"}
+                          endIcon={
+                            <Icon38Icon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__jFpwN
+                              )}
+                              role={"img"}
+                            />
+                          }
+                          showEndIcon={true}
+                          startIcon={
+                            <ChecksvgIcon
+                              className={classNames(
+                                projectcss.all,
+                                sty.svg__uIt5K
+                              )}
+                              role={"img"}
+                            />
+                          }
+                          submitsForm={true}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__o6NKn
+                            )}
+                          >
+                            {"Let's Talk"}
+                          </div>
+                        </Button2>
+                      </p.Stack>
+                    </Reveal>
                   </p.Stack>
                 </p.Stack>
               </div>
@@ -839,7 +890,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__djEfs
                     )}
                   >
-                    {"Freedoms"}
+                    {"OUR MISSION"}
                   </div>
                   <h2
                     className={classNames(
@@ -849,7 +900,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.h2__ztiBi
                     )}
                   >
-                    {"Open by design"}
+                    {"Strategic Clarity"}
                   </h2>
                   <div
                     className={classNames(
@@ -859,7 +910,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "Vitae sed sem a justo mauris potenti a primis vivamus justo tempor viverra adipiscing convallis fusce odio condimentum mi parturient ultricies."
+                      "Our mission is to demystify the path to success, ensuring that our clients navigate their journey with confidence. \n\nWith a foundation built on precise insights and open collaboration, we transform challenges into opportunities, fostering innovation and growth."
                     }
                   </div>
                 </p.Stack>
@@ -878,7 +929,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text__tv0Ad
                       )}
                     >
-                      {"Built on capability"}
+                      {"Precision-Driven Process"}
                     </div>
                     <Icon2Icon
                       className={classNames(projectcss.all, sty.svg__gOr0L)}
@@ -897,7 +948,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text___38RS
                       )}
                     >
-                      {"Highly energetic"}
+                      {"Dynamic Collaborative Approach"}
                     </div>
                     <Icon2Icon
                       className={classNames(projectcss.all, sty.svg__iEdFk)}
@@ -916,7 +967,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text__z6JXc
                       )}
                     >
-                      {"100% transparency and accountability"}
+                      {"Commitment to Clarity"}
                     </div>
                     <Icon2Icon
                       className={classNames(projectcss.all, sty.svg___1Spn)}
@@ -935,7 +986,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text__dePkn
                       )}
                     >
-                      {"Refreshing clarity"}
+                      {"Transparent Operational Insight"}
                     </div>
                     <Icon2Icon
                       className={classNames(projectcss.all, sty.svg__bLfZf)}
@@ -954,7 +1005,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.text___7PbL0
                       )}
                     >
-                      {"Modern results"}
+                      {"Evidence-Based Results"}
                     </div>
                     <Icon2Icon
                       className={classNames(projectcss.all, sty.svg__uSuRk)}
@@ -1096,85 +1147,70 @@ function PlasmicHomepage__RenderFunc(props: {
           >
             <div className={classNames(projectcss.all, sty.columns__zWpuE)}>
               <div className={classNames(projectcss.all, sty.column__whQyF)}>
-                <Statistic
-                  className={classNames("__wab_instance", sty.statistic__bsax4)}
-                  number={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__sZlmZ
-                      )}
-                    >
-                      {"3,193"}
-                    </div>
-                  }
-                  unit={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___3Qddx
-                      )}
-                    >
-                      {"Active Users"}
-                    </div>
-                  }
-                />
+                <div className={classNames(projectcss.all, sty.freeBox__jwzfb)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__sZlmZ
+                    )}
+                  >
+                    {"1,000,000+"}
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___3Qddx
+                    )}
+                  >
+                    {"Leads Generated"}
+                  </div>
+                </div>
               </div>
               <div className={classNames(projectcss.all, sty.column__o93KI)}>
-                <Statistic
-                  className={classNames("__wab_instance", sty.statistic__r73Do)}
-                  number={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___3Fxl
-                      )}
-                    >
-                      {"3,193"}
-                    </div>
-                  }
-                  unit={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___4EmrX
-                      )}
-                    >
-                      {"Active Users"}
-                    </div>
-                  }
-                />
+                <div className={classNames(projectcss.all, sty.freeBox__xnMuB)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__i5SwE
+                    )}
+                  >
+                    {"600+"}
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__sMbUn
+                    )}
+                  >
+                    {"Clients Served"}
+                  </div>
+                </div>
               </div>
               <div className={classNames(projectcss.all, sty.column__lDoDz)}>
-                <Statistic
-                  className={classNames("__wab_instance", sty.statistic__mSwAz)}
-                  number={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ijLy7
-                      )}
-                    >
-                      {"3,193"}
-                    </div>
-                  }
-                  unit={
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___6BghD
-                      )}
-                    >
-                      {"Active Users"}
-                    </div>
-                  }
-                />
+                <div className={classNames(projectcss.all, sty.freeBox__dUFbE)}>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__xoD8I
+                    )}
+                  >
+                    {"10"}
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__dFbgQ
+                    )}
+                  >
+                    {"Industry Verticals"}
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -1326,6 +1362,168 @@ function PlasmicHomepage__RenderFunc(props: {
               </p.Stack>
             </div>
           </p.Stack>
+          <p.Stack
+            as={"section"}
+            data-plasmic-name={"medical2"}
+            data-plasmic-override={overrides.medical2}
+            hasGap={true}
+            className={classNames(projectcss.all, sty.medical2)}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                sty.freeBox__coYFy,
+                "elevation"
+              )}
+            >
+              <h2
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h2,
+                  projectcss.__wab_text,
+                  sty.h2__j2IvZ
+                )}
+              >
+                {"Tech Industry"}
+              </h2>
+              <p.Stack
+                as={"div"}
+                data-plasmic-name={"_3Columns2"}
+                data-plasmic-override={overrides._3Columns2}
+                hasGap={true}
+                className={classNames(projectcss.all, sty._3Columns2)}
+              >
+                <div
+                  data-plasmic-name={"amt4"}
+                  data-plasmic-override={overrides.amt4}
+                  className={classNames(projectcss.all, sty.amt4)}
+                >
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__dm1VJ)}
+                  >
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img__qc125)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"70px"}
+                      displayMaxWidth={"60%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={
+                        "https://www.thelamedia.com/wp-content/uploads/2023/02/restart-logo.png"
+                      }
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___6Igsr
+                      )}
+                    >
+                      {
+                        "Target market research, go to market strategy, brand positioning and attribution-focused advertisement procuring initial 5,000 accounts."
+                      }
+                    </div>
+                  </p.Stack>
+                </div>
+                <div
+                  data-plasmic-name={"amt5"}
+                  data-plasmic-override={overrides.amt5}
+                  className={classNames(projectcss.all, sty.amt5)}
+                >
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__kk3H5)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___5TIfS
+                      )}
+                    >
+                      {"SUMMIIT"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__dFwwB
+                      )}
+                    >
+                      {
+                        "Mobile app development for iOS and Android, UX/UI, brand asset development and robust automation infrastructure. "
+                      }
+                    </div>
+                  </p.Stack>
+                </div>
+                <div
+                  data-plasmic-name={"amt6"}
+                  data-plasmic-override={overrides.amt6}
+                  className={classNames(projectcss.all, sty.amt6)}
+                >
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__zJtRs)}
+                  >
+                    <p.PlasmicImg
+                      alt={""}
+                      className={classNames(sty.img___4ERv)}
+                      displayHeight={"auto"}
+                      displayMaxHeight={"90px"}
+                      displayMaxWidth={"100%"}
+                      displayMinHeight={"0"}
+                      displayMinWidth={"0"}
+                      displayWidth={"auto"}
+                      loading={"lazy"}
+                      src={
+                        "https://familymedicineaustin.com/wp-content/uploads/2021/03/logo_new__1___1_-1-400x84.png"
+                      }
+                    />
+
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__asxKi
+                      )}
+                    >
+                      {
+                        "Fractional CMO implementation, website development and focused new patient recruitment for ancillary service lines."
+                      }
+                    </div>
+                  </p.Stack>
+                </div>
+              </p.Stack>
+            </div>
+          </p.Stack>
+          <div className={classNames(projectcss.all, sty.freeBox__rK5Mp)}>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__edY50
+              )}
+            >
+              {"1,000,000+"}
+            </div>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__bFfCx
+              )}
+            >
+              {"Leads Generated"}
+            </div>
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -1357,7 +1555,12 @@ const PlasmicDescendants = {
     "_3Columns",
     "amt",
     "amt2",
-    "amt3"
+    "amt3",
+    "medical2",
+    "_3Columns2",
+    "amt4",
+    "amt5",
+    "amt6"
   ],
   menu: ["menu", "menuElements", "heroCta2"],
   menuElements: ["menuElements", "heroCta2"],
@@ -1381,7 +1584,12 @@ const PlasmicDescendants = {
   _3Columns: ["_3Columns", "amt", "amt2", "amt3"],
   amt: ["amt"],
   amt2: ["amt2"],
-  amt3: ["amt3"]
+  amt3: ["amt3"],
+  medical2: ["medical2", "_3Columns2", "amt4", "amt5", "amt6"],
+  _3Columns2: ["_3Columns2", "amt4", "amt5", "amt6"],
+  amt4: ["amt4"],
+  amt5: ["amt5"],
+  amt6: ["amt6"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1411,6 +1619,11 @@ type NodeDefaultElementType = {
   amt: "div";
   amt2: "div";
   amt3: "div";
+  medical2: "section";
+  _3Columns2: "div";
+  amt4: "div";
+  amt5: "div";
+  amt6: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1496,6 +1709,11 @@ export const PlasmicHomepage = Object.assign(
     amt: makeNodeComponent("amt"),
     amt2: makeNodeComponent("amt2"),
     amt3: makeNodeComponent("amt3"),
+    medical2: makeNodeComponent("medical2"),
+    _3Columns2: makeNodeComponent("_3Columns2"),
+    amt4: makeNodeComponent("amt4"),
+    amt5: makeNodeComponent("amt5"),
+    amt6: makeNodeComponent("amt6"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
