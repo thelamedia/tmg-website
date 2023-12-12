@@ -431,11 +431,11 @@ function PlasmicHomepage__RenderFunc(props: {
               {"What We Do"}
             </h2>
             <Reveal
-              cascade={true}
+              cascade={false}
               className={classNames("__wab_instance", sty.reveal__mXo7B)}
               damping={0.8}
-              direction={"up"}
-              duration={1500}
+              duration={1000}
+              delay={200}
               triggerOnce={true}
             >
               <p.Stack
