@@ -276,15 +276,27 @@
   -webkit-transition-delay: 1s;
   padding: 96px 0px;
 }
+.freeBox__uxmvL {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+  padding: 8px;
+}
 .heroText {
   position: relative;
   width: 100%;
   height: auto;
-  margin-bottom: 32px;
+  margin-bottom: 0px;
   margin-right: 0px;
   color: #ffffff;
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 1.2px;
   line-height: 1.3;
   font-size: 80px;
@@ -299,17 +311,46 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .heroText {
     font-size: 48px;
+    left: auto;
+    top: auto;
   }
 }
-.span {
-  background: linear-gradient(90deg, #ff5708 0%, #ffe756 100%) 0% 0% / 100% 100%
-    repeat padding-box /* clip: text **/;
+.tilt:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+  background: none;
+}
+.heroText2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0px;
+  margin-right: 0px;
   color: #ffffff00;
-  font-style: normal;
-  font-weight: 900;
-  letter-spacing: 1.4px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  line-height: 1.3;
+  font-size: 80px;
+  transition-property: all;
+  transition-duration: 1s;
+  left: auto;
+  top: auto;
+  background: linear-gradient(0deg, #ff2b0000 0%, #f2dcc5 73%) 0% 0% / 100% 100%
+    repeat padding-box /* clip: text **/;
+  min-width: 0;
   background-clip: text;
   -webkit-background-clip: text;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .heroText2 {
+    font-size: 48px;
+    left: auto;
+    top: auto;
+  }
 }
 .heroDescription {
   position: relative;
@@ -800,8 +841,6 @@
   align-content: flex-start;
   justify-items: center;
   width: 100%;
-  padding-left: 0;
-  padding-right: 0;
   background: none;
   grid-column-start: 3 !important;
   grid-column-end: -3 !important;
@@ -812,6 +851,7 @@
       calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
     )
     minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
+  padding: 96px 0;
 }
 .clients > * {
   grid-column: 4;

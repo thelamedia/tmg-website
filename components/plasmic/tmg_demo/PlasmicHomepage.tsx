@@ -20,10 +20,6 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 import {
   hasVariant,
   classNames,
@@ -41,6 +37,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Button2 from "../../Button2"; // plasmic-import: t4Ewn2gBSIli/component
+import Tilt from "@plasmicpkgs/react-parallax-tilt";
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
@@ -63,7 +60,6 @@ import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: g0aZxbzKH
 
 createPlasmicElementProxy;
 
-
 export type PlasmicHomepage__VariantMembers = {};
 export type PlasmicHomepage__VariantsArgs = {};
 type VariantPropType = keyof PlasmicHomepage__VariantsArgs;
@@ -80,7 +76,8 @@ export type PlasmicHomepage__OverridesType = {
   heroCta2?: p.Flex<typeof Button2>;
   homeHero?: p.Flex<"section">;
   heroText?: p.Flex<"h1">;
-  span?: p.Flex<"span">;
+  tilt?: p.Flex<typeof Tilt>;
+  heroText2?: p.Flex<"h1">;
   heroDescription?: p.Flex<"div">;
   heroCta?: p.Flex<typeof Button2>;
   columns?: p.Flex<"section">;
@@ -123,59 +120,7 @@ function PlasmicHomepage__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  React.useEffect(() => {
-    // Import scripts dynamically
-    const threeScript = document.createElement('script');
-    threeScript.src = '/vanta/three.min.js';
-    threeScript.onload = () => {
-      const vantaScript1 = document.createElement('script');
-      const vantaScript2 = document.createElement('script');
-      vantaScript1.src = '/vanta/vanta.clouds.min.js';
-      vantaScript2.src = '/vanta/vanta.fog.min.js';
-      vantaScript1.onload = () => {
-        if (VANTA && typeof VANTA.CLOUDS === 'function') {
-          VANTA.CLOUDS({
-            el: "#homeHero",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            skyColor: 0x0,
-            cloudColor: 0x181818
-          });
-        }
-      };
-      document.body.appendChild(vantaScript1);
-      vantaScript2.onload = () => {
-        if (VANTA && typeof VANTA.FOG === 'function') {
-          VANTA.FOG({
-            el: "#none",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            highlightColor: 0x503107,
-            midtoneColor: 0x0,
-            lowlightColor: 0x50505,
-            baseColor: 0x0,
-            speed: 1.20,
-            zoom: 0.40
-          });
-        }
-      };
-      document.body.appendChild(vantaScript2);
-    };
-    document.body.appendChild(threeScript);
 
-    // Clean up effect if the component unmounts
-    return () => {
-      if (window.VANTA) {
-        window.VANTA.effect && window.VANTA.effect.destroy();
-      }
-    };
-  }, []);
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
 
   const $props = {
@@ -360,36 +305,41 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames(projectcss.all, sty.homeHero)}
             id={"homeHero"}
           >
-            <h1
-              data-plasmic-name={"heroText"}
-              data-plasmic-override={overrides.heroText}
-              className={classNames(
-                projectcss.all,
-                projectcss.h1,
-                projectcss.__wab_text,
-                sty.heroText
-              )}
-            >
-              <React.Fragment>
-                <React.Fragment>{"YOUR BRAND,\n"}</React.Fragment>
-                {
-                  <span
-                    data-plasmic-name={"span"}
-                    data-plasmic-override={overrides.span}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.span,
-                      projectcss.__wab_text,
-                      projectcss.plasmic_default__inline,
-                      sty.span
-                    )}
-                  >
-                    {"ELEVATED"}
-                  </span>
-                }
-                <React.Fragment>{""}</React.Fragment>
-              </React.Fragment>
-            </h1>
+            <div className={classNames(projectcss.all, sty.freeBox__uxmvL)}>
+              <h1
+                data-plasmic-name={"heroText"}
+                data-plasmic-override={overrides.heroText}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.heroText
+                )}
+              >
+                {"Your Brand,"}
+              </h1>
+              <Tilt
+                data-plasmic-name={"tilt"}
+                data-plasmic-override={overrides.tilt}
+                className={classNames("__wab_instance", sty.tilt)}
+                glareEnable={false}
+                tiltReverse={true}
+                trackOnWindow={true}
+              >
+                <h1
+                  data-plasmic-name={"heroText2"}
+                  data-plasmic-override={overrides.heroText2}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h1,
+                    projectcss.__wab_text,
+                    sty.heroText2
+                  )}
+                >
+                  {"ELEVATED"}
+                </h1>
+              </Tilt>
+            </div>
             <div
               data-plasmic-name={"heroDescription"}
               data-plasmic-override={overrides.heroDescription}
@@ -840,10 +790,8 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                       damping={0.5}
                       delay={1}
-                      direction={"right"}
                       duration={1000}
                       effect={"fade"}
-                      reverse={false}
                       triggerOnce={true}
                     >
                       <p.Stack
@@ -1607,7 +1555,8 @@ const PlasmicDescendants = {
     "heroCta2",
     "homeHero",
     "heroText",
-    "span",
+    "tilt",
+    "heroText2",
     "heroDescription",
     "heroCta",
     "columns",
@@ -1634,9 +1583,17 @@ const PlasmicDescendants = {
   menu: ["menu", "menuElements", "heroCta2"],
   menuElements: ["menuElements", "heroCta2"],
   heroCta2: ["heroCta2"],
-  homeHero: ["homeHero", "heroText", "span", "heroDescription", "heroCta"],
-  heroText: ["heroText", "span"],
-  span: ["span"],
+  homeHero: [
+    "homeHero",
+    "heroText",
+    "tilt",
+    "heroText2",
+    "heroDescription",
+    "heroCta"
+  ],
+  heroText: ["heroText"],
+  tilt: ["tilt", "heroText2"],
+  heroText2: ["heroText2"],
   heroDescription: ["heroDescription"],
   heroCta: ["heroCta"],
   columns: ["columns"],
@@ -1670,7 +1627,8 @@ type NodeDefaultElementType = {
   heroCta2: typeof Button2;
   homeHero: "section";
   heroText: "h1";
-  span: "span";
+  tilt: typeof Tilt;
+  heroText2: "h1";
   heroDescription: "div";
   heroCta: typeof Button2;
   columns: "section";
@@ -1760,7 +1718,8 @@ export const PlasmicHomepage = Object.assign(
     heroCta2: makeNodeComponent("heroCta2"),
     homeHero: makeNodeComponent("homeHero"),
     heroText: makeNodeComponent("heroText"),
-    span: makeNodeComponent("span"),
+    tilt: makeNodeComponent("tilt"),
+    heroText2: makeNodeComponent("heroText2"),
     heroDescription: makeNodeComponent("heroDescription"),
     heroCta: makeNodeComponent("heroCta"),
     columns: makeNodeComponent("columns"),
