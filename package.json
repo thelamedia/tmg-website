@@ -19,6 +19,7 @@
     "@plasmicpkgs/react-awesome-reveal": "^3.8.186",
     "@plasmicpkgs/react-parallax-tilt": "^0.0.185",
     "@plasmicpkgs/react-slick": "^0.0.205",
+    "@vercel/speed-insights": "^1.0.1",
     "next": "^14.0.4",
     "react": "^18",
     "react-dom": "^18",

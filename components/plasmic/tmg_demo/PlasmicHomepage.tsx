@@ -59,6 +59,7 @@ import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: g0aZxbzKH
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { SpeedInsights} from"@vercel/speed-insights/next"
 createPlasmicElementProxy;
 
 export type PlasmicHomepage__VariantMembers = {};
@@ -219,14 +220,14 @@ function PlasmicHomepage__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head></Head>
-
+    
       <style>{`
         body {
           margin: 0;
         }
       `}</style>
-
       <div className={projectcss.plasmic_page_wrapper}>
+      <SpeedInsights />
         <div
           data-plasmic-name={"homepage"}
           data-plasmic-override={overrides.homepage}
