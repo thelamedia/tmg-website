@@ -165,7 +165,7 @@ function PlasmicHomepage__RenderFunc(props: {
       vantaScript.onload = () => {
         if (VANTA && typeof VANTA.FOG === 'function') {
           VANTA.FOG({
-            el: "#vanta",
+            el: "#homeHero",
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
@@ -176,7 +176,7 @@ function PlasmicHomepage__RenderFunc(props: {
             lowlightColor: 0xff6800,
             baseColor: 0xfafafa,
             blurFactor: 0.87,
-            zoom: 0.30
+            zoom: .9
           });
         }
       };
@@ -229,7 +229,7 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-name={"homeHero"}
             data-plasmic-override={overrides.homeHero}
             className={classNames(projectcss.all, sty.homeHero)}
-           
+            id="homeHero"
           >
             <p.Stack
               as={"div"}
