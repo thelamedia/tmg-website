@@ -881,32 +881,26 @@
   min-width: 0;
 }
 .vanta {
-  display: grid;
+  display: flex;
   position: relative;
-  align-content: center;
-  justify-items: center;
   width: 100%;
   padding-left: 0;
   padding-right: 0;
   height: 400px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
-  grid-template-columns:
-    var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
-    min(
-      var(--plsmc-standard-width),
-      calc(100% - var(--plsmc-viewport-gap) - var(--plsmc-viewport-gap))
-    )
-    minmax(0, var(--plsmc-wide-chunk)) 1fr var(--plsmc-viewport-gap);
-}
-.vanta > * {
-  grid-column: 4;
 }
 .h1 {
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
+  left: auto;
+  top: auto;
+  text-align: center;
   min-width: 0;
 }
 .clients {
