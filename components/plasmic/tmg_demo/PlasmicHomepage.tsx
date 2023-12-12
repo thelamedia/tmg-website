@@ -79,6 +79,7 @@ export type PlasmicHomepage__OverridesType = {
   heroCta?: p.Flex<typeof Button2>;
   columns?: p.Flex<"section">;
   vanta?: p.Flex<"section">;
+  h1?: p.Flex<"h1">;
   clients?: p.Flex<"section">;
   imageGrid?: p.Flex<"div">;
   background2?: p.Flex<"div">;
@@ -155,55 +156,15 @@ function PlasmicHomepage__RenderFunc(props: {
     screen: useScreenVariantswtDzL3SdIaL()
   });
 
-  React.useEffect(() => {
-    // Import scripts dynamically
-    const threeScript = document.createElement('script');
-    threeScript.src = '/vanta/three.min.js';
-    threeScript.onload = () => {
-      const vantaScript = document.createElement('script');
-      vantaScript.src = '/vanta/vanta.fog.min.js';
-      vantaScript.onload = () => {
-        if (VANTA && typeof VANTA.FOG === 'function') {
-          VANTA.FOG({
-            el: "#homeHero",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            highlightColor: 0xfff0,
-            midtoneColor: 0x2c00ff,
-            lowlightColor: 0xff6800,
-            baseColor: 0xfafafa,
-            blurFactor: 0.87,
-            zoom: .9
-          });
-        }
-      };
-      document.body.appendChild(vantaScript);
-    };
-    document.body.appendChild(threeScript);
-
-    // Clean up effect if the component unmounts
-    return () => {
-      if (window.VANTA) {
-        window.VANTA.effect && window.VANTA.effect.destroy();
-      }
-    };
-  }, []);
-
   return (
     <React.Fragment>
-      <Head>
-      </Head>
+      <Head></Head>
 
       <style>{`
         body {
           margin: 0;
         }
       `}</style>
-
-
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
@@ -222,14 +183,11 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
-          <div id="your-element-selector">
-        {/* Your content here */}
-      </div>
           <section
             data-plasmic-name={"homeHero"}
             data-plasmic-override={overrides.homeHero}
             className={classNames(projectcss.all, sty.homeHero)}
-            id="homeHero"
+            id={"homeHero"}
           >
             <p.Stack
               as={"div"}
@@ -267,7 +225,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.freeBox__o4Rsw)}
                 >
-                  
                   <Button2
                     className={classNames("__wab_instance", sty.button2__mfYp)}
                     color={"clear"}
@@ -621,8 +578,20 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.vanta}
             className={classNames(projectcss.all, sty.vanta)}
             id={"vanta"}
-          />
-
+          >
+            <h1
+              data-plasmic-name={"h1"}
+              data-plasmic-override={overrides.h1}
+              className={classNames(
+                projectcss.all,
+                projectcss.h1,
+                projectcss.__wab_text,
+                sty.h1
+              )}
+            >
+              {"You won't believe what happens next."}
+            </h1>
+          </section>
           <section
             data-plasmic-name={"clients"}
             data-plasmic-override={overrides.clients}
@@ -861,7 +830,6 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"background2"}
                   data-plasmic-override={overrides.background2}
                   className={classNames(projectcss.all, sty.background2)}
-                  id="homeHero"
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__yoJHu)}>
@@ -1581,6 +1549,7 @@ const PlasmicDescendants = {
     "heroCta",
     "columns",
     "vanta",
+    "h1",
     "clients",
     "imageGrid",
     "background2",
@@ -1611,7 +1580,8 @@ const PlasmicDescendants = {
   heroDescription: ["heroDescription"],
   heroCta: ["heroCta"],
   columns: ["columns"],
-  vanta: ["vanta"],
+  vanta: ["vanta", "h1"],
+  h1: ["h1"],
   clients: ["clients"],
   imageGrid: ["imageGrid", "background2", "copy"],
   background2: ["background2"],
@@ -1640,6 +1610,7 @@ type NodeDefaultElementType = {
   heroCta: typeof Button2;
   columns: "section";
   vanta: "section";
+  h1: "h1";
   clients: "section";
   imageGrid: "div";
   background2: "div";
@@ -1724,6 +1695,7 @@ export const PlasmicHomepage = Object.assign(
     heroCta: makeNodeComponent("heroCta"),
     columns: makeNodeComponent("columns"),
     vanta: makeNodeComponent("vanta"),
+    h1: makeNodeComponent("h1"),
     clients: makeNodeComponent("clients"),
     imageGrid: makeNodeComponent("imageGrid"),
     background2: makeNodeComponent("background2"),
