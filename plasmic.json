@@ -468,7 +468,7 @@
     {
       "projectId": "tXTYCQMcFRriEHeNaPTHe7",
       "projectApiToken": "Cod4cVTrkqa04kdM1f7X2Vmap3PxEdi5LOqAlZuoEdi8mh86KILIIqzxBY21vrvsR3RtorxqZXl1mEJGDw",
-      "projectName": "TMG Demo",
+      "projectName": "TMG Website",
       "version": "latest",
       "cssFilePath": "plasmic/tmg_demo/plasmic_tmg_demo.module.css",
       "components": [
@@ -501,18 +501,17 @@
           "plumeType": "button"
         },
         {
-          "id": "BLf5zOGH50LS",
-          "name": "CaseStudyTemplate",
+          "id": "BR6TGahQO5AP",
+          "name": "Statistic",
           "type": "managed",
           "projectId": "tXTYCQMcFRriEHeNaPTHe7",
-          "renderModuleFilePath": "plasmic/tmg_demo/PlasmicCaseStudyTemplate.tsx",
+          "renderModuleFilePath": "plasmic/tmg_website/PlasmicStatistic.tsx",
           "importSpec": {
-            "modulePath": "../pages/case-study-template.tsx"
+            "modulePath": "Statistic.tsx"
           },
-          "cssFilePath": "plasmic/tmg_demo/PlasmicCaseStudyTemplate.module.css",
+          "cssFilePath": "plasmic/tmg_website/PlasmicStatistic.module.css",
           "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/case-study-template"
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -614,6 +613,28 @@
       ],
       "customFunctions": [],
       "jsBundleThemes": []
+    },
+    {
+      "projectId": "8PtdGodUbexNYgkuyBUcWu",
+      "projectApiToken": "34o5R5KswluuZ4sD83F88oQrcLWsNNeUpCptQ8Okf4hYqgjnHnX2idGAlhtB7WWQQelNAInf5XFazR1cGw",
+      "projectName": "plasmic-embed-css",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/plasmic_embed_css/plasmic_plasmic_embed_css.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "plasmic/plasmic_embed_css/PlasmicGlobalContextsProvider.tsx",
+      "splitsProviderFilePath": "",
+      "codeComponents": [
+        {
+          "id": "qF0uJxFztB",
+          "name": "EmbedCss",
+          "displayName": "global-embed-css",
+          "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
+        }
+      ],
+      "customFunctions": []
     }
   ],
   "globalVariants": {

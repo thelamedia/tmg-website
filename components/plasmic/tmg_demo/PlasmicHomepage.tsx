@@ -19,8 +19,6 @@ import { useRouter } from "next/router";
 
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
 
 import {
   hasVariant,
@@ -41,6 +39,7 @@ import {
 import Button2 from "../../Button2"; // plasmic-import: t4Ewn2gBSIli/component
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
 import { sliderHelpers as SliderWrapper_Helpers } from "@plasmicpkgs/react-slick";
+import Statistic from "../../Statistic"; // plasmic-import: BR6TGahQO5AP/component
 
 import { useScreenVariants as useScreenVariantswtDzL3SdIaL } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: WtDzL_3SDIaL/globalVariant
 
@@ -56,7 +55,6 @@ import Icon38Icon from "./icons/PlasmicIcon__Icon38"; // plasmic-import: fV2xAdF
 import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: NpEGyspG1WV_/icon
 import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: mYDiiUwNMA_x/icon
 import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: uNTZAlN07UAX/icon
-import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: WWKN1zpTsehN/icon
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: g0aZxbzKHlNV/icon
 
 createPlasmicElementProxy;
@@ -71,9 +69,10 @@ type ArgPropType = keyof PlasmicHomepage__ArgsType;
 export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
-  root?: p.Flex<"div">;
+  homepage?: p.Flex<"div">;
   menu?: p.Flex<"div">;
   menuElements?: p.Flex<"div">;
+  heroCta2?: p.Flex<typeof Button2>;
   homeHero?: p.Flex<"section">;
   heroText?: p.Flex<"h1">;
   span?: p.Flex<"span">;
@@ -88,6 +87,7 @@ export type PlasmicHomepage__OverridesType = {
   foreground?: p.Flex<"div">;
   testimonials?: p.Flex<"section">;
   sliderCarousel2?: p.Flex<typeof SliderWrapper>;
+  section?: p.Flex<"section">;
   medical?: p.Flex<"section">;
   _3Columns?: p.Flex<"div">;
   amt?: p.Flex<"div">;
@@ -112,41 +112,6 @@ function PlasmicHomepage__RenderFunc(props: {
   overrides: PlasmicHomepage__OverridesType;
   forNode?: string;
 }) {
-
-  React.useEffect(() => {
-    // Import scripts dynamically
-    const threeScript = document.createElement('script');
-    threeScript.src = '/vanta/three.min.js';
-    threeScript.onload = () => {
-      const vantaScript = document.createElement('script');
-      vantaScript.src = '/vanta/vanta.clouds.min.js';
-      vantaScript.onload = () => {
-        if (VANTA && typeof VANTA.CLOUDS === 'function') {
-          VANTA.CLOUDS({
-            el: "#homeHero",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            skyColor: 0x0,
-            cloudColor: 0x181818
-          });
-        }
-      };
-      document.body.appendChild(vantaScript);
-    };
-    document.body.appendChild(threeScript);
-
-    // Clean up effect if the component unmounts
-    return () => {
-      if (window.VANTA) {
-        window.VANTA.effect && window.VANTA.effect.destroy();
-      }
-    };
-  }, []);
-
-  
   const { variants, overrides, forNode } = props;
 
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
@@ -203,8 +168,8 @@ function PlasmicHomepage__RenderFunc(props: {
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
-          data-plasmic-name={"root"}
-          data-plasmic-override={overrides.root}
+          data-plasmic-name={"homepage"}
+          data-plasmic-override={overrides.homepage}
           data-plasmic-root={true}
           data-plasmic-for-node={forNode}
           className={classNames(
@@ -215,8 +180,9 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
             plasmic_plasmic_rich_components_css.plasmic_tokens,
-            sty.root
+            sty.homepage
           )}
+          id={"testimonials"}
         >
           <p.Stack
             as={"div"}
@@ -278,7 +244,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__aVfAp
                     )}
                   >
-                    {"Services"}
+                    {"What We Do"}
                   </div>
                 </Button2>
                 <Button2
@@ -305,115 +271,23 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__qxRi4
                     )}
                   >
-                    {"Features"}
+                    {"Case Studies"}
                   </div>
                 </Button2>
                 <Button2
-                  className={classNames("__wab_instance", sty.button2__bohK6)}
-                  color={"clear"}
+                  data-plasmic-name={"heroCta2"}
+                  data-plasmic-override={overrides.heroCta2}
+                  className={classNames("__wab_instance", sty.heroCta2)}
+                  color={"softSand"}
                   endIcon={
                     <Icon38Icon
-                      className={classNames(projectcss.all, sty.svg__h9HIi)}
+                      className={classNames(projectcss.all, sty.svg__orDxC)}
                       role={"img"}
                     />
                   }
-                  startIcon={
-                    <ChecksvgIcon
-                      className={classNames(projectcss.all, sty.svg__eeWmU)}
-                      role={"img"}
-                    />
-                  }
-                  submitsForm={true}
+                  showEndIcon={true}
                 >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__dplwI
-                    )}
-                  >
-                    {"Company"}
-                  </div>
-                </Button2>
-                <Button2
-                  className={classNames("__wab_instance", sty.button2___1MC)}
-                  color={"clear"}
-                  endIcon={
-                    <Icon38Icon
-                      className={classNames(projectcss.all, sty.svg__qrtC7)}
-                      role={"img"}
-                    />
-                  }
-                  startIcon={
-                    <ChecksvgIcon
-                      className={classNames(projectcss.all, sty.svg__uWwZ1)}
-                      role={"img"}
-                    />
-                  }
-                  submitsForm={true}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__mnXlM
-                    )}
-                  >
-                    {"Contact"}
-                  </div>
-                </Button2>
-                <Button2
-                  className={classNames("__wab_instance", sty.button2__zuxZ9)}
-                  color={"clear"}
-                  endIcon={
-                    <Icon38Icon
-                      className={classNames(projectcss.all, sty.svg__sFa1F)}
-                      role={"img"}
-                    />
-                  }
-                  startIcon={
-                    <ChecksvgIcon
-                      className={classNames(projectcss.all, sty.svg__aAy)}
-                      role={"img"}
-                    />
-                  }
-                  submitsForm={true}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__kQwzy
-                    )}
-                  >
-                    {"Log in"}
-                  </div>
-                </Button2>
-                <Button2
-                  className={classNames("__wab_instance", sty.button2__sLtE)}
-                  endIcon={
-                    <Icon38Icon
-                      className={classNames(projectcss.all, sty.svg___0EhI)}
-                      role={"img"}
-                    />
-                  }
-                  startIcon={
-                    <ChecksvgIcon
-                      className={classNames(projectcss.all, sty.svg__nOZg)}
-                      role={"img"}
-                    />
-                  }
-                  submitsForm={true}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__tglgF
-                    )}
-                  >
-                    {"Sign up"}
-                  </div>
+                  {"Let's Talk"}
                 </Button2>
               </p.Stack>
             </p.Stack>
@@ -592,7 +466,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         sty.h3__gHDxf
                       )}
                     >
-                      {"Advertising Deployment"}
+                      {"Omni-Channel Advertising Deployment"}
                     </h3>
                     <div
                       className={classNames(
@@ -838,7 +712,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayMinWidth={"0"}
                   displayWidth={"100%"}
                   src={
-                    "https://images.unsplash.com/photo-1530099486328-e021101a494a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2916&q=80"
+                    "https://www.thelamedia.com/wp-content/uploads/2023/01/marketing-campaign-41-1146x1536.jpg"
                   }
                 />
 
@@ -873,7 +747,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.text__vDLlD
                         )}
                       >
-                        {"Welcome"}
+                        {"OUR BACKGROUND"}
                       </div>
                       <div
                         className={classNames(
@@ -882,7 +756,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           sty.text__ev1V
                         )}
                       >
-                        {"Let's get going"}
+                        {"Full Service At Scale"}
                       </div>
                       <div
                         className={classNames(
@@ -892,21 +766,15 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                       >
                         {
-                          "Consectetur a adipiscing sagittis sed proin libero himenaeos ornare adipiscing suscipit leo vestibulum facilisi consequat nisi nisi adipiscing habitant facilisis suspendisse hac integer eget quam facilisis sem placerat fames."
+                          "We pride ourselves on our ability to craft and implement comprehensive strategies that deliver real results for our clients. \n\nAs a high-end and exclusive firm, we have a proven track record of success working with top companies in industries such as healthcare, real estate, energy, and fintech to name a few.  "
                         }
                       </div>
-                    </p.Stack>
-                    <p.Stack
-                      as={"div"}
-                      hasGap={true}
-                      className={classNames(projectcss.all, sty.freeBox__lURp6)}
-                    >
                       <Button2
                         className={classNames(
                           "__wab_instance",
                           sty.button2__zJpK3
                         )}
-                        color={"blue"}
+                        color={"sand"}
                         endIcon={
                           <Icon38Icon
                             className={classNames(
@@ -916,6 +784,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             role={"img"}
                           />
                         }
+                        showEndIcon={true}
                         startIcon={
                           <ChecksvgIcon
                             className={classNames(
@@ -934,43 +803,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.text__o6NKn
                           )}
                         >
-                          {"Start now ->"}
-                        </div>
-                      </Button2>
-                      <Button2
-                        className={classNames(
-                          "__wab_instance",
-                          sty.button2___2LBap
-                        )}
-                        color={"clear"}
-                        endIcon={
-                          <Icon38Icon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__qvT1
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        startIcon={
-                          <ChecksvgIcon
-                            className={classNames(
-                              projectcss.all,
-                              sty.svg__u2WYn
-                            )}
-                            role={"img"}
-                          />
-                        }
-                        submitsForm={true}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__c9HNf
-                          )}
-                        >
-                          {"Learn more\u2026"}
+                          {"Let's Talk"}
                         </div>
                       </Button2>
                     </p.Stack>
@@ -1029,34 +862,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       "Vitae sed sem a justo mauris potenti a primis vivamus justo tempor viverra adipiscing convallis fusce odio condimentum mi parturient ultricies."
                     }
                   </div>
-                  <Button2
-                    className={classNames("__wab_instance", sty.button2__oeqR8)}
-                    endIcon={
-                      <IconIcon
-                        className={classNames(projectcss.all, sty.svg__htzmg)}
-                        role={"img"}
-                      />
-                    }
-                    showEndIcon={true}
-                    size={"minimal"}
-                    startIcon={
-                      <ChecksvgIcon
-                        className={classNames(projectcss.all, sty.svg__on8T5)}
-                        role={"img"}
-                      />
-                    }
-                    submitsForm={true}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__zquvI
-                      )}
-                    >
-                      {"Learn more"}
-                    </div>
-                  </Button2>
                 </p.Stack>
               </div>
               <div className={classNames(projectcss.all, sty.column__isJhi)}>
@@ -1189,10 +994,12 @@ function PlasmicHomepage__RenderFunc(props: {
                           ["sliderCarousel2", "currentSlide"],
                           SliderWrapper_Helpers
                         ),
+                      centerMode: false,
                       className: classNames(
                         "__wab_instance",
                         sty.sliderCarousel2
                       ),
+                      dots: false,
                       initialSlide: p.generateStateValueProp($state, [
                         "sliderCarousel2",
                         "currentSlide"
@@ -1275,37 +1082,99 @@ function PlasmicHomepage__RenderFunc(props: {
                             {"Mandy\nCEO - Corporate Property Management"}
                           </div>
                         </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            sty.freeBox__m9LzC
-                          )}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__wzXf7
-                            )}
-                          >
-                            {
-                              '"Thela Media Group\u2019s reputation management system has helped us catch 100% of the actionable feedback that ends up online instead of in our team\u2019s hands. They\u2019ve never missed a thing, work 24/7, and have increased our response velocity to just under the speed of light!"'
-                            }
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__gwRcs
-                            )}
-                          >
-                            {"Mandy\nCEO - Corporate Property Management"}
-                          </div>
-                        </div>
                       </SliderWrapper>
                     );
                   })()}
                 </div>
+              </div>
+            </div>
+          </section>
+          <section
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section, "stats-area")}
+          >
+            <div className={classNames(projectcss.all, sty.columns__zWpuE)}>
+              <div className={classNames(projectcss.all, sty.column__whQyF)}>
+                <Statistic
+                  className={classNames("__wab_instance", sty.statistic__bsax4)}
+                  number={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__sZlmZ
+                      )}
+                    >
+                      {"3,193"}
+                    </div>
+                  }
+                  unit={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___3Qddx
+                      )}
+                    >
+                      {"Active Users"}
+                    </div>
+                  }
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__o93KI)}>
+                <Statistic
+                  className={classNames("__wab_instance", sty.statistic__r73Do)}
+                  number={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___3Fxl
+                      )}
+                    >
+                      {"3,193"}
+                    </div>
+                  }
+                  unit={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___4EmrX
+                      )}
+                    >
+                      {"Active Users"}
+                    </div>
+                  }
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__lDoDz)}>
+                <Statistic
+                  className={classNames("__wab_instance", sty.statistic__mSwAz)}
+                  number={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ijLy7
+                      )}
+                    >
+                      {"3,193"}
+                    </div>
+                  }
+                  unit={
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___6BghD
+                      )}
+                    >
+                      {"Active Users"}
+                    </div>
+                  }
+                />
               </div>
             </div>
           </section>
@@ -1316,7 +1185,13 @@ function PlasmicHomepage__RenderFunc(props: {
             hasGap={true}
             className={classNames(projectcss.all, sty.medical)}
           >
-            <div className={classNames(projectcss.all, sty.freeBox__yOjOv)}>
+            <div
+              className={classNames(
+                projectcss.all,
+                sty.freeBox__yOjOv,
+                "elevation"
+              )}
+            >
               <h2
                 className={classNames(
                   projectcss.all,
@@ -1370,40 +1245,6 @@ function PlasmicHomepage__RenderFunc(props: {
                         "Strategy and multi-channel advertising implementation for clinical trial patient recruitment across multiple geographies."
                       }
                     </div>
-                    <Button2
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button2__aAzSs
-                      )}
-                      endIcon={
-                        <IconIcon
-                          className={classNames(projectcss.all, sty.svg__nebo4)}
-                          role={"img"}
-                        />
-                      }
-                      showEndIcon={true}
-                      size={"minimal"}
-                      startIcon={
-                        <ChecksvgIcon
-                          className={classNames(
-                            projectcss.all,
-                            sty.svg___9QnZ8
-                          )}
-                          role={"img"}
-                        />
-                      }
-                      submitsForm={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___85TMj
-                        )}
-                      >
-                        {"View the case study"}
-                      </div>
-                    </Button2>
                   </p.Stack>
                 </div>
                 <div
@@ -1439,40 +1280,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       )}
                     >
                       {
-                        "Brand standards implementation and comprehensive marketing and advertising strategy for patented protocol."
+                        "Brand standards implementation and comprehensive marketing & advertising strategy for patented protocol."
                       }
                     </div>
-                    <Button2
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button2__c9Fr1
-                      )}
-                      endIcon={
-                        <IconIcon
-                          className={classNames(projectcss.all, sty.svg__adiWo)}
-                          role={"img"}
-                        />
-                      }
-                      showEndIcon={true}
-                      size={"minimal"}
-                      startIcon={
-                        <ChecksvgIcon
-                          className={classNames(projectcss.all, sty.svg__xsR6X)}
-                          role={"img"}
-                        />
-                      }
-                      submitsForm={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__q2V33
-                        )}
-                      >
-                        {"View the case study"}
-                      </div>
-                    </Button2>
                   </p.Stack>
                 </div>
                 <div
@@ -1511,37 +1321,6 @@ function PlasmicHomepage__RenderFunc(props: {
                         "Fractional CMO implementation, website development and focused new patient recruitment for ancillary service lines."
                       }
                     </div>
-                    <Button2
-                      className={classNames(
-                        "__wab_instance",
-                        sty.button2__axQt7
-                      )}
-                      endIcon={
-                        <IconIcon
-                          className={classNames(projectcss.all, sty.svg__ripci)}
-                          role={"img"}
-                        />
-                      }
-                      showEndIcon={true}
-                      size={"minimal"}
-                      startIcon={
-                        <ChecksvgIcon
-                          className={classNames(projectcss.all, sty.svg__wiDnM)}
-                          role={"img"}
-                        />
-                      }
-                      submitsForm={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__sCviq
-                        )}
-                      >
-                        {"View the case study"}
-                      </div>
-                    </Button2>
                   </p.Stack>
                 </div>
               </p.Stack>
@@ -1554,10 +1333,11 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: [
-    "root",
+  homepage: [
+    "homepage",
     "menu",
     "menuElements",
+    "heroCta2",
     "homeHero",
     "heroText",
     "span",
@@ -1572,14 +1352,16 @@ const PlasmicDescendants = {
     "foreground",
     "testimonials",
     "sliderCarousel2",
+    "section",
     "medical",
     "_3Columns",
     "amt",
     "amt2",
     "amt3"
   ],
-  menu: ["menu", "menuElements"],
-  menuElements: ["menuElements"],
+  menu: ["menu", "menuElements", "heroCta2"],
+  menuElements: ["menuElements", "heroCta2"],
+  heroCta2: ["heroCta2"],
   homeHero: ["homeHero", "heroText", "span", "heroDescription", "heroCta"],
   heroText: ["heroText", "span"],
   span: ["span"],
@@ -1594,6 +1376,7 @@ const PlasmicDescendants = {
   foreground: ["foreground"],
   testimonials: ["testimonials", "sliderCarousel2"],
   sliderCarousel2: ["sliderCarousel2"],
+  section: ["section"],
   medical: ["medical", "_3Columns", "amt", "amt2", "amt3"],
   _3Columns: ["_3Columns", "amt", "amt2", "amt3"],
   amt: ["amt"],
@@ -1604,9 +1387,10 @@ type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
-  root: "div";
+  homepage: "div";
   menu: "div";
   menuElements: "div";
+  heroCta2: typeof Button2;
   homeHero: "section";
   heroText: "h1";
   span: "span";
@@ -1621,6 +1405,7 @@ type NodeDefaultElementType = {
   foreground: "div";
   testimonials: "section";
   sliderCarousel2: typeof SliderWrapper;
+  section: "section";
   medical: "section";
   _3Columns: "div";
   amt: "div";
@@ -1675,7 +1460,7 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
       forNode: nodeName
     });
   };
-  if (nodeName === "root") {
+  if (nodeName === "homepage") {
     func.displayName = "PlasmicHomepage";
   } else {
     func.displayName = `PlasmicHomepage.${nodeName}`;
@@ -1685,11 +1470,12 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
 
 export const PlasmicHomepage = Object.assign(
   // Top-level PlasmicHomepage renders the root element
-  makeNodeComponent("root"),
+  makeNodeComponent("homepage"),
   {
     // Helper components rendering sub-elements
     menu: makeNodeComponent("menu"),
     menuElements: makeNodeComponent("menuElements"),
+    heroCta2: makeNodeComponent("heroCta2"),
     homeHero: makeNodeComponent("homeHero"),
     heroText: makeNodeComponent("heroText"),
     span: makeNodeComponent("span"),
@@ -1704,6 +1490,7 @@ export const PlasmicHomepage = Object.assign(
     foreground: makeNodeComponent("foreground"),
     testimonials: makeNodeComponent("testimonials"),
     sliderCarousel2: makeNodeComponent("sliderCarousel2"),
+    section: makeNodeComponent("section"),
     medical: makeNodeComponent("medical"),
     _3Columns: makeNodeComponent("_3Columns"),
     amt: makeNodeComponent("amt"),
