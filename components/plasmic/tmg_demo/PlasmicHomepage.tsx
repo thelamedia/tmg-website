@@ -20,6 +20,10 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import {
   hasVariant,
   classNames,
@@ -58,6 +62,7 @@ import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: uNTZAlN07
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: g0aZxbzKHlNV/icon
 
 createPlasmicElementProxy;
+
 
 export type PlasmicHomepage__VariantMembers = {};
 export type PlasmicHomepage__VariantsArgs = {};
@@ -118,7 +123,59 @@ function PlasmicHomepage__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
+  React.useEffect(() => {
+    // Import scripts dynamically
+    const threeScript = document.createElement('script');
+    threeScript.src = '/vanta/three.min.js';
+    threeScript.onload = () => {
+      const vantaScript1 = document.createElement('script');
+      const vantaScript2 = document.createElement('script');
+      vantaScript1.src = '/vanta/vanta.clouds.min.js';
+      vantaScript2.src = '/vanta/vanta.fog.min.js';
+      vantaScript1.onload = () => {
+        if (VANTA && typeof VANTA.CLOUDS === 'function') {
+          VANTA.CLOUDS({
+            el: "#homeHero",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            skyColor: 0x0,
+            cloudColor: 0x181818
+          });
+        }
+      };
+      document.body.appendChild(vantaScript1);
+      vantaScript2.onload = () => {
+        if (VANTA && typeof VANTA.FOG === 'function') {
+          VANTA.FOG({
+            el: "#none",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0x503107,
+            midtoneColor: 0x0,
+            lowlightColor: 0x50505,
+            baseColor: 0x0,
+            speed: 1.20,
+            zoom: 0.40
+          });
+        }
+      };
+      document.body.appendChild(vantaScript2);
+    };
+    document.body.appendChild(threeScript);
 
+    // Clean up effect if the component unmounts
+    return () => {
+      if (window.VANTA) {
+        window.VANTA.effect && window.VANTA.effect.destroy();
+      }
+    };
+  }, []);
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
 
   const $props = {
