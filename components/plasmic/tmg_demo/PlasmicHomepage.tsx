@@ -87,7 +87,6 @@ export type PlasmicHomepage__OverridesType = {
   foreground?: p.Flex<"div">;
   testimonials?: p.Flex<"section">;
   sliderCarousel2?: p.Flex<typeof SliderWrapper>;
-  section?: p.Flex<"section">;
   medical?: p.Flex<"section">;
   _3Columns?: p.Flex<"div">;
   amt?: p.Flex<"div">;
@@ -98,6 +97,7 @@ export type PlasmicHomepage__OverridesType = {
   amt4?: p.Flex<"div">;
   amt5?: p.Flex<"div">;
   amt6?: p.Flex<"div">;
+  h1?: p.Flex<"h1">;
 };
 
 export interface DefaultHomepageProps {}
@@ -717,6 +717,12 @@ function PlasmicHomepage__RenderFunc(props: {
                   displayMinWidth={"0"}
                   displayWidth={"auto"}
                   loading={"lazy"}
+                  src={{
+                    src: "/plasmic/tmg_website/images/image5.png",
+                    fullWidth: 489,
+                    fullHeight: 185,
+                    aspectRatio: undefined
+                  }}
                 />
               </div>
             </p.Stack>
@@ -769,15 +775,18 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(projectcss.all, sty.copy)}
                   >
                     <Reveal
+                      big={false}
                       cascade={false}
                       className={classNames(
                         "__wab_instance",
                         sty.reveal__sM0Be
                       )}
-                      damping={0.8}
+                      damping={0.5}
                       delay={1}
-                      direction={"down"}
-                      duration={2000}
+                      direction={"right"}
+                      duration={1000}
+                      effect={"fade"}
+                      reverse={false}
                       triggerOnce={true}
                     >
                       <p.Stack
@@ -1139,9 +1148,11 @@ function PlasmicHomepage__RenderFunc(props: {
             </div>
           </section>
           <section
-            data-plasmic-name={"section"}
-            data-plasmic-override={overrides.section}
-            className={classNames(projectcss.all, sty.section, "stats-area")}
+            className={classNames(
+              projectcss.all,
+              sty.section__fTDbV,
+              "stats-area"
+            )}
           >
             <div className={classNames(projectcss.all, sty.columns__zWpuE)}>
               <div className={classNames(projectcss.all, sty.column__whQyF)}>
@@ -1502,6 +1513,29 @@ function PlasmicHomepage__RenderFunc(props: {
               </p.Stack>
             </div>
           </p.Stack>
+          <section className={classNames(projectcss.all, sty.section__mWhNr)}>
+            <h1
+              data-plasmic-name={"h1"}
+              data-plasmic-override={overrides.h1}
+              className={classNames(
+                projectcss.all,
+                projectcss.h1,
+                projectcss.__wab_text,
+                sty.h1
+              )}
+            >
+              {"Ready to chat? "}
+            </h1>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__wdxv1
+              )}
+            >
+              {"Go ahead and drop us a line.  It's time to get you noticed. "}
+            </div>
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -1528,7 +1562,6 @@ const PlasmicDescendants = {
     "foreground",
     "testimonials",
     "sliderCarousel2",
-    "section",
     "medical",
     "_3Columns",
     "amt",
@@ -1538,7 +1571,8 @@ const PlasmicDescendants = {
     "_3Columns2",
     "amt4",
     "amt5",
-    "amt6"
+    "amt6",
+    "h1"
   ],
   menu: ["menu", "menuElements", "heroCta2"],
   menuElements: ["menuElements", "heroCta2"],
@@ -1557,7 +1591,6 @@ const PlasmicDescendants = {
   foreground: ["foreground"],
   testimonials: ["testimonials", "sliderCarousel2"],
   sliderCarousel2: ["sliderCarousel2"],
-  section: ["section"],
   medical: ["medical", "_3Columns", "amt", "amt2", "amt3"],
   _3Columns: ["_3Columns", "amt", "amt2", "amt3"],
   amt: ["amt"],
@@ -1567,7 +1600,8 @@ const PlasmicDescendants = {
   _3Columns2: ["_3Columns2", "amt4", "amt5", "amt6"],
   amt4: ["amt4"],
   amt5: ["amt5"],
-  amt6: ["amt6"]
+  amt6: ["amt6"],
+  h1: ["h1"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1591,7 +1625,6 @@ type NodeDefaultElementType = {
   foreground: "div";
   testimonials: "section";
   sliderCarousel2: typeof SliderWrapper;
-  section: "section";
   medical: "section";
   _3Columns: "div";
   amt: "div";
@@ -1602,6 +1635,7 @@ type NodeDefaultElementType = {
   amt4: "div";
   amt5: "div";
   amt6: "div";
+  h1: "h1";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1681,7 +1715,6 @@ export const PlasmicHomepage = Object.assign(
     foreground: makeNodeComponent("foreground"),
     testimonials: makeNodeComponent("testimonials"),
     sliderCarousel2: makeNodeComponent("sliderCarousel2"),
-    section: makeNodeComponent("section"),
     medical: makeNodeComponent("medical"),
     _3Columns: makeNodeComponent("_3Columns"),
     amt: makeNodeComponent("amt"),
@@ -1692,6 +1725,7 @@ export const PlasmicHomepage = Object.assign(
     amt4: makeNodeComponent("amt4"),
     amt5: makeNodeComponent("amt5"),
     amt6: makeNodeComponent("amt6"),
+    h1: makeNodeComponent("h1"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
