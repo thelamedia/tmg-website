@@ -52,6 +52,8 @@ import sty from "./PlasmicHomepage.module.css"; // plasmic-import: XpeFIiBi7NnY/
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: 8Ydc_EtyRQKt/icon
 import Icon38Icon from "./icons/PlasmicIcon__Icon38"; // plasmic-import: fV2xAdFtCCM7/icon
 import Icon4Icon from "./icons/PlasmicIcon__Icon4"; // plasmic-import: NpEGyspG1WV_/icon
+import Icon5Icon from "./icons/PlasmicIcon__Icon5"; // plasmic-import: mYDiiUwNMA_x/icon
+import Icon6Icon from "./icons/PlasmicIcon__Icon6"; // plasmic-import: uNTZAlN07UAX/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: WWKN1zpTsehN/icon
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: g0aZxbzKHlNV/icon
 
@@ -76,6 +78,7 @@ export type PlasmicHomepage__OverridesType = {
   heroDescription?: p.Flex<"div">;
   heroCta?: p.Flex<typeof Button2>;
   columns?: p.Flex<"section">;
+  vanta?: p.Flex<"section">;
   clients?: p.Flex<"section">;
   imageGrid?: p.Flex<"div">;
   background2?: p.Flex<"div">;
@@ -183,6 +186,7 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-name={"homeHero"}
             data-plasmic-override={overrides.homeHero}
             className={classNames(projectcss.all, sty.homeHero)}
+            id={"homeHero"}
           >
             <p.Stack
               as={"div"}
@@ -503,7 +507,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <div
                     className={classNames(projectcss.all, sty.column__nTl2A)}
                   >
-                    <Icon4Icon
+                    <Icon5Icon
                       className={classNames(projectcss.all, sty.svg__wVix7)}
                       role={"img"}
                     />
@@ -536,7 +540,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <div
                     className={classNames(projectcss.all, sty.column__t9P1L)}
                   >
-                    <Icon4Icon
+                    <Icon6Icon
                       className={classNames(projectcss.all, sty.svg__xGdQ7)}
                       role={"img"}
                     />
@@ -568,6 +572,13 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </p.Stack>
           </section>
+          <section
+            data-plasmic-name={"vanta"}
+            data-plasmic-override={overrides.vanta}
+            className={classNames(projectcss.all, sty.vanta)}
+            id={"vanta"}
+          />
+
           <section
             data-plasmic-name={"clients"}
             data-plasmic-override={overrides.clients}
@@ -1524,6 +1535,7 @@ const PlasmicDescendants = {
     "heroDescription",
     "heroCta",
     "columns",
+    "vanta",
     "clients",
     "imageGrid",
     "background2",
@@ -1554,6 +1566,7 @@ const PlasmicDescendants = {
   heroDescription: ["heroDescription"],
   heroCta: ["heroCta"],
   columns: ["columns"],
+  vanta: ["vanta"],
   clients: ["clients"],
   imageGrid: ["imageGrid", "background2", "copy"],
   background2: ["background2"],
@@ -1581,6 +1594,7 @@ type NodeDefaultElementType = {
   heroDescription: "div";
   heroCta: typeof Button2;
   columns: "section";
+  vanta: "section";
   clients: "section";
   imageGrid: "div";
   background2: "div";
@@ -1664,6 +1678,7 @@ export const PlasmicHomepage = Object.assign(
     heroDescription: makeNodeComponent("heroDescription"),
     heroCta: makeNodeComponent("heroCta"),
     columns: makeNodeComponent("columns"),
+    vanta: makeNodeComponent("vanta"),
     clients: makeNodeComponent("clients"),
     imageGrid: makeNodeComponent("imageGrid"),
     background2: makeNodeComponent("background2"),

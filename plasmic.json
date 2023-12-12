@@ -545,6 +545,16 @@
           "id": "NpEGyspG1WV_",
           "name": "Icon4Icon",
           "moduleFilePath": "plasmic/tmg_demo/icons/PlasmicIcon__Icon4.tsx"
+        },
+        {
+          "id": "mYDiiUwNMA_x",
+          "name": "Icon5Icon",
+          "moduleFilePath": "plasmic/tmg_demo/icons/PlasmicIcon__Icon5.tsx"
+        },
+        {
+          "id": "uNTZAlN07UAX",
+          "name": "Icon6Icon",
+          "moduleFilePath": "plasmic/tmg_demo/icons/PlasmicIcon__Icon6.tsx"
         }
       ],
       "images": [
