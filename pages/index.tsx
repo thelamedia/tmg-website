@@ -7,7 +7,10 @@ import { ScreenVariantProvider } from "../components/plasmic/tmg_demo/PlasmicGlo
 import { PlasmicHomepage } from "../components/plasmic/tmg_demo/PlasmicHomepage";
 import { useRouter } from "next/router";
 
+
+
 function Homepage() {
+
   // Use PlasmicHomepage to render this component as it was
   // designed in Plasmic, by activating the appropriate variants,
   // attaching the appropriate event handlers, etc.  You

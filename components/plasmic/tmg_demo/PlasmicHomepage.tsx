@@ -152,15 +152,55 @@ function PlasmicHomepage__RenderFunc(props: {
     screen: useScreenVariantswtDzL3SdIaL()
   });
 
+  React.useEffect(() => {
+    // Import scripts dynamically
+    const threeScript = document.createElement('script');
+    threeScript.src = '/vanta/three.min.js';
+    threeScript.onload = () => {
+      const vantaScript = document.createElement('script');
+      vantaScript.src = '/vanta/vanta.fog.min.js';
+      vantaScript.onload = () => {
+        if (VANTA && typeof VANTA.FOG === 'function') {
+          VANTA.FOG({
+            el: "#homeHero",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0xfff0,
+            midtoneColor: 0x2c00ff,
+            lowlightColor: 0xff6800,
+            baseColor: 0xfafafa,
+            blurFactor: 0.87,
+            zoom: 0.30
+          });
+        }
+      };
+      document.body.appendChild(vantaScript);
+    };
+    document.body.appendChild(threeScript);
+
+    // Clean up effect if the component unmounts
+    return () => {
+      if (window.VANTA) {
+        window.VANTA.effect && window.VANTA.effect.destroy();
+      }
+    };
+  }, []);
+
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+      </Head>
 
       <style>{`
         body {
           margin: 0;
         }
       `}</style>
+
+
 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
@@ -179,10 +219,14 @@ function PlasmicHomepage__RenderFunc(props: {
             sty.root
           )}
         >
+          <div id="your-element-selector">
+        {/* Your content here */}
+      </div>
           <section
             data-plasmic-name={"homeHero"}
             data-plasmic-override={overrides.homeHero}
             className={classNames(projectcss.all, sty.homeHero)}
+           
           >
             <p.Stack
               as={"div"}
@@ -220,6 +264,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   hasGap={true}
                   className={classNames(projectcss.all, sty.freeBox__o4Rsw)}
                 >
+                  
                   <Button2
                     className={classNames("__wab_instance", sty.button2__mfYp)}
                     color={"clear"}
@@ -806,6 +851,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-name={"background2"}
                   data-plasmic-override={overrides.background2}
                   className={classNames(projectcss.all, sty.background2)}
+                  id="homeHero"
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__yoJHu)}>
