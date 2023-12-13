@@ -20,6 +20,12 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 
+//Imports
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import {SpeedInsights} from "@vercel/speed-insights/next"
+
+
 import {
   hasVariant,
   classNames,
@@ -125,7 +131,39 @@ function PlasmicHomepage__RenderFunc(props: {
     ...args,
     ...variants
   };
+  React.useEffect(() => {
+    // Import scripts dynamically
+    const threeScript = document.createElement('script');
+    threeScript.src = '/vanta/three.min.js';
+    threeScript.onload = () => {
+      const vantaScript1 = document.createElement('script');
+      vantaScript1.src = '/vanta/vanta.clouds.min.js';
+      vantaScript1.onload = () => {
+        if (VANTA && typeof VANTA.CLOUDS === 'function') {
+          VANTA.CLOUDS({
+            el: "#homeHero",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            skyColor: 0x0,
+            cloudColor: 0x181818,
+            speed: .7
+          });
+        }
+      };
+      document.body.appendChild(vantaScript1);
+    };
+    document.body.appendChild(threeScript);
 
+    // Clean up effect if the component unmounts
+    return () => {
+      if (window.VANTA) {
+        window.VANTA.effect && window.VANTA.effect.destroy();
+      }
+    };
+  }, []);
   const __nextRouter = useNextRouter();
   const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
@@ -161,10 +199,13 @@ function PlasmicHomepage__RenderFunc(props: {
     screen: useScreenVariantswtDzL3SdIaL()
   });
 
+
+
   return (
     <React.Fragment>
+    
       <Head></Head>
-
+      <SpeedInsights />
       <style>{`
         body {
           margin: 0;
@@ -172,6 +213,7 @@ function PlasmicHomepage__RenderFunc(props: {
       `}</style>
 
       <div className={projectcss.plasmic_page_wrapper}>
+    
         <div
           data-plasmic-name={"homepage"}
           data-plasmic-override={overrides.homepage}
