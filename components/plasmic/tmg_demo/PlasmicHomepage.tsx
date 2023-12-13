@@ -20,12 +20,6 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 
-//Imports
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import {SpeedInsights} from "@vercel/speed-insights/next"
-
-
 import {
   hasVariant,
   classNames,
@@ -78,6 +72,7 @@ export type PlasmicHomepage__OverridesType = {
   homepage?: p.Flex<"div">;
   menu?: p.Flex<"div">;
   menuElements?: p.Flex<"div">;
+  caseStudies?: p.Flex<typeof Button2>;
   heroCta2?: p.Flex<typeof Button2>;
   homeHero?: p.Flex<"section">;
   heroText?: p.Flex<"h1">;
@@ -93,17 +88,21 @@ export type PlasmicHomepage__OverridesType = {
   foreground?: p.Flex<"div">;
   testimonials?: p.Flex<"section">;
   sliderCarousel2?: p.Flex<typeof SliderWrapper>;
+  section?: p.Flex<"section">;
   medical?: p.Flex<"section">;
   _3Columns?: p.Flex<"div">;
   amt?: p.Flex<"div">;
   amt2?: p.Flex<"div">;
   amt3?: p.Flex<"div">;
-  medical2?: p.Flex<"section">;
+  tech?: p.Flex<"section">;
   _3Columns2?: p.Flex<"div">;
   amt4?: p.Flex<"div">;
   amt5?: p.Flex<"div">;
   amt6?: p.Flex<"div">;
+  chat?: p.Flex<"section">;
   h1?: p.Flex<"h1">;
+  footer?: p.Flex<"section">;
+  link?: p.Flex<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultHomepageProps {}
@@ -131,39 +130,7 @@ function PlasmicHomepage__RenderFunc(props: {
     ...args,
     ...variants
   };
-  React.useEffect(() => {
-    // Import scripts dynamically
-    const threeScript = document.createElement('script');
-    threeScript.src = '/vanta/three.min.js';
-    threeScript.onload = () => {
-      const vantaScript1 = document.createElement('script');
-      vantaScript1.src = '/vanta/vanta.clouds.min.js';
-      vantaScript1.onload = () => {
-        if (VANTA && typeof VANTA.CLOUDS === 'function') {
-          VANTA.CLOUDS({
-            el: "#homeHero",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            skyColor: 0x0,
-            cloudColor: 0x181818,
-            speed: .7
-          });
-        }
-      };
-      document.body.appendChild(vantaScript1);
-    };
-    document.body.appendChild(threeScript);
 
-    // Clean up effect if the component unmounts
-    return () => {
-      if (window.VANTA) {
-        window.VANTA.effect && window.VANTA.effect.destroy();
-      }
-    };
-  }, []);
   const __nextRouter = useNextRouter();
   const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
@@ -199,13 +166,10 @@ function PlasmicHomepage__RenderFunc(props: {
     screen: useScreenVariantswtDzL3SdIaL()
   });
 
-
-
   return (
     <React.Fragment>
-    
       <Head></Head>
-      <SpeedInsights />
+
       <style>{`
         body {
           margin: 0;
@@ -213,7 +177,6 @@ function PlasmicHomepage__RenderFunc(props: {
       `}</style>
 
       <div className={projectcss.plasmic_page_wrapper}>
-    
         <div
           data-plasmic-name={"homepage"}
           data-plasmic-override={overrides.homepage}
@@ -268,34 +231,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(projectcss.all, sty.freeBox__o4Rsw)}
               >
                 <Button2
-                  className={classNames("__wab_instance", sty.button2__mfYp)}
-                  color={"clear"}
-                  endIcon={
-                    <Icon38Icon
-                      className={classNames(projectcss.all, sty.svg___6DwpF)}
-                      role={"img"}
-                    />
-                  }
-                  startIcon={
-                    <ChecksvgIcon
-                      className={classNames(projectcss.all, sty.svg__ck3U9)}
-                      role={"img"}
-                    />
-                  }
-                  submitsForm={true}
-                >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__aVfAp
-                    )}
-                  >
-                    {"What We Do"}
-                  </div>
-                </Button2>
-                <Button2
-                  className={classNames("__wab_instance", sty.button2__wwR6I)}
+                  data-plasmic-name={"caseStudies"}
+                  data-plasmic-override={overrides.caseStudies}
+                  className={classNames("__wab_instance", sty.caseStudies)}
                   color={"clear"}
                   endIcon={
                     <Icon38Icon
@@ -418,10 +356,9 @@ function PlasmicHomepage__RenderFunc(props: {
               {"What We Do"}
             </h2>
             <Reveal
-              cascade={true}
               className={classNames("__wab_instance", sty.reveal__mXo7B)}
               damping={0.8}
-              duration={1500}
+              duration={1000}
               triggerOnce={true}
             >
               <p.Stack
@@ -1154,6 +1091,33 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
+                            sty.freeBox__eIt1P
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__w3C1U
+                            )}
+                          >
+                            {
+                              '"We use Thela Media Group as our sole vendor whenever it comes to marketing and branding materials for our various companies. During the many years we have been doing business with them, we have never been disappointed in their work. Their customer service is exceptional, which is hard to find these days."'
+                            }
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__tfsRw
+                            )}
+                          >
+                            {"Shawn\nPresident - Medical Management Firm"}
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
                             sty.freeBox__hyqdw
                           )}
                         >
@@ -1186,11 +1150,9 @@ function PlasmicHomepage__RenderFunc(props: {
             </div>
           </section>
           <section
-            className={classNames(
-              projectcss.all,
-              sty.section__fTDbV,
-              "stats-area"
-            )}
+            data-plasmic-name={"section"}
+            data-plasmic-override={overrides.section}
+            className={classNames(projectcss.all, sty.section, "stats-area")}
           >
             <div className={classNames(projectcss.all, sty.columns__zWpuE)}>
               <div className={classNames(projectcss.all, sty.column__whQyF)}>
@@ -1202,7 +1164,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__sZlmZ
                     )}
                   >
-                    {"1,000,000+"}
+                    {"400+"}
                   </div>
                   <div
                     className={classNames(
@@ -1211,7 +1173,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text___3Qddx
                     )}
                   >
-                    {"Leads Generated"}
+                    {"Campaigns Launched"}
                   </div>
                 </div>
               </div>
@@ -1224,7 +1186,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__i5SwE
                     )}
                   >
-                    {"600+"}
+                    {"1,250,000+"}
                   </div>
                   <div
                     className={classNames(
@@ -1233,7 +1195,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__sMbUn
                     )}
                   >
-                    {"Clients Served"}
+                    {"Ads Served"}
                   </div>
                 </div>
               </div>
@@ -1246,7 +1208,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__xoD8I
                     )}
                   >
-                    {"10"}
+                    {"Unlimited"}
                   </div>
                   <div
                     className={classNames(
@@ -1255,7 +1217,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__dFbgQ
                     )}
                   >
-                    {"Industry Verticals"}
+                    {"Potential"}
                   </div>
                 </div>
               </div>
@@ -1411,10 +1373,10 @@ function PlasmicHomepage__RenderFunc(props: {
           </p.Stack>
           <p.Stack
             as={"section"}
-            data-plasmic-name={"medical2"}
-            data-plasmic-override={overrides.medical2}
+            data-plasmic-name={"tech"}
+            data-plasmic-override={overrides.tech}
             hasGap={true}
-            className={classNames(projectcss.all, sty.medical2)}
+            className={classNames(projectcss.all, sty.tech)}
           >
             <div
               className={classNames(
@@ -1551,7 +1513,11 @@ function PlasmicHomepage__RenderFunc(props: {
               </p.Stack>
             </div>
           </p.Stack>
-          <section className={classNames(projectcss.all, sty.section__mWhNr)}>
+          <section
+            data-plasmic-name={"chat"}
+            data-plasmic-override={overrides.chat}
+            className={classNames(projectcss.all, sty.chat)}
+          >
             <h1
               data-plasmic-name={"h1"}
               data-plasmic-override={overrides.h1}
@@ -1562,7 +1528,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 sty.h1
               )}
             >
-              {"Ready to chat? "}
+              {"Ready to stand out? "}
             </h1>
             <div
               className={classNames(
@@ -1603,6 +1569,65 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </Button2>
           </section>
+          <section
+            data-plasmic-name={"footer"}
+            data-plasmic-override={overrides.footer}
+            className={classNames(projectcss.all, sty.footer)}
+          >
+            <div className={classNames(projectcss.all, sty.columns__o1RnO)}>
+              <div className={classNames(projectcss.all, sty.column__orAa1)}>
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__lttVr)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"180px"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"auto"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/tmg_website/images/image7.png",
+                    fullWidth: 908,
+                    fullHeight: 254,
+                    aspectRatio: undefined
+                  }}
+                />
+              </div>
+              <div className={classNames(projectcss.all, sty.column__z1Gql)}>
+                <p.Stack
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__gwgyg)}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__v7F0R
+                    )}
+                  >
+                    {"\u00a9Thela Media Group 2023"}
+                  </div>
+                  <p.PlasmicLink
+                    data-plasmic-name={"link"}
+                    data-plasmic-override={overrides.link}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.a,
+                      projectcss.__wab_text,
+                      sty.link
+                    )}
+                    component={Link}
+                    href={"https://www.iubenda.com/privacy-policy/32379396"}
+                    platform={"nextjs"}
+                  >
+                    {"Privacy Policy"}
+                  </p.PlasmicLink>
+                </p.Stack>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </React.Fragment>
@@ -1614,6 +1639,7 @@ const PlasmicDescendants = {
     "homepage",
     "menu",
     "menuElements",
+    "caseStudies",
     "heroCta2",
     "homeHero",
     "heroText",
@@ -1629,20 +1655,25 @@ const PlasmicDescendants = {
     "foreground",
     "testimonials",
     "sliderCarousel2",
+    "section",
     "medical",
     "_3Columns",
     "amt",
     "amt2",
     "amt3",
-    "medical2",
+    "tech",
     "_3Columns2",
     "amt4",
     "amt5",
     "amt6",
-    "h1"
+    "chat",
+    "h1",
+    "footer",
+    "link"
   ],
-  menu: ["menu", "menuElements", "heroCta2"],
-  menuElements: ["menuElements", "heroCta2"],
+  menu: ["menu", "menuElements", "caseStudies", "heroCta2"],
+  menuElements: ["menuElements", "caseStudies", "heroCta2"],
+  caseStudies: ["caseStudies"],
   heroCta2: ["heroCta2"],
   homeHero: ["homeHero", "heroText", "heroText2", "heroDescription", "heroCta"],
   heroText: ["heroText"],
@@ -1658,17 +1689,21 @@ const PlasmicDescendants = {
   foreground: ["foreground"],
   testimonials: ["testimonials", "sliderCarousel2"],
   sliderCarousel2: ["sliderCarousel2"],
+  section: ["section"],
   medical: ["medical", "_3Columns", "amt", "amt2", "amt3"],
   _3Columns: ["_3Columns", "amt", "amt2", "amt3"],
   amt: ["amt"],
   amt2: ["amt2"],
   amt3: ["amt3"],
-  medical2: ["medical2", "_3Columns2", "amt4", "amt5", "amt6"],
+  tech: ["tech", "_3Columns2", "amt4", "amt5", "amt6"],
   _3Columns2: ["_3Columns2", "amt4", "amt5", "amt6"],
   amt4: ["amt4"],
   amt5: ["amt5"],
   amt6: ["amt6"],
-  h1: ["h1"]
+  chat: ["chat", "h1"],
+  h1: ["h1"],
+  footer: ["footer", "link"],
+  link: ["link"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -1677,6 +1712,7 @@ type NodeDefaultElementType = {
   homepage: "div";
   menu: "div";
   menuElements: "div";
+  caseStudies: typeof Button2;
   heroCta2: typeof Button2;
   homeHero: "section";
   heroText: "h1";
@@ -1692,17 +1728,21 @@ type NodeDefaultElementType = {
   foreground: "div";
   testimonials: "section";
   sliderCarousel2: typeof SliderWrapper;
+  section: "section";
   medical: "section";
   _3Columns: "div";
   amt: "div";
   amt2: "div";
   amt3: "div";
-  medical2: "section";
+  tech: "section";
   _3Columns2: "div";
   amt4: "div";
   amt5: "div";
   amt6: "div";
+  chat: "section";
   h1: "h1";
+  footer: "section";
+  link: "a";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -1767,6 +1807,7 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     menu: makeNodeComponent("menu"),
     menuElements: makeNodeComponent("menuElements"),
+    caseStudies: makeNodeComponent("caseStudies"),
     heroCta2: makeNodeComponent("heroCta2"),
     homeHero: makeNodeComponent("homeHero"),
     heroText: makeNodeComponent("heroText"),
@@ -1782,17 +1823,21 @@ export const PlasmicHomepage = Object.assign(
     foreground: makeNodeComponent("foreground"),
     testimonials: makeNodeComponent("testimonials"),
     sliderCarousel2: makeNodeComponent("sliderCarousel2"),
+    section: makeNodeComponent("section"),
     medical: makeNodeComponent("medical"),
     _3Columns: makeNodeComponent("_3Columns"),
     amt: makeNodeComponent("amt"),
     amt2: makeNodeComponent("amt2"),
     amt3: makeNodeComponent("amt3"),
-    medical2: makeNodeComponent("medical2"),
+    tech: makeNodeComponent("tech"),
     _3Columns2: makeNodeComponent("_3Columns2"),
     amt4: makeNodeComponent("amt4"),
     amt5: makeNodeComponent("amt5"),
     amt6: makeNodeComponent("amt6"),
+    chat: makeNodeComponent("chat"),
     h1: makeNodeComponent("h1"),
+    footer: makeNodeComponent("footer"),
+    link: makeNodeComponent("link"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
