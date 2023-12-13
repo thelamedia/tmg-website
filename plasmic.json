@@ -460,10 +460,21 @@
             "name": "paginationHelpers",
             "importPath": "@plasmicpkgs/antd5/skinny/registerPagination"
           }
+        },
+        {
+          "id": "Zjjf7sP4JdQI",
+          "name": "AntdBreadcrumb",
+          "displayName": "plasmic-antd5-breadcrumb",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
+        },
+        {
+          "id": "2ZOevuBPH-SX",
+          "name": "AntdBreadcrumbItem",
+          "displayName": "plasmic-antd5-breadcrumb-item",
+          "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "tXTYCQMcFRriEHeNaPTHe7",
@@ -558,34 +569,9 @@
       ],
       "images": [
         {
-          "id": "sIIQ8Rfgp7CY",
-          "name": "image",
-          "filePath": "../public/plasmic/tmg_demo/images/image.svg"
-        },
-        {
           "id": "yIpYcN4MSPez",
           "name": "TMGIcon.png",
           "filePath": "../public/plasmic/tmg_demo/images/tmgIconpng.png"
-        },
-        {
-          "id": "Jvsi5LEJ0hv0",
-          "name": "TMG Logo White.png",
-          "filePath": "../public/plasmic/tmg_website/images/tmgLogoWhitepng.png"
-        },
-        {
-          "id": "-p8EJVBY-fu-",
-          "name": "image 2",
-          "filePath": "../public/plasmic/tmg_website/images/image2.png"
-        },
-        {
-          "id": "idUErNihnW_E",
-          "name": "image 3",
-          "filePath": "../public/plasmic/tmg_website/images/image3.png"
-        },
-        {
-          "id": "8XTMMWiPjrxK",
-          "name": "image 4",
-          "filePath": "../public/plasmic/tmg_website/images/image4.png"
         },
         {
           "id": "XSEfUiqEjKia",
@@ -593,14 +579,29 @@
           "filePath": "../public/plasmic/tmg_website/images/image5.png"
         },
         {
-          "id": "f7oxY_owTBtV",
-          "name": "image 6",
-          "filePath": "../public/plasmic/tmg_website/images/image6.png"
-        },
-        {
           "id": "Mew5UV2G5Qo2",
           "name": "image 7",
           "filePath": "../public/plasmic/tmg_website/images/image7.png"
+        },
+        {
+          "id": "SkDv4xlu9JHp",
+          "name": "image",
+          "filePath": "../public/plasmic/tmg_website/images/image.svg"
+        },
+        {
+          "id": "nkJf4-7IxUbO",
+          "name": "image 2",
+          "filePath": "../public/plasmic/tmg_website/images/image2.png"
+        },
+        {
+          "id": "E7_7rbt8HpK1",
+          "name": "image 3",
+          "filePath": "../public/plasmic/tmg_website/images/image3.png"
+        },
+        {
+          "id": "qrBGAYk4-XAW",
+          "name": "image 4",
+          "filePath": "../public/plasmic/tmg_website/images/image4.png"
         }
       ],
       "indirect": false,
@@ -733,6 +734,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.324",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.324/dist/plasmic.schema.json"
+  "cliVersion": "0.1.325",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.325/dist/plasmic.schema.json"
 }

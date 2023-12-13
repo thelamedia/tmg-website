@@ -19,10 +19,6 @@ import { useRouter } from "next/router";
 
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import {SpeedInsights} from "@vercel/speed-insights/next"
-
 
 import {
   hasVariant,
@@ -86,7 +82,6 @@ export type PlasmicHomepage__OverridesType = {
   columns?: p.Flex<"section">;
   clients?: p.Flex<"section">;
   imageGrid?: p.Flex<"div">;
-  background2?: p.Flex<"div">;
   copy?: p.Flex<"div">;
   checklist?: p.Flex<"section">;
   foreground?: p.Flex<"div">;
@@ -106,6 +101,8 @@ export type PlasmicHomepage__OverridesType = {
   chat?: p.Flex<"section">;
   h1?: p.Flex<"h1">;
   footer?: p.Flex<"section">;
+  h4?: p.Flex<"h4">;
+  phoneNumber?: p.Flex<"a"> & Partial<LinkProps>;
   link?: p.Flex<"a"> & Partial<LinkProps>;
 };
 
@@ -134,60 +131,7 @@ function PlasmicHomepage__RenderFunc(props: {
     ...args,
     ...variants
   };
-  React.useEffect(() => {
-    // Import scripts dynamically
-    const threeScript = document.createElement('script');
-    threeScript.src = '/vanta/three.min.js';
-    threeScript.onload = () => {
-      const vantaScript1 = document.createElement('script');
-      const vantaScript2 = document.createElement('script');
-      vantaScript1.src = '/vanta/vanta.clouds.min.js';
-      vantaScript2.src = '/vanta/vanta.fog.min.js';
-      vantaScript1.onload = () => {
-        if (VANTA && typeof VANTA.CLOUDS === 'function') {
-          VANTA.CLOUDS({
-            el: "#homeHero",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            skyColor: 0x0,
-            cloudColor: 0x181818,
-            speed: .7
-          });
-        }
-      };
-      document.body.appendChild(vantaScript1);
-      vantaScript2.onload = () => {
-        if (VANTA && typeof VANTA.FOG === 'function') {
-          VANTA.FOG({
-            el: "#none",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            highlightColor: 0x503107,
-            midtoneColor: 0x0,
-            lowlightColor: 0x50505,
-            baseColor: 0x0,
-            speed: 1.20,
-            zoom: 0.40
-          });
-        }
-      };
-      document.body.appendChild(vantaScript2);
-    };
-    document.body.appendChild(threeScript);
 
-    // Clean up effect if the component unmounts
-    return () => {
-      if (window.VANTA) {
-        window.VANTA.effect && window.VANTA.effect.destroy();
-      }
-    };
-  }, []);
   const __nextRouter = useNextRouter();
   const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
@@ -226,7 +170,7 @@ function PlasmicHomepage__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head></Head>
-      <SpeedInsights /> 
+
       <style>{`
         body {
           margin: 0;
@@ -548,217 +492,236 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.clients}
             className={classNames(projectcss.all, sty.clients)}
           >
-            <h2
-              className={classNames(
-                projectcss.all,
-                projectcss.h2,
-                projectcss.__wab_text,
-                sty.h2___4RNtx
-              )}
+            <Reveal
+              className={classNames("__wab_instance", sty.reveal___9KMeV)}
+              triggerOnce={true}
             >
-              {"Trusted By 600+ Companies Worldwide"}
-            </h2>
-            <p.Stack
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.columns___4UlzU)}
+              <h2
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h2,
+                  projectcss.__wab_text,
+                  sty.h2___4RNtx
+                )}
+              >
+                {"Trusted By 600+ Companies Worldwide"}
+              </h2>
+            </Reveal>
+            <Reveal
+              className={classNames("__wab_instance", sty.reveal__bIOv)}
+              triggerOnce={true}
             >
-              <div className={classNames(projectcss.all, sty.column__h1DO2)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__rSya3)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://www.thelamedia.com/wp-content/uploads/2021/11/Forcepoint-Logo.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column___7NYpq)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__ie7Sx)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://www.thelamedia.com/wp-content/uploads/2023/02/Jecobra-Logo.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__hlEG)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__mQaLs)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://www.thelamedia.com/wp-content/uploads/2023/02/auntie-annes.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__wBNpM)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__mDyhm)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://www.thelamedia.com/wp-content/uploads/2021/11/Qualico-logo-2.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__qXdDz)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__jrbM5)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://www.thelamedia.com/wp-content/uploads/2021/11/nb-capital-logo.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column___32EM)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img___5H7K)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://www.thelamedia.com/wp-content/uploads/2021/11/Artboard-3amt.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__zVYw)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img___4YuMy)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://www.thelamedia.com/wp-content/uploads/2023/02/restart-logo.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__kXDyO)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__geyzG)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://www.thelamedia.com/wp-content/uploads/2021/11/THS-Logo.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__aXghz)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__bTptI)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://www.thelamedia.com/wp-content/uploads/2021/11/Artboard-1-copy@2x.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__uGfVw)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__wTOW)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://theprevivor-v1685545382.websitepro-cdn.com/wp-content/uploads/2019/09/Logo-Black-Transparent-e1574326461251.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__fa7Oj)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__gLjW)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={
-                    "https://wellcellglobal.com/wp-content/uploads/2023/12/WellCellGlobalLogo-1.png"
-                  }
-                />
-              </div>
-              <div className={classNames(projectcss.all, sty.column__mplzl)}>
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img__rcIm)}
-                  displayHeight={"auto"}
-                  displayMaxHeight={"none"}
-                  displayMaxWidth={"100%"}
-                  displayMinHeight={"0"}
-                  displayMinWidth={"0"}
-                  displayWidth={"auto"}
-                  loading={"lazy"}
-                  src={{
-                    src: "/plasmic/tmg_website/images/image5.png",
-                    fullWidth: 489,
-                    fullHeight: 185,
-                    aspectRatio: undefined
-                  }}
-                />
-              </div>
-            </p.Stack>
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.columns___4UlzU)}
+              >
+                <div className={classNames(projectcss.all, sty.column__h1DO2)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__rSya3)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={
+                      "https://www.thelamedia.com/wp-content/uploads/2021/11/Forcepoint-Logo.png"
+                    }
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column___7NYpq)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__ie7Sx)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={
+                      "https://www.thelamedia.com/wp-content/uploads/2023/02/Jecobra-Logo.png"
+                    }
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__hlEG)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__mQaLs)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/tmg_website/images/image.svg",
+                      fullWidth: 300,
+                      fullHeight: 57,
+                      aspectRatio: 5.225
+                    }}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__wBNpM)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__mDyhm)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={
+                      "https://www.thelamedia.com/wp-content/uploads/2021/11/Qualico-logo-2.png"
+                    }
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__qXdDz)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__jrbM5)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={
+                      "https://www.thelamedia.com/wp-content/uploads/2021/11/nb-capital-logo.png"
+                    }
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column___32EM)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img___5H7K)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={
+                      "https://www.thelamedia.com/wp-content/uploads/2021/11/Artboard-3amt.png"
+                    }
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__zVYw)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img___4YuMy)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={
+                      "https://www.thelamedia.com/wp-content/uploads/2023/02/restart-logo.png"
+                    }
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__kXDyO)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__geyzG)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={
+                      "https://www.thelamedia.com/wp-content/uploads/2021/11/THS-Logo.png"
+                    }
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__aXghz)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__ciftv)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/tmg_website/images/image4.png",
+                      fullWidth: 218,
+                      fullHeight: 53,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__uGfVw)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__wTOW)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={
+                      "https://theprevivor-v1685545382.websitepro-cdn.com/wp-content/uploads/2019/09/Logo-Black-Transparent-e1574326461251.png"
+                    }
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__fa7Oj)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__gLjW)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/tmg_website/images/image2.png",
+                      fullWidth: 1480,
+                      fullHeight: 428,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+                <div className={classNames(projectcss.all, sty.column__mplzl)}>
+                  <p.PlasmicImg
+                    alt={""}
+                    className={classNames(sty.img__rcIm)}
+                    displayHeight={"auto"}
+                    displayMaxHeight={"none"}
+                    displayMaxWidth={"100%"}
+                    displayMinHeight={"0"}
+                    displayMinWidth={"0"}
+                    displayWidth={"auto"}
+                    loading={"lazy"}
+                    src={{
+                      src: "/plasmic/tmg_website/images/image5.png",
+                      fullWidth: 489,
+                      fullHeight: 185,
+                      aspectRatio: undefined
+                    }}
+                  />
+                </div>
+              </p.Stack>
+            </Reveal>
           </section>
           <p.Stack
             as={"div"}
@@ -788,11 +751,6 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                   />
                 </Reveal>
-                <div
-                  data-plasmic-name={"background2"}
-                  data-plasmic-override={overrides.background2}
-                  className={classNames(projectcss.all, sty.background2)}
-                />
               </div>
               <div className={classNames(projectcss.all, sty.column__yoJHu)}>
                 <p.Stack
@@ -917,141 +875,156 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames(projectcss.all, sty.foreground)}
             >
               <div className={classNames(projectcss.all, sty.column__q3DDi)}>
-                <p.Stack
-                  as={"div"}
-                  hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__otCfF)}
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__p19Ht)}
+                  triggerOnce={true}
                 >
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__djEfs
-                    )}
+                  <p.Stack
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__otCfF)}
                   >
-                    {"OUR MISSION"}
-                  </div>
-                  <h2
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h2,
-                      projectcss.__wab_text,
-                      sty.h2__ztiBi
-                    )}
-                  >
-                    {"Strategic Clarity"}
-                  </h2>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__u9HuP
-                    )}
-                  >
-                    {
-                      "Our mission is to demystify the path to success, ensuring that our clients navigate their journey with confidence. \n\nWith a foundation built on precise insights and open collaboration, we transform challenges into opportunities, fostering innovation and growth."
-                    }
-                  </div>
-                </p.Stack>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__djEfs
+                      )}
+                    >
+                      {"OUR MISSION"}
+                    </div>
+                    <h2
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h2,
+                        projectcss.__wab_text,
+                        sty.h2__ztiBi
+                      )}
+                    >
+                      {"Strategic Clarity"}
+                    </h2>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__u9HuP
+                      )}
+                    >
+                      {
+                        "Our mission is to demystify the path to success, ensuring that our clients navigate their journey with confidence. \n\nWith a foundation built on precise insights and open collaboration, we transform challenges into opportunities, fostering innovation and growth."
+                      }
+                    </div>
+                  </p.Stack>
+                </Reveal>
               </div>
               <div className={classNames(projectcss.all, sty.column__isJhi)}>
-                <div className={classNames(projectcss.all, sty.freeBox__z62L0)}>
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__x9UKp)}
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__rn5Yl)}
+                  triggerOnce={true}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__z62L0)}
                   >
-                    <div
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__x9UKp)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__tv0Ad
+                        )}
+                      >
+                        {"Precision-Driven Process"}
+                      </div>
+                      <Icon2Icon
+                        className={classNames(projectcss.all, sty.svg__gOr0L)}
+                        role={"img"}
+                      />
+                    </p.Stack>
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
                       className={classNames(
                         projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__tv0Ad
+                        sty.freeBox___6XmMs
                       )}
                     >
-                      {"Precision-Driven Process"}
-                    </div>
-                    <Icon2Icon
-                      className={classNames(projectcss.all, sty.svg__gOr0L)}
-                      role={"img"}
-                    />
-                  </p.Stack>
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox___6XmMs)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___38RS
-                      )}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___38RS
+                        )}
+                      >
+                        {"Dynamic Collaborative Approach"}
+                      </div>
+                      <Icon2Icon
+                        className={classNames(projectcss.all, sty.svg__iEdFk)}
+                        role={"img"}
+                      />
+                    </p.Stack>
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__nZf3N)}
                     >
-                      {"Dynamic Collaborative Approach"}
-                    </div>
-                    <Icon2Icon
-                      className={classNames(projectcss.all, sty.svg__iEdFk)}
-                      role={"img"}
-                    />
-                  </p.Stack>
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__nZf3N)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__z6JXc
-                      )}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__z6JXc
+                        )}
+                      >
+                        {"Commitment to Clarity"}
+                      </div>
+                      <Icon2Icon
+                        className={classNames(projectcss.all, sty.svg___1Spn)}
+                        role={"img"}
+                      />
+                    </p.Stack>
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__zUfNm)}
                     >
-                      {"Commitment to Clarity"}
-                    </div>
-                    <Icon2Icon
-                      className={classNames(projectcss.all, sty.svg___1Spn)}
-                      role={"img"}
-                    />
-                  </p.Stack>
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__zUfNm)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__dePkn
-                      )}
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__dePkn
+                        )}
+                      >
+                        {"Transparent Operational Insight"}
+                      </div>
+                      <Icon2Icon
+                        className={classNames(projectcss.all, sty.svg__bLfZf)}
+                        role={"img"}
+                      />
+                    </p.Stack>
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__f3Xmi)}
                     >
-                      {"Transparent Operational Insight"}
-                    </div>
-                    <Icon2Icon
-                      className={classNames(projectcss.all, sty.svg__bLfZf)}
-                      role={"img"}
-                    />
-                  </p.Stack>
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__f3Xmi)}
-                  >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___7PbL0
-                      )}
-                    >
-                      {"Evidence-Based Results"}
-                    </div>
-                    <Icon2Icon
-                      className={classNames(projectcss.all, sty.svg__uSuRk)}
-                      role={"img"}
-                    />
-                  </p.Stack>
-                </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___7PbL0
+                        )}
+                      >
+                        {"Evidence-Based Results"}
+                      </div>
+                      <Icon2Icon
+                        className={classNames(projectcss.all, sty.svg__uSuRk)}
+                        role={"img"}
+                      />
+                    </p.Stack>
+                  </div>
+                </Reveal>
               </div>
             </p.Stack>
           </p.Stack>
@@ -1213,70 +1186,93 @@ function PlasmicHomepage__RenderFunc(props: {
           >
             <div className={classNames(projectcss.all, sty.columns__zWpuE)}>
               <div className={classNames(projectcss.all, sty.column__whQyF)}>
-                <div className={classNames(projectcss.all, sty.freeBox__jwzfb)}>
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__gnG9H)}
+                  triggerOnce={true}
+                >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__sZlmZ
-                    )}
+                    className={classNames(projectcss.all, sty.freeBox__jwzfb)}
                   >
-                    {"400+"}
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__sZlmZ
+                      )}
+                    >
+                      {"400+"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___3Qddx
+                      )}
+                    >
+                      {"Campaigns Launched"}
+                    </div>
                   </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___3Qddx
-                    )}
-                  >
-                    {"Campaigns Launched"}
-                  </div>
-                </div>
+                </Reveal>
               </div>
               <div className={classNames(projectcss.all, sty.column__o93KI)}>
-                <div className={classNames(projectcss.all, sty.freeBox__xnMuB)}>
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__vDg0T)}
+                  delay={200}
+                  triggerOnce={true}
+                >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__i5SwE
-                    )}
+                    className={classNames(projectcss.all, sty.freeBox__xnMuB)}
                   >
-                    {"1,250,000+"}
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__i5SwE
+                      )}
+                    >
+                      {"1,250,000+"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__sMbUn
+                      )}
+                    >
+                      {"Ads Served"}
+                    </div>
                   </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__sMbUn
-                    )}
-                  >
-                    {"Ads Served"}
-                  </div>
-                </div>
+                </Reveal>
               </div>
               <div className={classNames(projectcss.all, sty.column__lDoDz)}>
-                <div className={classNames(projectcss.all, sty.freeBox__dUFbE)}>
+                <Reveal
+                  className={classNames("__wab_instance", sty.reveal__ezFl4)}
+                  delay={400}
+                  triggerOnce={true}
+                >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__xoD8I
-                    )}
+                    className={classNames(projectcss.all, sty.freeBox__dUFbE)}
                   >
-                    {"Unlimited"}
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xoD8I
+                      )}
+                    >
+                      {"Unlimited"}
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__dFbgQ
+                      )}
+                    >
+                      {"Potential"}
+                    </div>
                   </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__dFbgQ
-                    )}
-                  >
-                    {"Potential"}
-                  </div>
-                </div>
+                </Reveal>
               </div>
             </div>
           </section>
@@ -1316,114 +1312,131 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-override={overrides.amt}
                   className={classNames(projectcss.all, sty.amt)}
                 >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__c85OY)}
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__gswCz)}
+                    triggerOnce={true}
                   >
-                    <p.PlasmicImg
-                      alt={""}
-                      className={classNames(sty.img__dbCCp)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"90px"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={
-                        "https://www.thelamedia.com/wp-content/uploads/2021/11/Artboard-3amt.png"
-                      }
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__w3Pi3
-                      )}
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__c85OY)}
                     >
-                      {
-                        "Strategy and multi-channel advertising implementation for clinical trial patient recruitment across multiple geographies."
-                      }
-                    </div>
-                  </p.Stack>
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__dbCCp)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"90px"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={
+                          "https://www.thelamedia.com/wp-content/uploads/2021/11/Artboard-3amt.png"
+                        }
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__w3Pi3
+                        )}
+                      >
+                        {
+                          "Strategy and multi-channel advertising implementation for clinical trial patient recruitment across multiple geographies."
+                        }
+                      </div>
+                    </p.Stack>
+                  </Reveal>
                 </div>
                 <div
                   data-plasmic-name={"amt2"}
                   data-plasmic-override={overrides.amt2}
                   className={classNames(projectcss.all, sty.amt2)}
                 >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__dvoEo)}
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__jJqnS)}
+                    delay={300}
+                    triggerOnce={true}
                   >
-                    <p.PlasmicImg
-                      alt={""}
-                      className={classNames(sty.img__j2AyT)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"90px"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={
-                        "https://wellcellglobal.com/wp-content/uploads/2023/12/WellCellGlobalLogo-1.png"
-                      }
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__e4Ptt
-                      )}
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__dvoEo)}
                     >
-                      {
-                        "Brand standards implementation and comprehensive marketing & advertising strategy for patented protocol."
-                      }
-                    </div>
-                  </p.Stack>
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__j2AyT)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"90px"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={
+                          "https://wellcellglobal.com/wp-content/uploads/2023/12/WellCellGlobalLogo-1.png"
+                        }
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__e4Ptt
+                        )}
+                      >
+                        {
+                          "Brand standards implementation and comprehensive marketing & advertising strategy for patented protocol."
+                        }
+                      </div>
+                    </p.Stack>
+                  </Reveal>
                 </div>
                 <div
                   data-plasmic-name={"amt3"}
                   data-plasmic-override={overrides.amt3}
                   className={classNames(projectcss.all, sty.amt3)}
                 >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__wxktk)}
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__fx8Wo)}
+                    delay={600}
+                    triggerOnce={true}
                   >
-                    <p.PlasmicImg
-                      alt={""}
-                      className={classNames(sty.img__wM4L)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"90px"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={
-                        "https://familymedicineaustin.com/wp-content/uploads/2021/03/logo_new__1___1_-1-400x84.png"
-                      }
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__yPXxs
-                      )}
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__wxktk)}
                     >
-                      {
-                        "Fractional CMO implementation, website development and focused new patient recruitment for ancillary service lines."
-                      }
-                    </div>
-                  </p.Stack>
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__wM4L)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"90px"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={
+                          "https://familymedicineaustin.com/wp-content/uploads/2021/03/logo_new__1___1_-1-400x84.png"
+                        }
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__yPXxs
+                        )}
+                      >
+                        {
+                          "Fractional CMO implementation, website development and focused new patient recruitment for ancillary service lines."
+                        }
+                      </div>
+                    </p.Stack>
+                  </Reveal>
                 </div>
               </p.Stack>
             </div>
@@ -1464,108 +1477,128 @@ function PlasmicHomepage__RenderFunc(props: {
                   data-plasmic-override={overrides.amt4}
                   className={classNames(projectcss.all, sty.amt4)}
                 >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__dm1VJ)}
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal___545Yr)}
+                    triggerOnce={true}
                   >
-                    <p.PlasmicImg
-                      alt={""}
-                      className={classNames(sty.img__qc125)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"70px"}
-                      displayMaxWidth={"60%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={
-                        "https://www.thelamedia.com/wp-content/uploads/2023/02/restart-logo.png"
-                      }
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___6Igsr
-                      )}
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__dm1VJ)}
                     >
-                      {
-                        "Target market research, go to market strategy, brand positioning and attribution-focused advertisement procuring initial 5,000 accounts."
-                      }
-                    </div>
-                  </p.Stack>
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__qc125)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"70px"}
+                        displayMaxWidth={"60%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={
+                          "https://www.thelamedia.com/wp-content/uploads/2023/02/restart-logo.png"
+                        }
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___6Igsr
+                        )}
+                      >
+                        {
+                          "Target market research, go to market strategy, brand positioning and attribution-focused advertisement procuring initial 5,000 accounts."
+                        }
+                      </div>
+                    </p.Stack>
+                  </Reveal>
                 </div>
                 <div
                   data-plasmic-name={"amt5"}
                   data-plasmic-override={overrides.amt5}
                   className={classNames(projectcss.all, sty.amt5)}
                 >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__kk3H5)}
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__mQ12)}
+                    delay={300}
+                    triggerOnce={true}
                   >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text___5TIfS
-                      )}
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__kk3H5)}
                     >
-                      {"SUMMIIT"}
-                    </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__dFwwB
-                      )}
-                    >
-                      {
-                        "Mobile app development for iOS and Android, UX/UI, brand asset development and robust automation infrastructure. "
-                      }
-                    </div>
-                  </p.Stack>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___5TIfS
+                        )}
+                      >
+                        {"SUMMIIT"}
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__dFwwB
+                        )}
+                      >
+                        {
+                          "Mobile app development for iOS and Android, UX/UI, brand asset development and robust automation infrastructure. "
+                        }
+                      </div>
+                    </p.Stack>
+                  </Reveal>
                 </div>
                 <div
                   data-plasmic-name={"amt6"}
                   data-plasmic-override={overrides.amt6}
                   className={classNames(projectcss.all, sty.amt6)}
                 >
-                  <p.Stack
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__zJtRs)}
+                  <Reveal
+                    className={classNames("__wab_instance", sty.reveal__tkefm)}
+                    delay={600}
+                    triggerOnce={true}
                   >
-                    <p.PlasmicImg
-                      alt={""}
-                      className={classNames(sty.img___4ERv)}
-                      displayHeight={"auto"}
-                      displayMaxHeight={"90px"}
-                      displayMaxWidth={"100%"}
-                      displayMinHeight={"0"}
-                      displayMinWidth={"0"}
-                      displayWidth={"auto"}
-                      loading={"lazy"}
-                      src={
-                        "https://familymedicineaustin.com/wp-content/uploads/2021/03/logo_new__1___1_-1-400x84.png"
-                      }
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__asxKi
-                      )}
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.freeBox__zJtRs)}
                     >
-                      {
-                        "Fractional CMO implementation, website development and focused new patient recruitment for ancillary service lines."
-                      }
-                    </div>
-                  </p.Stack>
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img___4ERv)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"52px"}
+                        displayMaxWidth={"100%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"auto"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/tmg_website/images/image2.png",
+                          fullWidth: 1480,
+                          fullHeight: 428,
+                          aspectRatio: undefined
+                        }}
+                      />
+
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__asxKi
+                        )}
+                      >
+                        {
+                          "Go to market strategy, community development strategy and full-scale DTC E-commerce implementation with global delivery logistics. "
+                        }
+                      </div>
+                    </p.Stack>
+                  </Reveal>
                 </div>
               </p.Stack>
             </div>
@@ -1652,6 +1685,39 @@ function PlasmicHomepage__RenderFunc(props: {
                 />
               </div>
               <div className={classNames(projectcss.all, sty.column__z1Gql)}>
+                <h4
+                  data-plasmic-name={"h4"}
+                  data-plasmic-override={overrides.h4}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h4,
+                    projectcss.__wab_text,
+                    sty.h4
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <p.PlasmicLink
+                        data-plasmic-name={"phoneNumber"}
+                        data-plasmic-override={overrides.phoneNumber}
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.a,
+                          projectcss.__wab_text,
+                          projectcss.plasmic_default__inline,
+                          sty.phoneNumber
+                        )}
+                        component={Link}
+                        href={"tel:+15125721800"}
+                        platform={"nextjs"}
+                      >
+                        {"+1 (512) 572-1800"}
+                      </p.PlasmicLink>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </h4>
                 <p.Stack
                   as={"div"}
                   hasGap={true}
@@ -1706,7 +1772,6 @@ const PlasmicDescendants = {
     "columns",
     "clients",
     "imageGrid",
-    "background2",
     "copy",
     "checklist",
     "foreground",
@@ -1726,6 +1791,8 @@ const PlasmicDescendants = {
     "chat",
     "h1",
     "footer",
+    "h4",
+    "phoneNumber",
     "link"
   ],
   menu: ["menu", "menuElements", "caseStudies", "heroCta2"],
@@ -1739,8 +1806,7 @@ const PlasmicDescendants = {
   heroCta: ["heroCta"],
   columns: ["columns"],
   clients: ["clients"],
-  imageGrid: ["imageGrid", "background2", "copy"],
-  background2: ["background2"],
+  imageGrid: ["imageGrid", "copy"],
   copy: ["copy"],
   checklist: ["checklist", "foreground"],
   foreground: ["foreground"],
@@ -1759,7 +1825,9 @@ const PlasmicDescendants = {
   amt6: ["amt6"],
   chat: ["chat", "h1"],
   h1: ["h1"],
-  footer: ["footer", "link"],
+  footer: ["footer", "h4", "phoneNumber", "link"],
+  h4: ["h4", "phoneNumber"],
+  phoneNumber: ["phoneNumber"],
   link: ["link"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -1779,7 +1847,6 @@ type NodeDefaultElementType = {
   columns: "section";
   clients: "section";
   imageGrid: "div";
-  background2: "div";
   copy: "div";
   checklist: "section";
   foreground: "div";
@@ -1799,6 +1866,8 @@ type NodeDefaultElementType = {
   chat: "section";
   h1: "h1";
   footer: "section";
+  h4: "h4";
+  phoneNumber: "a";
   link: "a";
 };
 
@@ -1874,7 +1943,6 @@ export const PlasmicHomepage = Object.assign(
     columns: makeNodeComponent("columns"),
     clients: makeNodeComponent("clients"),
     imageGrid: makeNodeComponent("imageGrid"),
-    background2: makeNodeComponent("background2"),
     copy: makeNodeComponent("copy"),
     checklist: makeNodeComponent("checklist"),
     foreground: makeNodeComponent("foreground"),
@@ -1894,6 +1962,8 @@ export const PlasmicHomepage = Object.assign(
     chat: makeNodeComponent("chat"),
     h1: makeNodeComponent("h1"),
     footer: makeNodeComponent("footer"),
+    h4: makeNodeComponent("h4"),
+    phoneNumber: makeNodeComponent("phoneNumber"),
     link: makeNodeComponent("link"),
 
     // Metadata about props expected for PlasmicHomepage
