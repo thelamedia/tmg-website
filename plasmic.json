@@ -658,6 +658,11 @@
           "id": "qrBGAYk4-XAW",
           "name": "image 4",
           "filePath": "../public/plasmic/tmg_website/images/image4.png"
+        },
+        {
+          "id": "4pVu1364AYxW",
+          "name": "image 18",
+          "filePath": "../public/plasmic/tmg_website/images/image18.png"
         }
       ],
       "indirect": false,
