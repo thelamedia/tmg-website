@@ -20,11 +20,6 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 
-//Imports
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import {SpeedInsights} from "@vercel/speed-insights/next"
-
 import {
   hasVariant,
   classNames,
@@ -141,63 +136,6 @@ function PlasmicHomepage__RenderFunc(props: {
     ...variants
   };
 
-  React.useEffect(() => {
-    // Import scripts dynamically
-    const threeScript = document.createElement('script');
-    threeScript.src = '/vanta/three.min.js';
-    threeScript.onload = () => {
-      const vantaScript1 = document.createElement('script');
-      const vantaScript2 = document.createElement('script');
-      vantaScript1.src = '/vanta/vanta.clouds.min.js';
-      vantaScript2.src = '/vanta/vanta.fog.min.js';
-      vantaScript1.onload = () => {
-        if (VANTA && typeof VANTA.CLOUDS === 'function') {
-          VANTA.CLOUDS({
-            el: "#homeHero",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            skyColor: 0x0,
-            cloudColor: 0x181818,
-            speed: .7
-          });
-        }
-      };
-      document.body.appendChild(vantaScript1);
-      vantaScript2.onload = () => {
-        if (VANTA && typeof VANTA.FOG === 'function') {
-          VANTA.FOG({
-            el: "#none",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            highlightColor: 0x503107,
-            midtoneColor: 0x0,
-            lowlightColor: 0x50505,
-            baseColor: 0x0,
-            speed: 1.20,
-            zoom: 0.40
-          });
-        }
-      };
-      document.body.appendChild(vantaScript2);
-    };
-    document.body.appendChild(threeScript);
-
-
-
-    // Clean up effect if the component unmounts
-    return () => {
-      if (window.VANTA) {
-        window.VANTA.effect && window.VANTA.effect.destroy();
-      }
-    };
-  }, []);
-
   const __nextRouter = useNextRouter();
   const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
@@ -236,7 +174,7 @@ function PlasmicHomepage__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">{PlasmicHomepage.pageMetadata.title}</title>
         <meta
           key="og:title"
@@ -248,8 +186,33 @@ function PlasmicHomepage__RenderFunc(props: {
           name="twitter:title"
           content={PlasmicHomepage.pageMetadata.title}
         />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicHomepage.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicHomepage.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicHomepage.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicHomepage.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicHomepage.pageMetadata.ogImageSrc}
+        />
+        <link ref="canonical" href={PlasmicHomepage.pageMetadata.canonical} />
       </Head>
-      <SpeedInsights /> 
 
       <style>{`
         body {
@@ -721,9 +684,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMinWidth={"0"}
                     displayWidth={"auto"}
                     loading={"lazy"}
-                    src={
-                      "https://www.thelamedia.com/wp-content/uploads/2023/02/restart-logo.png"
-                    }
+                    src={{
+                      src: "/plasmic/tmg_website/images/image15.png",
+                      fullWidth: 750,
+                      fullHeight: 183,
+                      aspectRatio: undefined
+                    }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__kXDyO)}>
@@ -2192,9 +2158,11 @@ export const PlasmicHomepage = Object.assign(
     // Page metadata
     pageMetadata: {
       title: "Thela Media Group - Your Brand, Elevated",
-      description: "",
-      ogImageSrc: "",
-      canonical: ""
+      description:
+        "Elevate your brand with Thela Media Group's innovative marketing and advertising solutions. Specializing in healthcare, real estate, and fintech.",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/d9fc86b4dc646921dadc22d61ca49893.jpg",
+      canonical: "https://thelamedia.com"
     }
   }
 );

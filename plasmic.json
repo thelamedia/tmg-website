@@ -663,6 +663,16 @@
           "id": "4pVu1364AYxW",
           "name": "image 18",
           "filePath": "../public/plasmic/tmg_website/images/image18.png"
+        },
+        {
+          "id": "IXwhH48ZfvYy",
+          "name": "GraphQL Image.jpg",
+          "filePath": "../public/plasmic/tmg_website/images/graphQlImagejpg.jpg"
+        },
+        {
+          "id": "Y1oJCgoGGlkN",
+          "name": "GraphQL Image 2.jpg",
+          "filePath": "../public/plasmic/tmg_website/images/graphQlImage2Jpg.jpg"
         }
       ],
       "indirect": false,
