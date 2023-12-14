@@ -83,6 +83,7 @@ export type PlasmicHomepage__OverridesType = {
   clients?: p.Flex<"section">;
   imageGrid?: p.Flex<"div">;
   copy?: p.Flex<"div">;
+  button2?: p.Flex<typeof Button2>;
   checklist?: p.Flex<"section">;
   foreground?: p.Flex<"div">;
   testimonials?: p.Flex<"section">;
@@ -100,6 +101,9 @@ export type PlasmicHomepage__OverridesType = {
   amt6?: p.Flex<"div">;
   chat?: p.Flex<"section">;
   h1?: p.Flex<"h1">;
+  call?: p.Flex<typeof Button2>;
+  text?: p.Flex<typeof Button2>;
+  schedule?: p.Flex<typeof Button2>;
   footer?: p.Flex<"section">;
   h4?: p.Flex<"h4">;
   phoneNumber?: p.Flex<"a"> & Partial<LinkProps>;
@@ -816,10 +820,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                         </div>
                         <Button2
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button2__zJpK3
-                          )}
+                          data-plasmic-name={"button2"}
+                          data-plasmic-override={overrides.button2}
+                          className={classNames("__wab_instance", sty.button2)}
                           color={"sand"}
                           endIcon={
                             <Icon38Icon
@@ -1608,56 +1611,138 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.chat}
             className={classNames(projectcss.all, sty.chat)}
           >
-            <h1
-              data-plasmic-name={"h1"}
-              data-plasmic-override={overrides.h1}
-              className={classNames(
-                projectcss.all,
-                projectcss.h1,
-                projectcss.__wab_text,
-                sty.h1
-              )}
+            <p.Stack
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__dy9LU)}
             >
-              {"Ready to stand out? "}
-            </h1>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__wdxv1
-              )}
-            >
-              {"Go ahead and drop us a line.  It's time to get you noticed. "}
-            </div>
-            <Button2
-              className={classNames("__wab_instance", sty.button2__qZdq)}
-              color={"sand"}
-              endIcon={
-                <Icon38Icon
-                  className={classNames(projectcss.all, sty.svg__wleEr)}
-                  role={"img"}
-                />
-              }
-              link={"tel:+15125721800"}
-              showEndIcon={true}
-              startIcon={
-                <ChecksvgIcon
-                  className={classNames(projectcss.all, sty.svg__aluS6)}
-                  role={"img"}
-                />
-              }
-              submitsForm={true}
-            >
+              <h1
+                data-plasmic-name={"h1"}
+                data-plasmic-override={overrides.h1}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1
+                )}
+              >
+                {"Ready to stand out? "}
+              </h1>
               <div
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__yPdbm
+                  sty.text__wdxv1
                 )}
               >
-                {"Let's Talk"}
+                {
+                  "Go ahead and drop us a line for a complimentary consult.  It's time to get you noticed. "
+                }
               </div>
-            </Button2>
+              <p.Stack
+                as={"div"}
+                hasGap={true}
+                className={classNames(projectcss.all, sty.freeBox___6Gp3K)}
+              >
+                <Button2
+                  data-plasmic-name={"call"}
+                  data-plasmic-override={overrides.call}
+                  className={classNames("__wab_instance", sty.call)}
+                  color={"softSand"}
+                  endIcon={
+                    <Icon38Icon
+                      className={classNames(projectcss.all, sty.svg__wleEr)}
+                      role={"img"}
+                    />
+                  }
+                  link={"tel:+15125721800"}
+                  showEndIcon={true}
+                  startIcon={
+                    <ChecksvgIcon
+                      className={classNames(projectcss.all, sty.svg__aluS6)}
+                      role={"img"}
+                    />
+                  }
+                  submitsForm={true}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__yPdbm
+                    )}
+                  >
+                    {"Call Us"}
+                  </div>
+                </Button2>
+                <Button2
+                  data-plasmic-name={"text"}
+                  data-plasmic-override={overrides.text}
+                  className={classNames("__wab_instance", sty.text)}
+                  color={"softSand"}
+                  endIcon={
+                    <Icon38Icon
+                      className={classNames(projectcss.all, sty.svg__i4XY)}
+                      role={"img"}
+                    />
+                  }
+                  link={
+                    "sms:+15125721800&body=I would like to schedule a complimentary consultation"
+                  }
+                  showEndIcon={true}
+                  startIcon={
+                    <ChecksvgIcon
+                      className={classNames(projectcss.all, sty.svg__rS48H)}
+                      role={"img"}
+                    />
+                  }
+                  submitsForm={true}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__jgh1
+                    )}
+                  >
+                    {"Text Us"}
+                  </div>
+                </Button2>
+                <Button2
+                  data-plasmic-name={"schedule"}
+                  data-plasmic-override={overrides.schedule}
+                  className={classNames("__wab_instance", sty.schedule)}
+                  color={"softSand"}
+                  endIcon={
+                    <Icon38Icon
+                      className={classNames(projectcss.all, sty.svg__doYgb)}
+                      role={"img"}
+                    />
+                  }
+                  link={
+                    "https://outlook.office365.com/owa/calendar/InitialConsultation@thelamedia.com/bookings/"
+                  }
+                  showEndIcon={true}
+                  startIcon={
+                    <ChecksvgIcon
+                      className={classNames(projectcss.all, sty.svg__hlEzh)}
+                      role={"img"}
+                    />
+                  }
+                  submitsForm={true}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__jEdSv
+                    )}
+                  >
+                    {"Schedule Online"}
+                  </div>
+                </Button2>
+              </p.Stack>
+            </p.Stack>
           </section>
           <section
             data-plasmic-name={"footer"}
@@ -1773,6 +1858,7 @@ const PlasmicDescendants = {
     "clients",
     "imageGrid",
     "copy",
+    "button2",
     "checklist",
     "foreground",
     "testimonials",
@@ -1790,6 +1876,9 @@ const PlasmicDescendants = {
     "amt6",
     "chat",
     "h1",
+    "call",
+    "text",
+    "schedule",
     "footer",
     "h4",
     "phoneNumber",
@@ -1806,8 +1895,9 @@ const PlasmicDescendants = {
   heroCta: ["heroCta"],
   columns: ["columns"],
   clients: ["clients"],
-  imageGrid: ["imageGrid", "copy"],
-  copy: ["copy"],
+  imageGrid: ["imageGrid", "copy", "button2"],
+  copy: ["copy", "button2"],
+  button2: ["button2"],
   checklist: ["checklist", "foreground"],
   foreground: ["foreground"],
   testimonials: ["testimonials", "sliderCarousel2"],
@@ -1823,8 +1913,11 @@ const PlasmicDescendants = {
   amt4: ["amt4"],
   amt5: ["amt5"],
   amt6: ["amt6"],
-  chat: ["chat", "h1"],
+  chat: ["chat", "h1", "call", "text", "schedule"],
   h1: ["h1"],
+  call: ["call"],
+  text: ["text"],
+  schedule: ["schedule"],
   footer: ["footer", "h4", "phoneNumber", "link"],
   h4: ["h4", "phoneNumber"],
   phoneNumber: ["phoneNumber"],
@@ -1848,6 +1941,7 @@ type NodeDefaultElementType = {
   clients: "section";
   imageGrid: "div";
   copy: "div";
+  button2: typeof Button2;
   checklist: "section";
   foreground: "div";
   testimonials: "section";
@@ -1865,6 +1959,9 @@ type NodeDefaultElementType = {
   amt6: "div";
   chat: "section";
   h1: "h1";
+  call: typeof Button2;
+  text: typeof Button2;
+  schedule: typeof Button2;
   footer: "section";
   h4: "h4";
   phoneNumber: "a";
@@ -1944,6 +2041,7 @@ export const PlasmicHomepage = Object.assign(
     clients: makeNodeComponent("clients"),
     imageGrid: makeNodeComponent("imageGrid"),
     copy: makeNodeComponent("copy"),
+    button2: makeNodeComponent("button2"),
     checklist: makeNodeComponent("checklist"),
     foreground: makeNodeComponent("foreground"),
     testimonials: makeNodeComponent("testimonials"),
@@ -1961,6 +2059,9 @@ export const PlasmicHomepage = Object.assign(
     amt6: makeNodeComponent("amt6"),
     chat: makeNodeComponent("chat"),
     h1: makeNodeComponent("h1"),
+    call: makeNodeComponent("call"),
+    text: makeNodeComponent("text"),
+    schedule: makeNodeComponent("schedule"),
     footer: makeNodeComponent("footer"),
     h4: makeNodeComponent("h4"),
     phoneNumber: makeNodeComponent("phoneNumber"),
