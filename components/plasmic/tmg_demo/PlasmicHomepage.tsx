@@ -1510,10 +1510,10 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(sty.img__qc125)}
                         displayHeight={"auto"}
                         displayMaxHeight={"70px"}
-                        displayMaxWidth={"60%"}
+                        displayMaxWidth={"43.21%"}
                         displayMinHeight={"0"}
                         displayMinWidth={"0"}
-                        displayWidth={"auto"}
+                        displayWidth={"100%"}
                         loading={"lazy"}
                         src={
                           "https://www.thelamedia.com/wp-content/uploads/2023/02/restart-logo.png"
@@ -1554,7 +1554,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(sty.img__bcxpg)}
                         displayHeight={"auto"}
                         displayMaxHeight={"70px"}
-                        displayMaxWidth={"51.36%"}
+                        displayMaxWidth={"34.51%"}
                         displayMinHeight={"0"}
                         displayMinWidth={"0"}
                         displayWidth={"100%"}
@@ -1599,12 +1599,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       <p.PlasmicImg
                         alt={""}
                         className={classNames(sty.img___4ERv)}
-                        displayHeight={"auto"}
+                        displayHeight={"38px"}
                         displayMaxHeight={"52px"}
                         displayMaxWidth={"100%"}
                         displayMinHeight={"0"}
                         displayMinWidth={"0"}
-                        displayWidth={"auto"}
+                        displayWidth={"253px"}
                         loading={"lazy"}
                         src={{
                           src: "/plasmic/tmg_website/images/image2.png",

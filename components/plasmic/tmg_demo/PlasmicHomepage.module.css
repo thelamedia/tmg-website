@@ -2957,12 +2957,14 @@
 .img__qc125 {
   position: relative;
   object-fit: cover;
-  max-width: 60%;
+  max-width: 43.21%;
   filter: brightness(0%) invert(100%);
   max-height: 70px;
   margin-bottom: 10px;
   margin-right: 10px;
   margin-top: calc(10px + 16px) !important;
+  width: 100%;
+  min-width: 0;
 }
 .img__qc125 > picture > img {
   object-fit: cover;
@@ -3026,7 +3028,7 @@
 .img__bcxpg {
   position: relative;
   object-fit: cover;
-  max-width: 51.36%;
+  max-width: 34.51%;
   filter: brightness(0%) invert(100%);
   max-height: 70px;
   margin-bottom: 10px;
@@ -3100,10 +3102,13 @@
   max-width: 100%;
   filter: none;
   max-height: 52px;
-  margin-bottom: 10px;
-  margin-top: calc(10px + 16px) !important;
+  margin-bottom: 17px;
+  margin-top: calc(0px + 16px) !important;
   object-position: 50% 50%;
   margin-left: -12px;
+  width: 253px;
+  height: 38px;
+  flex-shrink: 0;
 }
 .img___4ERv > picture > img {
   object-fit: cover;
@@ -3111,7 +3116,7 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .img___4ERv {
-    margin-top: calc(10px + 16px) !important;
+    margin-top: calc(0px + 16px) !important;
   }
 }
 .text__asxKi {
@@ -3257,6 +3262,31 @@
   > img {
   margin-left: 32px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___6Gp3K {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___6Gp3K > :global(.__wab_flex-container) {
+    flex-direction: column;
+    margin-left: calc(0px - 0px);
+    width: calc(100% + 0px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox___6Gp3K > :global(.__wab_flex-container) > *,
+  .freeBox___6Gp3K > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .freeBox___6Gp3K > :global(.__wab_flex-container) > picture > img,
+  .freeBox___6Gp3K
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-left: 0px;
+  }
+}
 .call:global(.__wab_instance) {
   position: relative;
   width: auto;
@@ -3267,6 +3297,8 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .call:global(.__wab_instance) {
     width: 100%;
+    left: auto;
+    top: auto;
     min-width: 0;
   }
 }
@@ -3307,6 +3339,8 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .text:global(.__wab_instance) {
     width: 100%;
+    left: auto;
+    top: auto;
     min-width: 0;
   }
 }
@@ -3347,6 +3381,8 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .schedule:global(.__wab_instance) {
     width: 100%;
+    left: auto;
+    top: auto;
     min-width: 0;
   }
 }
