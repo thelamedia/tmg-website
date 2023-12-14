@@ -595,11 +595,6 @@
           "filePath": "../public/plasmic/tmg_website/images/image3.png"
         },
         {
-          "id": "qrBGAYk4-XAW",
-          "name": "image 4",
-          "filePath": "../public/plasmic/tmg_website/images/image4.png"
-        },
-        {
           "id": "nkJf4-7IxUbO",
           "name": "image 2",
           "filePath": "../public/plasmic/tmg_website/images/image2.png"
@@ -658,6 +653,11 @@
           "id": "KLM3p2exV9vj",
           "name": "image 17",
           "filePath": "../public/plasmic/tmg_website/images/image17.png"
+        },
+        {
+          "id": "qrBGAYk4-XAW",
+          "name": "image 4",
+          "filePath": "../public/plasmic/tmg_website/images/image4.png"
         }
       ],
       "indirect": false,
