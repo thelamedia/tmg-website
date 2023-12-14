@@ -840,6 +840,12 @@
   min-width: 0;
   margin: 50px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .h2___4RNtx {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
 .reveal__bIOv:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
@@ -2446,6 +2452,8 @@
   height: auto;
   max-width: 100%;
   background: #1c1c1e;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
   min-width: 0;
   border-radius: 8px;
   padding: 40px;
