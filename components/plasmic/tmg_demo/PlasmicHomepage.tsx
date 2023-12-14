@@ -20,11 +20,6 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 
-//Imports
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import {SpeedInsights} from "@vercel/speed-insights/next"
-
 import {
   hasVariant,
   classNames,
@@ -140,62 +135,6 @@ function PlasmicHomepage__RenderFunc(props: {
     ...args,
     ...variants
   };
-  React.useEffect(() => {
-    // Import scripts dynamically
-    const threeScript = document.createElement('script');
-    threeScript.src = '/vanta/three.min.js';
-    threeScript.onload = () => {
-      const vantaScript1 = document.createElement('script');
-      const vantaScript2 = document.createElement('script');
-      vantaScript1.src = '/vanta/vanta.clouds.min.js';
-      vantaScript2.src = '/vanta/vanta.fog.min.js';
-      vantaScript1.onload = () => {
-        if (VANTA && typeof VANTA.CLOUDS === 'function') {
-          VANTA.CLOUDS({
-            el: "#homeHero",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            skyColor: 0x0,
-            cloudColor: 0x181818,
-            speed: .7
-          });
-        }
-      };
-      document.body.appendChild(vantaScript1);
-      vantaScript2.onload = () => {
-        if (VANTA && typeof VANTA.FOG === 'function') {
-          VANTA.FOG({
-            el: "#none",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            highlightColor: 0x503107,
-            midtoneColor: 0x0,
-            lowlightColor: 0x50505,
-            baseColor: 0x0,
-            speed: 1.20,
-            zoom: 0.40
-          });
-        }
-      };
-      document.body.appendChild(vantaScript2);
-    };
-    document.body.appendChild(threeScript);
-
-
-
-    // Clean up effect if the component unmounts
-    return () => {
-      if (window.VANTA) {
-        window.VANTA.effect && window.VANTA.effect.destroy();
-      }
-    };
-  }, []);
 
   const __nextRouter = useNextRouter();
   const $ctx = ph.useDataEnv?.() || {};
@@ -248,7 +187,7 @@ function PlasmicHomepage__RenderFunc(props: {
           content={PlasmicHomepage.pageMetadata.title}
         />
       </Head>
-      <SpeedInsights /> 
+
       <style>{`
         body {
           margin: 0;
@@ -605,9 +544,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMinWidth={"0"}
                     displayWidth={"auto"}
                     loading={"lazy"}
-                    src={
-                      "https://www.thelamedia.com/wp-content/uploads/2021/11/Forcepoint-Logo.png"
-                    }
+                    src={{
+                      src: "/plasmic/tmg_website/images/image9.png",
+                      fullWidth: 4217,
+                      fullHeight: 1157,
+                      aspectRatio: undefined
+                    }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column___7NYpq)}>
@@ -621,9 +563,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMinWidth={"0"}
                     displayWidth={"auto"}
                     loading={"lazy"}
-                    src={
-                      "https://www.thelamedia.com/wp-content/uploads/2023/02/Jecobra-Logo.png"
-                    }
+                    src={{
+                      src: "/plasmic/tmg_website/images/image10.png",
+                      fullWidth: 750,
+                      fullHeight: 336,
+                      aspectRatio: undefined
+                    }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__hlEG)}>
@@ -638,10 +583,10 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={"auto"}
                     loading={"lazy"}
                     src={{
-                      src: "/plasmic/tmg_website/images/image.svg",
+                      src: "/plasmic/tmg_website/images/image11.png",
                       fullWidth: 300,
                       fullHeight: 57,
-                      aspectRatio: 5.225
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
@@ -656,9 +601,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMinWidth={"0"}
                     displayWidth={"auto"}
                     loading={"lazy"}
-                    src={
-                      "https://www.thelamedia.com/wp-content/uploads/2021/11/Qualico-logo-2.png"
-                    }
+                    src={{
+                      src: "/plasmic/tmg_website/images/image12.png",
+                      fullWidth: 1050,
+                      fullHeight: 258,
+                      aspectRatio: undefined
+                    }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__qXdDz)}>
@@ -672,9 +620,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMinWidth={"0"}
                     displayWidth={"auto"}
                     loading={"lazy"}
-                    src={
-                      "https://www.thelamedia.com/wp-content/uploads/2021/11/nb-capital-logo.png"
-                    }
+                    src={{
+                      src: "/plasmic/tmg_website/images/image13.png",
+                      fullWidth: 1233,
+                      fullHeight: 294,
+                      aspectRatio: undefined
+                    }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column___32EM)}>
@@ -688,9 +639,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMinWidth={"0"}
                     displayWidth={"auto"}
                     loading={"lazy"}
-                    src={
-                      "https://www.thelamedia.com/wp-content/uploads/2021/11/Artboard-3amt.png"
-                    }
+                    src={{
+                      src: "/plasmic/tmg_website/images/image15.png",
+                      fullWidth: 750,
+                      fullHeight: 183,
+                      aspectRatio: undefined
+                    }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__zVYw)}>
@@ -720,9 +674,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMinWidth={"0"}
                     displayWidth={"auto"}
                     loading={"lazy"}
-                    src={
-                      "https://www.thelamedia.com/wp-content/uploads/2021/11/THS-Logo.png"
-                    }
+                    src={{
+                      src: "/plasmic/tmg_website/images/image16.png",
+                      fullWidth: 245,
+                      fullHeight: 45,
+                      aspectRatio: undefined
+                    }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__aXghz)}>
@@ -755,9 +712,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayMinWidth={"0"}
                     displayWidth={"auto"}
                     loading={"lazy"}
-                    src={
-                      "https://theprevivor-v1685545382.websitepro-cdn.com/wp-content/uploads/2019/09/Logo-Black-Transparent-e1574326461251.png"
-                    }
+                    src={{
+                      src: "/plasmic/tmg_website/images/image17.png",
+                      fullWidth: 2324,
+                      fullHeight: 1061,
+                      aspectRatio: undefined
+                    }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__fa7Oj)}>
@@ -1408,9 +1368,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         displayMinWidth={"0"}
                         displayWidth={"auto"}
                         loading={"lazy"}
-                        src={
-                          "https://www.thelamedia.com/wp-content/uploads/2021/11/Artboard-3amt.png"
-                        }
+                        src={{
+                          src: "/plasmic/tmg_website/images/image14.png",
+                          fullWidth: 323,
+                          fullHeight: 96,
+                          aspectRatio: undefined
+                        }}
                       />
 
                       <div
@@ -1576,9 +1539,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         displayMinWidth={"0"}
                         displayWidth={"100%"}
                         loading={"lazy"}
-                        src={
-                          "https://www.thelamedia.com/wp-content/uploads/2023/02/restart-logo.png"
-                        }
+                        src={{
+                          src: "/plasmic/tmg_website/images/image15.png",
+                          fullWidth: 750,
+                          fullHeight: 183,
+                          aspectRatio: undefined
+                        }}
                       />
 
                       <div

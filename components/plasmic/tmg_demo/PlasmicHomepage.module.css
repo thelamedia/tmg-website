@@ -828,6 +828,12 @@
   max-width: 100%;
   object-fit: cover;
   position: relative;
+  text-align: center;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .reveal___9KMeV:global(.__wab_instance) {
+    text-align: center;
+  }
 }
 .h2___4RNtx {
   position: relative;
