@@ -722,7 +722,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     displayWidth={"auto"}
                     loading={"lazy"}
                     src={
-                      "https://www.thelamedia.com/wp-content/uploads/2023/02/restart-logo.png"
+                      "/plasmic/tmg_website/images/image15.png"
                     }
                   />
                 </div>
