@@ -36,7 +36,7 @@
   --mixin-duW8jgTcObTF_letter-spacing: -0.5px;
   --mixin-duW8jgTcObTF_line-height: 1.1;
   --mixin-duW8jgTcObTF_white-space: pre-wrap;
-  --mixin-FM_EnQU2yCC1_color: #0070f3;
+  --mixin-FM_EnQU2yCC1_color: var(--token-47ovROB-Xr2C);
   --mixin-FM_EnQU2yCC1_white-space: pre-wrap;
   --mixin-HP7Fj8FSQS6u_color: #ffffff;
   --mixin-HP7Fj8FSQS6u_font-size: 32px;
@@ -129,10 +129,11 @@
   --mixin-lX5cS-biN8b-_font-weight: 600;
   --mixin-lX5cS-biN8b-_line-height: 1.5;
   --mixin-lX5cS-biN8b-_white-space: pre-wrap;
-  --mixin-66w6vXW23VD4_color: #3291ff;
+  --mixin-66w6vXW23VD4_color: var(--token-47ovROB-Xr2C);
   --mixin-66w6vXW23VD4_white-space: pre-wrap;
   --mixin-jap4cjEL1F0d_white-space: pre-wrap;
   --mixin-nE_YlQlyd13x_white-space: pre-wrap;
+  --mixin-g9nE7QfYUsHw_white-space: pre-wrap;
 }
 
 .plasmic_mixins {
@@ -666,4 +667,11 @@ p:where(.root_reset.p),
 :where(.root_reset .__wab_expr_html_text) p,
 :where(.root_reset_tags) p,
 p:where(.root_reset_tags) {
+}
+
+:where(.root_reset) a:where(.a):active,
+a:where(.root_reset.a):active,
+:where(.root_reset .__wab_expr_html_text) a:active,
+:where(.root_reset_tags) a:active,
+a:where(.root_reset_tags):active {
 }
