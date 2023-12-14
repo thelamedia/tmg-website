@@ -20,6 +20,12 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 
+//Imports
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import {SpeedInsights} from "@vercel/speed-insights/next"
+
+
 import {
   hasVariant,
   classNames,
@@ -135,7 +141,63 @@ function PlasmicHomepage__RenderFunc(props: {
     ...args,
     ...variants
   };
+  React.useEffect(() => {
+    // Import scripts dynamically
+    const threeScript = document.createElement('script');
+    threeScript.src = '/vanta/three.min.js';
+    threeScript.onload = () => {
+      const vantaScript1 = document.createElement('script');
+      const vantaScript2 = document.createElement('script');
+      vantaScript1.src = '/vanta/vanta.clouds.min.js';
+      vantaScript2.src = '/vanta/vanta.fog.min.js';
+      vantaScript1.onload = () => {
+        if (VANTA && typeof VANTA.CLOUDS === 'function') {
+          VANTA.CLOUDS({
+            el: "#homeHero",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            skyColor: 0x0,
+            cloudColor: 0x181818,
+            speed: .7
+          });
+        }
+      };
+      document.body.appendChild(vantaScript1);
+      vantaScript2.onload = () => {
+        if (VANTA && typeof VANTA.FOG === 'function') {
+          VANTA.FOG({
+            el: "#none",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            highlightColor: 0x503107,
+            midtoneColor: 0x0,
+            lowlightColor: 0x50505,
+            baseColor: 0x0,
+            speed: 1.20,
+            zoom: 0.40
+          });
+        }
+      };
+      document.body.appendChild(vantaScript2);
+    };
+    document.body.appendChild(threeScript);
 
+
+
+    // Clean up effect if the component unmounts
+    return () => {
+      if (window.VANTA) {
+        window.VANTA.effect && window.VANTA.effect.destroy();
+      }
+    };
+  }, []);
+  
   const __nextRouter = useNextRouter();
   const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
@@ -173,8 +235,10 @@ function PlasmicHomepage__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
-
+      <Head>
+        <title>Thela Media Group - Your Brand, Elevated</title>
+      </Head>
+      <SpeedInsights /> 
       <style>{`
         body {
           margin: 0;
