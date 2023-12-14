@@ -1391,9 +1391,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         displayMinWidth={"0"}
                         displayWidth={"auto"}
                         loading={"lazy"}
-                        src={
-                          "https://wellcellglobal.com/wp-content/uploads/2023/12/WellCellGlobalLogo-1.png"
-                        }
+                        src={{
+                          src: "/plasmic/tmg_website/images/image8.png",
+                          fullWidth: 197,
+                          fullHeight: 58,
+                          aspectRatio: undefined
+                        }}
                       />
 
                       <div
@@ -1404,7 +1407,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         )}
                       >
                         {
-                          "Brand standards implementation and comprehensive marketing & advertising strategy for patented protocol."
+                          "Go to market strategy, comprehensive brand & marketing development including custom photo assets, video production, and graphic design."
                         }
                       </div>
                     </p.Stack>
@@ -1433,7 +1436,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         displayMaxWidth={"100%"}
                         displayMinHeight={"0"}
                         displayMinWidth={"0"}
-                        displayWidth={"auto"}
+                        displayWidth={"325px"}
                         loading={"lazy"}
                         src={
                           "https://familymedicineaustin.com/wp-content/uploads/2021/03/logo_new__1___1_-1-400x84.png"
@@ -1546,15 +1549,24 @@ function PlasmicHomepage__RenderFunc(props: {
                       hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__kk3H5)}
                     >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___5TIfS
-                        )}
-                      >
-                        {"SUMMIIT"}
-                      </div>
+                      <p.PlasmicImg
+                        alt={""}
+                        className={classNames(sty.img__bcxpg)}
+                        displayHeight={"auto"}
+                        displayMaxHeight={"70px"}
+                        displayMaxWidth={"51.36%"}
+                        displayMinHeight={"0"}
+                        displayMinWidth={"0"}
+                        displayWidth={"100%"}
+                        loading={"lazy"}
+                        src={{
+                          src: "/plasmic/tmg_website/images/image6.png",
+                          fullWidth: 3279,
+                          fullHeight: 947,
+                          aspectRatio: undefined
+                        }}
+                      />
+
                       <div
                         className={classNames(
                           projectcss.all,

@@ -603,6 +603,16 @@
           "id": "nkJf4-7IxUbO",
           "name": "image 2",
           "filePath": "../public/plasmic/tmg_website/images/image2.png"
+        },
+        {
+          "id": "RTdlxL4u15CW",
+          "name": "image 6",
+          "filePath": "../public/plasmic/tmg_website/images/image6.png"
+        },
+        {
+          "id": "_OzJLan6ukPW",
+          "name": "image 8",
+          "filePath": "../public/plasmic/tmg_website/images/image8.png"
         }
       ],
       "indirect": false,
