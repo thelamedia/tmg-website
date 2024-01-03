@@ -73,8 +73,7 @@
           }
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -673,6 +672,41 @@
           "id": "Y1oJCgoGGlkN",
           "name": "GraphQL Image 2.jpg",
           "filePath": "../public/plasmic/tmg_website/images/graphQlImage2Jpg.jpg"
+        },
+        {
+          "id": "2u6SVxtZGZRq",
+          "name": "image 19",
+          "filePath": "../public/plasmic/tmg_website/images/image19.png"
+        },
+        {
+          "id": "c7yV0DbR7QjE",
+          "name": "image 20",
+          "filePath": "../public/plasmic/tmg_website/images/image20.png"
+        },
+        {
+          "id": "2avekiMbbHqQ",
+          "name": "image 21",
+          "filePath": "../public/plasmic/tmg_website/images/image21.png"
+        },
+        {
+          "id": "pDoBrzA0a96K",
+          "name": "image 22",
+          "filePath": "../public/plasmic/tmg_website/images/image22.png"
+        },
+        {
+          "id": "t44CA52ZtqEo",
+          "name": "image 23",
+          "filePath": "../public/plasmic/tmg_website/images/image23.png"
+        },
+        {
+          "id": "BRAKwtNBkiyH",
+          "name": "image 24",
+          "filePath": "../public/plasmic/tmg_website/images/image24.png"
+        },
+        {
+          "id": "tLEIO0cKad9W",
+          "name": "image 25",
+          "filePath": "../public/plasmic/tmg_website/images/image25.png"
         }
       ],
       "indirect": false,

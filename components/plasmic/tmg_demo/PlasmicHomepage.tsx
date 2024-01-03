@@ -84,6 +84,10 @@ export type PlasmicHomepage__OverridesType = {
   imageGrid?: p.Flex<"div">;
   copy?: p.Flex<"div">;
   button2?: p.Flex<typeof Button2>;
+  audience?: p.Flex<"section">;
+  moveRight?: p.Flex<"div">;
+  moveLeft?: p.Flex<"div">;
+  moveRight3?: p.Flex<"div">;
   checklist?: p.Flex<"section">;
   foreground?: p.Flex<"div">;
   testimonials?: p.Flex<"section">;
@@ -100,7 +104,6 @@ export type PlasmicHomepage__OverridesType = {
   amt5?: p.Flex<"div">;
   amt6?: p.Flex<"div">;
   chat?: p.Flex<"section">;
-  h1?: p.Flex<"h1">;
   call?: p.Flex<typeof Button2>;
   text?: p.Flex<typeof Button2>;
   schedule?: p.Flex<typeof Button2>;
@@ -929,6 +932,418 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
           </p.Stack>
+          <section
+            data-plasmic-name={"audience"}
+            data-plasmic-override={overrides.audience}
+            className={classNames(projectcss.all, sty.audience)}
+          >
+            <div className={classNames(projectcss.all, sty.freeBox___1JtNd)}>
+              <h1
+                className={classNames(
+                  projectcss.all,
+                  projectcss.h1,
+                  projectcss.__wab_text,
+                  sty.h1__ehcci
+                )}
+              >
+                {"We\nKnow\nPeople"}
+              </h1>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__xKb3B
+                )}
+              >
+                {
+                  "With deep data partnerships and comprehensive attribution, your message gets delivered to the right audience, every time. "
+                }
+              </div>
+            </div>
+            <div
+              data-plasmic-name={"moveRight"}
+              data-plasmic-override={overrides.moveRight}
+              className={classNames(projectcss.all, sty.moveRight, "slideImg")}
+            >
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img___8Wcku, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image21.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__f3Q7U, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image21.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__tYaa7, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image21.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img___098Rk, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image21.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__gQzJl, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image21.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__fik5H, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image21.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__woiOp, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image21.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"moveLeft"}
+              data-plasmic-override={overrides.moveLeft}
+              className={classNames(
+                projectcss.all,
+                sty.moveLeft,
+                "slideImgLeft"
+              )}
+            >
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img___9H7Cb, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image25.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img___887Z0, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image25.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__hiKFg, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image25.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__jzsG4, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image25.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__rgo9V, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image25.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__cNCrj, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image25.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+            <div
+              data-plasmic-name={"moveRight3"}
+              data-plasmic-override={overrides.moveRight3}
+              className={classNames(
+                projectcss.all,
+                sty.moveRight3,
+                "slideImgRightSlow"
+              )}
+            >
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__ubfaZ, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image23.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__o0Hn, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image23.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__wOryO, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image23.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__qqJf, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image23.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__kkxTk, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image23.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__naIqN, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image23.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <p.PlasmicImg
+                alt={""}
+                className={classNames(sty.img__wMzn4, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image23.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
+                }}
+              />
+            </div>
+          </section>
           <p.Stack
             as={"section"}
             data-plasmic-name={"checklist"}
@@ -1163,6 +1578,33 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
+                            sty.freeBox__eIt1P
+                          )}
+                        >
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__w3C1U
+                            )}
+                          >
+                            {
+                              "TMG developed a marketing campaign and a scheduling process for acquiring patients that was so successful, we ended up as the top producing site in the country for our first clinical trial.  Many studies later, and not only are their efforts still producing stellar results in an ever changing landscape, but they have the same dedication and focus on results that an equity owner would possess.  I can't say enough good things about TMG.  Don't miss an opportunity to work with their amazing talent."
+                            }
+                          </div>
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.__wab_text,
+                              sty.text__tfsRw
+                            )}
+                          >
+                            {"Tony\nCEO - Medical Trials Company"}
+                          </div>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
                             sty.freeBox__whQtJ
                           )}
                         >
@@ -1190,14 +1632,14 @@ function PlasmicHomepage__RenderFunc(props: {
                         <div
                           className={classNames(
                             projectcss.all,
-                            sty.freeBox__eIt1P
+                            sty.freeBox__jhpi3
                           )}
                         >
                           <div
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__w3C1U
+                              sty.text___47YJq
                             )}
                           >
                             {
@@ -1208,7 +1650,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__tfsRw
+                              sty.text__rDmZi
                             )}
                           >
                             {"Shawn\nPresident - Medical Management Firm"}
@@ -1701,13 +2143,11 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames(projectcss.all, sty.freeBox__dy9LU)}
             >
               <h1
-                data-plasmic-name={"h1"}
-                data-plasmic-override={overrides.h1}
                 className={classNames(
                   projectcss.all,
                   projectcss.h1,
                   projectcss.__wab_text,
-                  sty.h1
+                  sty.h1__t4AJ
                 )}
               >
                 {"Ready to stand out? "}
@@ -1943,6 +2383,10 @@ const PlasmicDescendants = {
     "imageGrid",
     "copy",
     "button2",
+    "audience",
+    "moveRight",
+    "moveLeft",
+    "moveRight3",
     "checklist",
     "foreground",
     "testimonials",
@@ -1959,7 +2403,6 @@ const PlasmicDescendants = {
     "amt5",
     "amt6",
     "chat",
-    "h1",
     "call",
     "text",
     "schedule",
@@ -1982,6 +2425,10 @@ const PlasmicDescendants = {
   imageGrid: ["imageGrid", "copy", "button2"],
   copy: ["copy", "button2"],
   button2: ["button2"],
+  audience: ["audience", "moveRight", "moveLeft", "moveRight3"],
+  moveRight: ["moveRight"],
+  moveLeft: ["moveLeft"],
+  moveRight3: ["moveRight3"],
   checklist: ["checklist", "foreground"],
   foreground: ["foreground"],
   testimonials: ["testimonials", "sliderCarousel2"],
@@ -1997,8 +2444,7 @@ const PlasmicDescendants = {
   amt4: ["amt4"],
   amt5: ["amt5"],
   amt6: ["amt6"],
-  chat: ["chat", "h1", "call", "text", "schedule"],
-  h1: ["h1"],
+  chat: ["chat", "call", "text", "schedule"],
   call: ["call"],
   text: ["text"],
   schedule: ["schedule"],
@@ -2026,6 +2472,10 @@ type NodeDefaultElementType = {
   imageGrid: "div";
   copy: "div";
   button2: typeof Button2;
+  audience: "section";
+  moveRight: "div";
+  moveLeft: "div";
+  moveRight3: "div";
   checklist: "section";
   foreground: "div";
   testimonials: "section";
@@ -2042,7 +2492,6 @@ type NodeDefaultElementType = {
   amt5: "div";
   amt6: "div";
   chat: "section";
-  h1: "h1";
   call: typeof Button2;
   text: typeof Button2;
   schedule: typeof Button2;
@@ -2126,6 +2575,10 @@ export const PlasmicHomepage = Object.assign(
     imageGrid: makeNodeComponent("imageGrid"),
     copy: makeNodeComponent("copy"),
     button2: makeNodeComponent("button2"),
+    audience: makeNodeComponent("audience"),
+    moveRight: makeNodeComponent("moveRight"),
+    moveLeft: makeNodeComponent("moveLeft"),
+    moveRight3: makeNodeComponent("moveRight3"),
     checklist: makeNodeComponent("checklist"),
     foreground: makeNodeComponent("foreground"),
     testimonials: makeNodeComponent("testimonials"),
@@ -2142,7 +2595,6 @@ export const PlasmicHomepage = Object.assign(
     amt5: makeNodeComponent("amt5"),
     amt6: makeNodeComponent("amt6"),
     chat: makeNodeComponent("chat"),
-    h1: makeNodeComponent("h1"),
     call: makeNodeComponent("call"),
     text: makeNodeComponent("text"),
     schedule: makeNodeComponent("schedule"),
