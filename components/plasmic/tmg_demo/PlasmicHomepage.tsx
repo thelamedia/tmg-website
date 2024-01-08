@@ -88,6 +88,7 @@ export type PlasmicHomepage__OverridesType = {
   moveRight?: p.Flex<"div">;
   moveLeft?: p.Flex<"div">;
   moveRight3?: p.Flex<"div">;
+  stats?: p.Flex<"section">;
   checklist?: p.Flex<"section">;
   foreground?: p.Flex<"div">;
   testimonials?: p.Flex<"section">;
@@ -1344,6 +1345,110 @@ function PlasmicHomepage__RenderFunc(props: {
               />
             </div>
           </section>
+          <section
+            data-plasmic-name={"stats"}
+            data-plasmic-override={overrides.stats}
+            className={classNames(projectcss.all, sty.stats)}
+          >
+            <div className={classNames(projectcss.all, sty.columns___8C4Yq)}>
+              <div className={classNames(projectcss.all, sty.column__adBo9)}>
+                <h2
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2__hd6Rj
+                  )}
+                >
+                  {"Be The Top 7%"}
+                </h2>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__pmsCi
+                  )}
+                >
+                  {
+                    "When strategy and execution are partnered with solid attribution and market fit testing, you become capable of maximizing both impact and profitability.  \n\nThis isn't just a theory.  Our clients are winning more customers at up to 93% cost reduction over their direct competitors.    "
+                  }
+                </div>
+              </div>
+              <div className={classNames(projectcss.all, sty.column__cEMek)}>
+                <p.PlasmicImg
+                  alt={""}
+                  className={classNames(sty.img__h6Gfo)}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
+                  displayMaxWidth={"100%"}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"100%"}
+                  loading={"lazy"}
+                  src={{
+                    src: "/plasmic/tmg_website/images/img5457Jpg.jpg",
+                    fullWidth: 1290,
+                    fullHeight: 812,
+                    aspectRatio: undefined
+                  }}
+                />
+
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__lzi89
+                  )}
+                >
+                  {"Screenshot taken from an active client campaign."}
+                </div>
+              </div>
+            </div>
+            <div className={classNames(projectcss.all, sty.columns__w02KX)}>
+              <div className={classNames(projectcss.all, sty.column__rbEpx)}>
+                <h2
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2__kNy9D
+                  )}
+                >
+                  {"21.33%"}
+                </h2>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__xa6J
+                  )}
+                >
+                  {"Industry standard marketing email open rate"}
+                </div>
+              </div>
+              <div className={classNames(projectcss.all, sty.column___7C2Uv)}>
+                <h2
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.h2,
+                    projectcss.__wab_text,
+                    sty.h2__lecan
+                  )}
+                >
+                  {"74.92%"}
+                </h2>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__iFy8S
+                  )}
+                >
+                  {"TMG client average marketing email open rate"}
+                </div>
+              </div>
+            </div>
+          </section>
           <p.Stack
             as={"section"}
             data-plasmic-name={"checklist"}
@@ -2387,6 +2492,7 @@ const PlasmicDescendants = {
     "moveRight",
     "moveLeft",
     "moveRight3",
+    "stats",
     "checklist",
     "foreground",
     "testimonials",
@@ -2429,6 +2535,7 @@ const PlasmicDescendants = {
   moveRight: ["moveRight"],
   moveLeft: ["moveLeft"],
   moveRight3: ["moveRight3"],
+  stats: ["stats"],
   checklist: ["checklist", "foreground"],
   foreground: ["foreground"],
   testimonials: ["testimonials", "sliderCarousel2"],
@@ -2476,6 +2583,7 @@ type NodeDefaultElementType = {
   moveRight: "div";
   moveLeft: "div";
   moveRight3: "div";
+  stats: "section";
   checklist: "section";
   foreground: "div";
   testimonials: "section";
@@ -2579,6 +2687,7 @@ export const PlasmicHomepage = Object.assign(
     moveRight: makeNodeComponent("moveRight"),
     moveLeft: makeNodeComponent("moveLeft"),
     moveRight3: makeNodeComponent("moveRight3"),
+    stats: makeNodeComponent("stats"),
     checklist: makeNodeComponent("checklist"),
     foreground: makeNodeComponent("foreground"),
     testimonials: makeNodeComponent("testimonials"),

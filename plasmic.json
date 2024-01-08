@@ -73,7 +73,8 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -707,6 +708,11 @@
           "id": "tLEIO0cKad9W",
           "name": "image 25",
           "filePath": "../public/plasmic/tmg_website/images/image25.png"
+        },
+        {
+          "id": "r1zVt1DMx5e5",
+          "name": "IMG_5457.jpg",
+          "filePath": "../public/plasmic/tmg_website/images/img5457Jpg.jpg"
         }
       ],
       "indirect": false,
