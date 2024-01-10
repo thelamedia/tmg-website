@@ -20,6 +20,12 @@ import { useRouter } from "next/router";
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
 
+//Imports
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import {SpeedInsights} from "@vercel/speed-insights/next"
+
+
 import {
   hasVariant,
   classNames,
@@ -178,6 +184,7 @@ function PlasmicHomepage__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
+    
         <meta name="twitter:card" content="summary_large_image" />
         <title key="title">{PlasmicHomepage.pageMetadata.title}</title>
         <meta
@@ -223,7 +230,7 @@ function PlasmicHomepage__RenderFunc(props: {
           margin: 0;
         }
       `}</style>
-
+  <SpeedInsights /> 
       <div className={projectcss.plasmic_page_wrapper}>
         <div
           data-plasmic-name={"homepage"}
