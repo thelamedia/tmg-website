@@ -19,6 +19,7 @@ import { useRouter } from "next/router";
 
 import * as p from "@plasmicapp/react-web";
 import * as ph from "@plasmicapp/react-web/lib/host";
+import Script from "next/script"
 
 import {
   hasVariant,
@@ -223,7 +224,18 @@ function PlasmicHomepage__RenderFunc(props: {
           margin: 0;
         }
       `}</style>
-
+      <Script id="gtb-body">
+        {
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-5QZHLFKG"
+              height="0"
+              width="0"
+              style="display:none;visibility:hidden"
+            ></iframe>
+          </noscript>
+        }
+      </Script>
       <div className={projectcss.plasmic_page_wrapper}>
         <div
           data-plasmic-name={"homepage"}
@@ -269,7 +281,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image7.png",
                   fullWidth: 908,
                   fullHeight: 254,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -578,7 +590,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image9.png",
                       fullWidth: 4217,
                       fullHeight: 1157,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </div>
@@ -597,7 +609,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image10.png",
                       fullWidth: 750,
                       fullHeight: 336,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </div>
@@ -616,7 +628,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image11.png",
                       fullWidth: 300,
                       fullHeight: 57,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </div>
@@ -635,7 +647,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image12.png",
                       fullWidth: 1050,
                       fullHeight: 258,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </div>
@@ -654,7 +666,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image13.png",
                       fullWidth: 1233,
                       fullHeight: 294,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </div>
@@ -673,7 +685,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image14.png",
                       fullWidth: 323,
                       fullHeight: 96,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </div>
@@ -692,7 +704,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image15.png",
                       fullWidth: 750,
                       fullHeight: 183,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </div>
@@ -711,7 +723,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image16.png",
                       fullWidth: 245,
                       fullHeight: 45,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </div>
@@ -730,7 +742,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image4.png",
                       fullWidth: 218,
                       fullHeight: 53,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </div>
@@ -749,7 +761,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image17.png",
                       fullWidth: 2324,
                       fullHeight: 1061,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </div>
@@ -768,7 +780,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image2.png",
                       fullWidth: 1480,
                       fullHeight: 428,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </div>
@@ -787,7 +799,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image5.png",
                       fullWidth: 489,
                       fullHeight: 185,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </div>
@@ -821,7 +833,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image18.png",
                       fullWidth: 1146,
                       fullHeight: 1536,
-                      aspectRatio: undefined
+                      aspectRatio: undefined,
                     }}
                   />
                 </Reveal>
@@ -980,7 +992,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -998,7 +1010,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1016,7 +1028,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1034,7 +1046,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1052,7 +1064,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1070,7 +1082,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1088,7 +1100,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
             </div>
@@ -1115,7 +1127,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image25.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1133,7 +1145,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image25.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1151,7 +1163,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image25.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1169,7 +1181,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image25.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1187,7 +1199,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image25.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1205,7 +1217,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image25.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
             </div>
@@ -1232,7 +1244,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1250,7 +1262,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1268,7 +1280,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1286,7 +1298,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1304,7 +1316,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1322,7 +1334,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
 
@@ -1340,7 +1352,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined
+                  aspectRatio: undefined,
                 }}
               />
             </div>
@@ -1389,7 +1401,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     src: "/plasmic/tmg_website/images/img5457Jpg.jpg",
                     fullWidth: 1290,
                     fullHeight: 812,
-                    aspectRatio: undefined
+                    aspectRatio: undefined,
                   }}
                 />
 
@@ -1654,20 +1666,20 @@ function PlasmicHomepage__RenderFunc(props: {
                       dots: false,
                       initialSlide: p.generateStateValueProp($state, [
                         "sliderCarousel2",
-                        "currentSlide"
+                        "currentSlide",
                       ]),
-                      ref: ref => {
+                      ref: (ref) => {
                         $refs["sliderCarousel2"] = ref;
                       },
-                      sliderScopeClassName: sty["sliderCarousel2__slider"]
+                      sliderScopeClassName: sty["sliderCarousel2__slider"],
                     };
                     p.initializeCodeComponentStates(
                       $state,
                       [
                         {
                           name: "currentSlide",
-                          plasmicStateName: "sliderCarousel2.currentSlide"
-                        }
+                          plasmicStateName: "sliderCarousel2.currentSlide",
+                        },
                       ],
                       [],
                       SliderWrapper_Helpers ?? {},
@@ -1951,7 +1963,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           src: "/plasmic/tmg_website/images/image14.png",
                           fullWidth: 323,
                           fullHeight: 96,
-                          aspectRatio: undefined
+                          aspectRatio: undefined,
                         }}
                       />
 
@@ -1998,7 +2010,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           src: "/plasmic/tmg_website/images/image8.png",
                           fullWidth: 197,
                           fullHeight: 58,
-                          aspectRatio: undefined
+                          aspectRatio: undefined,
                         }}
                       />
 
@@ -2122,7 +2134,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           src: "/plasmic/tmg_website/images/image15.png",
                           fullWidth: 750,
                           fullHeight: 183,
-                          aspectRatio: undefined
+                          aspectRatio: undefined,
                         }}
                       />
 
@@ -2169,7 +2181,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           src: "/plasmic/tmg_website/images/image6.png",
                           fullWidth: 3279,
                           fullHeight: 947,
-                          aspectRatio: undefined
+                          aspectRatio: undefined,
                         }}
                       />
 
@@ -2216,7 +2228,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           src: "/plasmic/tmg_website/images/image2.png",
                           fullWidth: 1480,
                           fullHeight: 428,
-                          aspectRatio: undefined
+                          aspectRatio: undefined,
                         }}
                       />
 
@@ -2394,7 +2406,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     src: "/plasmic/tmg_website/images/image7.png",
                     fullWidth: 908,
                     fullHeight: 254,
-                    aspectRatio: undefined
+                    aspectRatio: undefined,
                   }}
                 />
 
