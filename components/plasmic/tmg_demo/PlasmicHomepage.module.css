@@ -1544,7 +1544,7 @@
   justify-content: center;
   width: 100%;
   height: 226px;
-  max-width: 100%;
+  max-width: auto;
   flex-wrap: nowrap;
   align-content: stretch;
   overflow: visible;
@@ -1637,73 +1637,73 @@
 }
 .img___9H7Cb {
   position: relative;
-  object-fit: cover;
+  object-fit: contain;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
 .img___9H7Cb > picture > img {
-  object-fit: cover;
+  object-fit: contain;
 }
-.img__cD5Jb {
+.img__wbMy {
   position: relative;
-  object-fit: cover;
+  object-fit: contain;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__cD5Jb > picture > img {
-  object-fit: cover;
+.img__wbMy > picture > img {
+  object-fit: contain;
 }
-.img__lzbGb {
+.img__y72R {
   position: relative;
-  object-fit: cover;
+  object-fit: contain;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__lzbGb > picture > img {
-  object-fit: cover;
+.img__y72R > picture > img {
+  object-fit: contain;
 }
-.img__w2Rh {
+.img__q48UW {
   position: relative;
-  object-fit: cover;
+  object-fit: contain;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__w2Rh > picture > img {
-  object-fit: cover;
+.img__q48UW > picture > img {
+  object-fit: contain;
 }
-.img__qVneu {
+.img__nQx8K {
   position: relative;
-  object-fit: cover;
+  object-fit: contain;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__qVneu > picture > img {
-  object-fit: cover;
+.img__nQx8K > picture > img {
+  object-fit: contain;
 }
-.img___48Wwr {
+.img__gUsCu {
   position: relative;
-  object-fit: cover;
+  object-fit: contain;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img___48Wwr > picture > img {
-  object-fit: cover;
+.img__gUsCu > picture > img {
+  object-fit: contain;
 }
-.img__njoC5 {
+.img___6Y5Zl {
   position: relative;
-  object-fit: cover;
+  object-fit: contain;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__njoC5 > picture > img {
-  object-fit: cover;
+.img___6Y5Zl > picture > img {
+  object-fit: contain;
 }
 .moveRight3 {
   display: flex;
@@ -1713,7 +1713,7 @@
   justify-content: center;
   width: 100%;
   height: 226px;
-  max-width: 100%;
+  max-width: auto;
   flex-wrap: nowrap;
   align-content: stretch;
   overflow: visible;
@@ -1725,80 +1725,66 @@
 }
 .img__ubfaZ {
   position: relative;
-  object-fit: cover;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
 .img__ubfaZ > picture > img {
-  object-fit: cover;
+  object-fit: contain;
 }
-.img__xktbt {
+.img__t2SN {
   position: relative;
-  object-fit: cover;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__xktbt > picture > img {
-  object-fit: cover;
+.img__t2SN > picture > img {
+  object-fit: contain;
 }
-.img__kI0Fx {
+.img__qDiTp {
   position: relative;
-  object-fit: cover;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__kI0Fx > picture > img {
-  object-fit: cover;
+.img__qDiTp > picture > img {
+  object-fit: contain;
 }
-.img__oqQm {
+.img__fsJn6 {
   position: relative;
-  object-fit: cover;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__oqQm > picture > img {
-  object-fit: cover;
+.img__fsJn6 > picture > img {
+  object-fit: contain;
 }
-.img__c4VLv {
+.img__kZzSq {
   position: relative;
-  object-fit: cover;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__c4VLv > picture > img {
-  object-fit: cover;
+.img__kZzSq > picture > img {
+  object-fit: contain;
 }
-.img__lxcdh {
+.img__zhjeN {
   position: relative;
-  object-fit: cover;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__lxcdh > picture > img {
-  object-fit: cover;
+.img__zhjeN > picture > img {
+  object-fit: contain;
 }
-.img___6OZrv {
+.img___7HxsO {
   position: relative;
-  object-fit: cover;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img___6OZrv > picture > img {
-  object-fit: cover;
+.img___7HxsO > picture > img {
+  object-fit: contain;
 }
 .stats {
   display: grid;

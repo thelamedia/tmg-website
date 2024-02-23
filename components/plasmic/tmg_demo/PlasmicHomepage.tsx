@@ -1141,7 +1141,7 @@ function PlasmicHomepage__RenderFunc(props: {
 
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__cD5Jb, ``)}
+                className={classNames(sty.img__wbMy, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
@@ -1159,7 +1159,7 @@ function PlasmicHomepage__RenderFunc(props: {
 
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__lzbGb, ``)}
+                className={classNames(sty.img__y72R, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
@@ -1177,7 +1177,7 @@ function PlasmicHomepage__RenderFunc(props: {
 
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__w2Rh, ``)}
+                className={classNames(sty.img__q48UW, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
@@ -1195,7 +1195,7 @@ function PlasmicHomepage__RenderFunc(props: {
 
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__qVneu, ``)}
+                className={classNames(sty.img__nQx8K, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
@@ -1213,7 +1213,7 @@ function PlasmicHomepage__RenderFunc(props: {
 
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img___48Wwr, ``)}
+                className={classNames(sty.img__gUsCu, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
@@ -1231,7 +1231,7 @@ function PlasmicHomepage__RenderFunc(props: {
 
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__njoC5, ``)}
+                className={classNames(sty.img___6Y5Zl, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
@@ -1264,7 +1264,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 displayMaxWidth={"none"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"100%"}
+                displayWidth={"auto"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image23.png",
@@ -1276,13 +1276,13 @@ function PlasmicHomepage__RenderFunc(props: {
 
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__xktbt, ``)}
+                className={classNames(sty.img__t2SN, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"100%"}
+                displayWidth={"auto"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image23.png",
@@ -1294,13 +1294,13 @@ function PlasmicHomepage__RenderFunc(props: {
 
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__kI0Fx, ``)}
+                className={classNames(sty.img__qDiTp, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"100%"}
+                displayWidth={"auto"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image23.png",
@@ -1312,13 +1312,13 @@ function PlasmicHomepage__RenderFunc(props: {
 
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__oqQm, ``)}
+                className={classNames(sty.img__fsJn6, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"100%"}
+                displayWidth={"auto"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image23.png",
@@ -1330,13 +1330,13 @@ function PlasmicHomepage__RenderFunc(props: {
 
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__c4VLv, ``)}
+                className={classNames(sty.img__kZzSq, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"100%"}
+                displayWidth={"auto"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image23.png",
@@ -1348,13 +1348,13 @@ function PlasmicHomepage__RenderFunc(props: {
 
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__lxcdh, ``)}
+                className={classNames(sty.img__zhjeN, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"100%"}
+                displayWidth={"auto"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image23.png",
@@ -1366,13 +1366,13 @@ function PlasmicHomepage__RenderFunc(props: {
 
               <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img___6OZrv, ``)}
+                className={classNames(sty.img___7HxsO, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"none"}
                 displayMinHeight={"0"}
                 displayMinWidth={"0"}
-                displayWidth={"100%"}
+                displayWidth={"auto"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image23.png",
