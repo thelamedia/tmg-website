@@ -17,26 +17,48 @@ import Head from "next/head";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/router";
 
-import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/react-web/lib/host";
-import Script from "next/script"
-
 import {
-  hasVariant,
-  classNames,
-  wrapWithClassName,
-  createPlasmicElementProxy,
-  makeFragment,
+  Flex as Flex__,
   MultiChoiceArg,
+  PlasmicDataSourceContextProvider as PlasmicDataSourceContextProvider__,
+  PlasmicIcon as PlasmicIcon__,
+  PlasmicImg as PlasmicImg__,
+  PlasmicLink as PlasmicLink__,
+  PlasmicPageGuard as PlasmicPageGuard__,
   SingleBooleanChoiceArg,
   SingleChoiceArg,
-  pick,
-  omit,
-  useTrigger,
+  Stack as Stack__,
   StrictProps,
+  Trans as Trans__,
+  classNames,
+  createPlasmicElementProxy,
   deriveRenderOpts,
-  ensureGlobalVariants
+  ensureGlobalVariants,
+  generateOnMutateForSpec,
+  generateStateOnChangeProp,
+  generateStateOnChangePropForCodeComponents,
+  generateStateValueProp,
+  get as $stateGet,
+  hasVariant,
+  initializeCodeComponentStates,
+  initializePlasmicStates,
+  makeFragment,
+  omit,
+  pick,
+  renderPlasmicSlot,
+  set as $stateSet,
+  useCurrentUser,
+  useDollarState,
+  usePlasmicTranslator,
+  useTrigger,
+  wrapWithClassName
 } from "@plasmicapp/react-web";
+import {
+  DataCtxReader as DataCtxReader__,
+  useDataEnv,
+  useGlobalActions
+} from "@plasmicapp/react-web/lib/host";
+
 import Button2 from "../../Button2"; // plasmic-import: t4Ewn2gBSIli/component
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal";
 import { SliderWrapper } from "@plasmicpkgs/react-slick";
@@ -70,49 +92,49 @@ type ArgPropType = keyof PlasmicHomepage__ArgsType;
 export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
-  homepage?: p.Flex<"div">;
-  menu?: p.Flex<"div">;
-  menuElements?: p.Flex<"div">;
-  caseStudies?: p.Flex<typeof Button2>;
-  heroCta2?: p.Flex<typeof Button2>;
-  homeHero?: p.Flex<"section">;
-  heroText?: p.Flex<"h1">;
-  heroText2?: p.Flex<"h1">;
-  heroDescription?: p.Flex<"div">;
-  heroCta?: p.Flex<typeof Button2>;
-  columns?: p.Flex<"section">;
-  clients?: p.Flex<"section">;
-  imageGrid?: p.Flex<"div">;
-  copy?: p.Flex<"div">;
-  button2?: p.Flex<typeof Button2>;
-  audience?: p.Flex<"section">;
-  moveRight?: p.Flex<"div">;
-  moveLeft?: p.Flex<"div">;
-  moveRight3?: p.Flex<"div">;
-  stats?: p.Flex<"section">;
-  checklist?: p.Flex<"section">;
-  foreground?: p.Flex<"div">;
-  testimonials?: p.Flex<"section">;
-  sliderCarousel2?: p.Flex<typeof SliderWrapper>;
-  section?: p.Flex<"section">;
-  medical?: p.Flex<"section">;
-  _3Columns?: p.Flex<"div">;
-  amt?: p.Flex<"div">;
-  amt2?: p.Flex<"div">;
-  amt3?: p.Flex<"div">;
-  tech?: p.Flex<"section">;
-  _3Columns2?: p.Flex<"div">;
-  amt4?: p.Flex<"div">;
-  amt5?: p.Flex<"div">;
-  amt6?: p.Flex<"div">;
-  chat?: p.Flex<"section">;
-  call?: p.Flex<typeof Button2>;
-  text?: p.Flex<typeof Button2>;
-  schedule?: p.Flex<typeof Button2>;
-  footer?: p.Flex<"section">;
-  h4?: p.Flex<"h4">;
-  phoneNumber?: p.Flex<"a"> & Partial<LinkProps>;
-  link?: p.Flex<"a"> & Partial<LinkProps>;
+  homepage?: Flex__<"div">;
+  menu?: Flex__<"div">;
+  menuElements?: Flex__<"div">;
+  caseStudies?: Flex__<typeof Button2>;
+  heroCta2?: Flex__<typeof Button2>;
+  homeHero?: Flex__<"section">;
+  heroText?: Flex__<"h1">;
+  heroText2?: Flex__<"h1">;
+  heroDescription?: Flex__<"div">;
+  heroCta?: Flex__<typeof Button2>;
+  columns?: Flex__<"section">;
+  clients?: Flex__<"section">;
+  imageGrid?: Flex__<"div">;
+  copy?: Flex__<"div">;
+  button2?: Flex__<typeof Button2>;
+  audience?: Flex__<"section">;
+  moveRight?: Flex__<"div">;
+  moveLeft?: Flex__<"div">;
+  moveRight3?: Flex__<"div">;
+  stats?: Flex__<"section">;
+  checklist?: Flex__<"section">;
+  foreground?: Flex__<"div">;
+  testimonials?: Flex__<"section">;
+  sliderCarousel2?: Flex__<typeof SliderWrapper>;
+  section?: Flex__<"section">;
+  medical?: Flex__<"section">;
+  _3Columns?: Flex__<"div">;
+  amt?: Flex__<"div">;
+  amt2?: Flex__<"div">;
+  amt3?: Flex__<"div">;
+  tech?: Flex__<"section">;
+  _3Columns2?: Flex__<"div">;
+  amt4?: Flex__<"div">;
+  amt5?: Flex__<"div">;
+  amt6?: Flex__<"div">;
+  chat?: Flex__<"section">;
+  call?: Flex__<typeof Button2>;
+  text?: Flex__<typeof Button2>;
+  schedule?: Flex__<typeof Button2>;
+  footer?: Flex__<"section">;
+  h4?: Flex__<"h4">;
+  phoneNumber?: Flex__<"a"> & Partial<LinkProps>;
+  link?: Flex__<"a"> & Partial<LinkProps>;
 };
 
 export interface DefaultHomepageProps {}
@@ -142,13 +164,13 @@ function PlasmicHomepage__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
-  const $ctx = ph.useDataEnv?.() || {};
+  const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const currentUser = p.useCurrentUser?.() || {};
+  const currentUser = useCurrentUser?.() || {};
 
-  const stateSpecs: Parameters<typeof p.useDollarState>[0] = React.useMemo(
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
         path: "sliderCarousel2.currentSlide",
@@ -157,15 +179,12 @@ function PlasmicHomepage__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => 0,
 
         refName: "sliderCarousel2",
-        onMutate: p.generateOnMutateForSpec(
-          "currentSlide",
-          SliderWrapper_Helpers
-        )
+        onMutate: generateOnMutateForSpec("currentSlide", SliderWrapper_Helpers)
       }
     ],
     [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, {
+  const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
@@ -224,18 +243,7 @@ function PlasmicHomepage__RenderFunc(props: {
           margin: 0;
         }
       `}</style>
-      <Script id="gtb-body">
-        {
-          <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-5QZHLFKG"
-              height="0"
-              width="0"
-              style="display:none;visibility:hidden"
-            ></iframe>
-          </noscript>
-        }
-      </Script>
+
       <div className={projectcss.plasmic_page_wrapper}>
         <div
           data-plasmic-name={"homepage"}
@@ -254,21 +262,21 @@ function PlasmicHomepage__RenderFunc(props: {
           )}
           id={"testimonials"}
         >
-          <p.Stack
+          <Stack__
             as={"div"}
             data-plasmic-name={"menu"}
             data-plasmic-override={overrides.menu}
             hasGap={true}
             className={classNames(projectcss.all, sty.menu)}
           >
-            <p.Stack
+            <Stack__
               as={"div"}
               data-plasmic-name={"menuElements"}
               data-plasmic-override={overrides.menuElements}
               hasGap={true}
               className={classNames(projectcss.all, sty.menuElements)}
             >
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__jt5Sm)}
                 displayHeight={"auto"}
@@ -281,11 +289,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image7.png",
                   fullWidth: 908,
                   fullHeight: 254,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.Stack
+              <Stack__
                 as={"div"}
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__o4Rsw)}
@@ -335,9 +343,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 >
                   {"Let's Talk"}
                 </Button2>
-              </p.Stack>
-            </p.Stack>
-          </p.Stack>
+              </Stack__>
+            </Stack__>
+          </Stack__>
           <section
             data-plasmic-name={"homeHero"}
             data-plasmic-override={overrides.homeHero}
@@ -421,7 +429,7 @@ function PlasmicHomepage__RenderFunc(props: {
               duration={1000}
               triggerOnce={true}
             >
-              <p.Stack
+              <Stack__
                 as={"div"}
                 hasGap={true}
                 className={classNames(projectcss.all, sty.columns__dQdhn)}
@@ -543,7 +551,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
                   </div>
                 </div>
-              </p.Stack>
+              </Stack__>
             </Reveal>
           </section>
           <section
@@ -570,13 +578,13 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames("__wab_instance", sty.reveal__bIOv)}
               triggerOnce={true}
             >
-              <p.Stack
+              <Stack__
                 as={"div"}
                 hasGap={true}
                 className={classNames(projectcss.all, sty.columns___4UlzU)}
               >
                 <div className={classNames(projectcss.all, sty.column__h1DO2)}>
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__rSya3)}
                     displayHeight={"auto"}
@@ -590,12 +598,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image9.png",
                       fullWidth: 4217,
                       fullHeight: 1157,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column___7NYpq)}>
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__ie7Sx)}
                     displayHeight={"auto"}
@@ -609,12 +617,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image10.png",
                       fullWidth: 750,
                       fullHeight: 336,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__hlEG)}>
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__mQaLs)}
                     displayHeight={"auto"}
@@ -628,12 +636,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image11.png",
                       fullWidth: 300,
                       fullHeight: 57,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__wBNpM)}>
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__mDyhm)}
                     displayHeight={"auto"}
@@ -647,12 +655,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image12.png",
                       fullWidth: 1050,
                       fullHeight: 258,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__qXdDz)}>
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__jrbM5)}
                     displayHeight={"auto"}
@@ -666,12 +674,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image13.png",
                       fullWidth: 1233,
                       fullHeight: 294,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column___32EM)}>
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img___5H7K)}
                     displayHeight={"auto"}
@@ -685,12 +693,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image14.png",
                       fullWidth: 323,
                       fullHeight: 96,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__zVYw)}>
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img___4YuMy)}
                     displayHeight={"auto"}
@@ -704,12 +712,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image15.png",
                       fullWidth: 750,
                       fullHeight: 183,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__kXDyO)}>
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__geyzG)}
                     displayHeight={"auto"}
@@ -723,12 +731,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image16.png",
                       fullWidth: 245,
                       fullHeight: 45,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__aXghz)}>
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__ciftv)}
                     displayHeight={"auto"}
@@ -742,12 +750,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image4.png",
                       fullWidth: 218,
                       fullHeight: 53,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__uGfVw)}>
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__wTOW)}
                     displayHeight={"auto"}
@@ -761,12 +769,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image17.png",
                       fullWidth: 2324,
                       fullHeight: 1061,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__fa7Oj)}>
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__gLjW)}
                     displayHeight={"auto"}
@@ -780,12 +788,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image2.png",
                       fullWidth: 1480,
                       fullHeight: 428,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
                 <div className={classNames(projectcss.all, sty.column__mplzl)}>
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__rcIm)}
                     displayHeight={"auto"}
@@ -799,14 +807,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image5.png",
                       fullWidth: 489,
                       fullHeight: 185,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </div>
-              </p.Stack>
+              </Stack__>
             </Reveal>
           </section>
-          <p.Stack
+          <Stack__
             as={"div"}
             data-plasmic-name={"imageGrid"}
             data-plasmic-override={overrides.imageGrid}
@@ -820,7 +828,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   delay={1}
                   triggerOnce={true}
                 >
-                  <p.PlasmicImg
+                  <PlasmicImg__
                     alt={""}
                     className={classNames(sty.img__yuUnU)}
                     displayHeight={"100%"}
@@ -833,18 +841,18 @@ function PlasmicHomepage__RenderFunc(props: {
                       src: "/plasmic/tmg_website/images/image18.png",
                       fullWidth: 1146,
                       fullHeight: 1536,
-                      aspectRatio: undefined,
+                      aspectRatio: undefined
                     }}
                   />
                 </Reveal>
               </div>
               <div className={classNames(projectcss.all, sty.column__yoJHu)}>
-                <p.Stack
+                <Stack__
                   as={"div"}
                   hasGap={true}
                   className={classNames(projectcss.all, sty.freeBox__nxBom)}
                 >
-                  <p.Stack
+                  <Stack__
                     as={"div"}
                     data-plasmic-name={"copy"}
                     data-plasmic-override={overrides.copy}
@@ -864,7 +872,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       effect={"fade"}
                       triggerOnce={true}
                     >
-                      <p.Stack
+                      <Stack__
                         as={"div"}
                         hasGap={true}
                         className={classNames(
@@ -938,13 +946,13 @@ function PlasmicHomepage__RenderFunc(props: {
                             {"Let's Talk"}
                           </div>
                         </Button2>
-                      </p.Stack>
+                      </Stack__>
                     </Reveal>
-                  </p.Stack>
-                </p.Stack>
+                  </Stack__>
+                </Stack__>
               </div>
             </div>
-          </p.Stack>
+          </Stack__>
           <section
             data-plasmic-name={"audience"}
             data-plasmic-override={overrides.audience}
@@ -978,7 +986,7 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.moveRight}
               className={classNames(projectcss.all, sty.moveRight, "slideImg")}
             >
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img___8Wcku, ``)}
                 displayHeight={"226px"}
@@ -992,11 +1000,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__f3Q7U, ``)}
                 displayHeight={"226px"}
@@ -1010,11 +1018,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__tYaa7, ``)}
                 displayHeight={"226px"}
@@ -1028,11 +1036,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img___098Rk, ``)}
                 displayHeight={"226px"}
@@ -1046,11 +1054,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__gQzJl, ``)}
                 displayHeight={"226px"}
@@ -1064,11 +1072,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__fik5H, ``)}
                 displayHeight={"226px"}
@@ -1082,11 +1090,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__woiOp, ``)}
                 displayHeight={"226px"}
@@ -1100,7 +1108,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image21.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
             </div>
@@ -1113,111 +1121,129 @@ function PlasmicHomepage__RenderFunc(props: {
                 "slideImgLeft"
               )}
             >
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img___9H7Cb, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
-                displayMinWidth={"0"}
+                displayMinWidth={"100%"}
                 displayWidth={"100%"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image25.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img___887Z0, ``)}
+                className={classNames(sty.img__knGbk, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
-                displayMinWidth={"0"}
+                displayMinWidth={"100%"}
                 displayWidth={"100%"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image25.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__hiKFg, ``)}
+                className={classNames(sty.img__t2Feh, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
-                displayMinWidth={"0"}
+                displayMinWidth={"100%"}
                 displayWidth={"100%"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image25.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__jzsG4, ``)}
+                className={classNames(sty.img__hzVyu, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
-                displayMinWidth={"0"}
+                displayMinWidth={"100%"}
                 displayWidth={"100%"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image25.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__rgo9V, ``)}
+                className={classNames(sty.img__vyIyn, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
-                displayMinWidth={"0"}
+                displayMinWidth={"100%"}
                 displayWidth={"100%"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image25.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
-                className={classNames(sty.img__cNCrj, ``)}
+                className={classNames(sty.img__oHXsP, ``)}
                 displayHeight={"226px"}
                 displayMaxHeight={"none"}
                 displayMaxWidth={"100%"}
                 displayMinHeight={"0"}
-                displayMinWidth={"0"}
+                displayMinWidth={"100%"}
                 displayWidth={"100%"}
                 loading={"lazy"}
                 src={{
                   src: "/plasmic/tmg_website/images/image25.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
+                }}
+              />
+
+              <PlasmicImg__
+                alt={""}
+                className={classNames(sty.img__gmFC, ``)}
+                displayHeight={"226px"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"100%"}
+                displayMinHeight={"0"}
+                displayMinWidth={"100%"}
+                displayWidth={"100%"}
+                loading={"lazy"}
+                src={{
+                  src: "/plasmic/tmg_website/images/image25.png",
+                  fullWidth: 1976,
+                  fullHeight: 226,
+                  aspectRatio: undefined
                 }}
               />
             </div>
@@ -1230,7 +1256,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 "slideImgRightSlow"
               )}
             >
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__ubfaZ, ``)}
                 displayHeight={"226px"}
@@ -1244,11 +1270,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__o0Hn, ``)}
                 displayHeight={"226px"}
@@ -1262,11 +1288,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__wOryO, ``)}
                 displayHeight={"226px"}
@@ -1280,11 +1306,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__qqJf, ``)}
                 displayHeight={"226px"}
@@ -1298,11 +1324,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__kkxTk, ``)}
                 displayHeight={"226px"}
@@ -1316,11 +1342,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__naIqN, ``)}
                 displayHeight={"226px"}
@@ -1334,11 +1360,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
 
-              <p.PlasmicImg
+              <PlasmicImg__
                 alt={""}
                 className={classNames(sty.img__wMzn4, ``)}
                 displayHeight={"226px"}
@@ -1352,7 +1378,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   src: "/plasmic/tmg_website/images/image23.png",
                   fullWidth: 1976,
                   fullHeight: 226,
-                  aspectRatio: undefined,
+                  aspectRatio: undefined
                 }}
               />
             </div>
@@ -1387,7 +1413,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </div>
               <div className={classNames(projectcss.all, sty.column__cEMek)}>
-                <p.PlasmicImg
+                <PlasmicImg__
                   alt={""}
                   className={classNames(sty.img__h6Gfo)}
                   displayHeight={"auto"}
@@ -1401,7 +1427,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     src: "/plasmic/tmg_website/images/img5457Jpg.jpg",
                     fullWidth: 1290,
                     fullHeight: 812,
-                    aspectRatio: undefined,
+                    aspectRatio: undefined
                   }}
                 />
 
@@ -1461,14 +1487,14 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
           </section>
-          <p.Stack
+          <Stack__
             as={"section"}
             data-plasmic-name={"checklist"}
             data-plasmic-override={overrides.checklist}
             hasGap={true}
             className={classNames(projectcss.all, sty.checklist)}
           >
-            <p.Stack
+            <Stack__
               as={"div"}
               data-plasmic-name={"foreground"}
               data-plasmic-override={overrides.foreground}
@@ -1480,7 +1506,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   className={classNames("__wab_instance", sty.reveal__p19Ht)}
                   triggerOnce={true}
                 >
-                  <p.Stack
+                  <Stack__
                     as={"div"}
                     hasGap={true}
                     className={classNames(projectcss.all, sty.freeBox__otCfF)}
@@ -1515,7 +1541,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         "Our mission is to demystify the path to success, ensuring that our clients navigate their journey with confidence. \n\nWith a foundation built on precise insights and open collaboration, we transform challenges into opportunities, fostering innovation and growth."
                       }
                     </div>
-                  </p.Stack>
+                  </Stack__>
                 </Reveal>
               </div>
               <div className={classNames(projectcss.all, sty.column__isJhi)}>
@@ -1526,7 +1552,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <div
                     className={classNames(projectcss.all, sty.freeBox__z62L0)}
                   >
-                    <p.Stack
+                    <Stack__
                       as={"div"}
                       hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__x9UKp)}
@@ -1544,8 +1570,8 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(projectcss.all, sty.svg__gOr0L)}
                         role={"img"}
                       />
-                    </p.Stack>
-                    <p.Stack
+                    </Stack__>
+                    <Stack__
                       as={"div"}
                       hasGap={true}
                       className={classNames(
@@ -1566,8 +1592,8 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(projectcss.all, sty.svg__iEdFk)}
                         role={"img"}
                       />
-                    </p.Stack>
-                    <p.Stack
+                    </Stack__>
+                    <Stack__
                       as={"div"}
                       hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__nZf3N)}
@@ -1585,8 +1611,8 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(projectcss.all, sty.svg___1Spn)}
                         role={"img"}
                       />
-                    </p.Stack>
-                    <p.Stack
+                    </Stack__>
+                    <Stack__
                       as={"div"}
                       hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__zUfNm)}
@@ -1604,8 +1630,8 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(projectcss.all, sty.svg__bLfZf)}
                         role={"img"}
                       />
-                    </p.Stack>
-                    <p.Stack
+                    </Stack__>
+                    <Stack__
                       as={"div"}
                       hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__f3Xmi)}
@@ -1623,12 +1649,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(projectcss.all, sty.svg__uSuRk)}
                         role={"img"}
                       />
-                    </p.Stack>
+                    </Stack__>
                   </div>
                 </Reveal>
               </div>
-            </p.Stack>
-          </p.Stack>
+            </Stack__>
+          </Stack__>
           <section
             data-plasmic-name={"testimonials"}
             data-plasmic-override={overrides.testimonials}
@@ -1651,35 +1677,34 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div className={classNames(projectcss.all, sty.freeBox__y0Lu0)}>
                   {(() => {
                     const child$Props = {
-                      beforeChange:
-                        p.generateStateOnChangePropForCodeComponents(
-                          $state,
-                          "currentSlide",
-                          ["sliderCarousel2", "currentSlide"],
-                          SliderWrapper_Helpers
-                        ),
+                      beforeChange: generateStateOnChangePropForCodeComponents(
+                        $state,
+                        "currentSlide",
+                        ["sliderCarousel2", "currentSlide"],
+                        SliderWrapper_Helpers
+                      ),
                       centerMode: false,
                       className: classNames(
                         "__wab_instance",
                         sty.sliderCarousel2
                       ),
                       dots: false,
-                      initialSlide: p.generateStateValueProp($state, [
+                      initialSlide: generateStateValueProp($state, [
                         "sliderCarousel2",
-                        "currentSlide",
+                        "currentSlide"
                       ]),
-                      ref: (ref) => {
+                      ref: ref => {
                         $refs["sliderCarousel2"] = ref;
                       },
-                      sliderScopeClassName: sty["sliderCarousel2__slider"],
+                      sliderScopeClassName: sty["sliderCarousel2__slider"]
                     };
-                    p.initializeCodeComponentStates(
+                    initializeCodeComponentStates(
                       $state,
                       [
                         {
                           name: "currentSlide",
-                          plasmicStateName: "sliderCarousel2.currentSlide",
-                        },
+                          plasmicStateName: "sliderCarousel2.currentSlide"
+                        }
                       ],
                       [],
                       SliderWrapper_Helpers ?? {},
@@ -1904,7 +1929,7 @@ function PlasmicHomepage__RenderFunc(props: {
               </div>
             </div>
           </section>
-          <p.Stack
+          <Stack__
             as={"section"}
             data-plasmic-name={"medical"}
             data-plasmic-override={overrides.medical}
@@ -1928,7 +1953,7 @@ function PlasmicHomepage__RenderFunc(props: {
               >
                 {"Medical Industry"}
               </h2>
-              <p.Stack
+              <Stack__
                 as={"div"}
                 data-plasmic-name={"_3Columns"}
                 data-plasmic-override={overrides._3Columns}
@@ -1944,12 +1969,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames("__wab_instance", sty.reveal__gswCz)}
                     triggerOnce={true}
                   >
-                    <p.Stack
+                    <Stack__
                       as={"div"}
                       hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__c85OY)}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__dbCCp)}
                         displayHeight={"auto"}
@@ -1963,7 +1988,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           src: "/plasmic/tmg_website/images/image14.png",
                           fullWidth: 323,
                           fullHeight: 96,
-                          aspectRatio: undefined,
+                          aspectRatio: undefined
                         }}
                       />
 
@@ -1978,7 +2003,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           "Strategy and multi-channel advertising implementation for clinical trial patient recruitment across multiple geographies."
                         }
                       </div>
-                    </p.Stack>
+                    </Stack__>
                   </Reveal>
                 </div>
                 <div
@@ -1991,12 +2016,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     delay={300}
                     triggerOnce={true}
                   >
-                    <p.Stack
+                    <Stack__
                       as={"div"}
                       hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__dvoEo)}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__j2AyT)}
                         displayHeight={"auto"}
@@ -2010,7 +2035,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           src: "/plasmic/tmg_website/images/image8.png",
                           fullWidth: 197,
                           fullHeight: 58,
-                          aspectRatio: undefined,
+                          aspectRatio: undefined
                         }}
                       />
 
@@ -2025,7 +2050,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           "Go to market strategy, comprehensive brand & marketing development including custom photo assets, video production, and graphic design."
                         }
                       </div>
-                    </p.Stack>
+                    </Stack__>
                   </Reveal>
                 </div>
                 <div
@@ -2038,12 +2063,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     delay={600}
                     triggerOnce={true}
                   >
-                    <p.Stack
+                    <Stack__
                       as={"div"}
                       hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__wxktk)}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__wM4L)}
                         displayHeight={"auto"}
@@ -2069,13 +2094,13 @@ function PlasmicHomepage__RenderFunc(props: {
                           "Fractional CMO implementation, website development and focused new patient recruitment for ancillary service lines."
                         }
                       </div>
-                    </p.Stack>
+                    </Stack__>
                   </Reveal>
                 </div>
-              </p.Stack>
+              </Stack__>
             </div>
-          </p.Stack>
-          <p.Stack
+          </Stack__>
+          <Stack__
             as={"section"}
             data-plasmic-name={"tech"}
             data-plasmic-override={overrides.tech}
@@ -2099,7 +2124,7 @@ function PlasmicHomepage__RenderFunc(props: {
               >
                 {"Tech Industry"}
               </h2>
-              <p.Stack
+              <Stack__
                 as={"div"}
                 data-plasmic-name={"_3Columns2"}
                 data-plasmic-override={overrides._3Columns2}
@@ -2115,12 +2140,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames("__wab_instance", sty.reveal___545Yr)}
                     triggerOnce={true}
                   >
-                    <p.Stack
+                    <Stack__
                       as={"div"}
                       hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__dm1VJ)}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__qc125)}
                         displayHeight={"auto"}
@@ -2134,7 +2159,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           src: "/plasmic/tmg_website/images/image15.png",
                           fullWidth: 750,
                           fullHeight: 183,
-                          aspectRatio: undefined,
+                          aspectRatio: undefined
                         }}
                       />
 
@@ -2149,7 +2174,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           "Target market research, go to market strategy, brand positioning and attribution-focused advertisement procuring initial 5,000 accounts."
                         }
                       </div>
-                    </p.Stack>
+                    </Stack__>
                   </Reveal>
                 </div>
                 <div
@@ -2162,12 +2187,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     delay={300}
                     triggerOnce={true}
                   >
-                    <p.Stack
+                    <Stack__
                       as={"div"}
                       hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__kk3H5)}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img__bcxpg)}
                         displayHeight={"auto"}
@@ -2181,7 +2206,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           src: "/plasmic/tmg_website/images/image6.png",
                           fullWidth: 3279,
                           fullHeight: 947,
-                          aspectRatio: undefined,
+                          aspectRatio: undefined
                         }}
                       />
 
@@ -2196,7 +2221,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           "Mobile app development for iOS and Android, UX/UI, brand asset development and robust automation infrastructure. "
                         }
                       </div>
-                    </p.Stack>
+                    </Stack__>
                   </Reveal>
                 </div>
                 <div
@@ -2209,12 +2234,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     delay={600}
                     triggerOnce={true}
                   >
-                    <p.Stack
+                    <Stack__
                       as={"div"}
                       hasGap={true}
                       className={classNames(projectcss.all, sty.freeBox__zJtRs)}
                     >
-                      <p.PlasmicImg
+                      <PlasmicImg__
                         alt={""}
                         className={classNames(sty.img___4ERv)}
                         displayHeight={"38px"}
@@ -2228,7 +2253,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           src: "/plasmic/tmg_website/images/image2.png",
                           fullWidth: 1480,
                           fullHeight: 428,
-                          aspectRatio: undefined,
+                          aspectRatio: undefined
                         }}
                       />
 
@@ -2243,18 +2268,18 @@ function PlasmicHomepage__RenderFunc(props: {
                           "Go to market strategy, community development strategy and full-scale DTC E-commerce implementation with global delivery logistics. "
                         }
                       </div>
-                    </p.Stack>
+                    </Stack__>
                   </Reveal>
                 </div>
-              </p.Stack>
+              </Stack__>
             </div>
-          </p.Stack>
+          </Stack__>
           <section
             data-plasmic-name={"chat"}
             data-plasmic-override={overrides.chat}
             className={classNames(projectcss.all, sty.chat)}
           >
-            <p.Stack
+            <Stack__
               as={"div"}
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__dy9LU)}
@@ -2280,7 +2305,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   "Go ahead and drop us a line for a complimentary consult.  It's time to get you noticed. "
                 }
               </div>
-              <p.Stack
+              <Stack__
                 as={"div"}
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox___6Gp3K)}
@@ -2382,8 +2407,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"Schedule Online"}
                   </div>
                 </Button2>
-              </p.Stack>
-            </p.Stack>
+              </Stack__>
+            </Stack__>
           </section>
           <section
             data-plasmic-name={"footer"}
@@ -2392,7 +2417,7 @@ function PlasmicHomepage__RenderFunc(props: {
           >
             <div className={classNames(projectcss.all, sty.columns__o1RnO)}>
               <div className={classNames(projectcss.all, sty.column__orAa1)}>
-                <p.PlasmicImg
+                <PlasmicImg__
                   alt={""}
                   className={classNames(sty.img__lttVr)}
                   displayHeight={"auto"}
@@ -2406,7 +2431,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     src: "/plasmic/tmg_website/images/image7.png",
                     fullWidth: 908,
                     fullHeight: 254,
-                    aspectRatio: undefined,
+                    aspectRatio: undefined
                   }}
                 />
 
@@ -2423,7 +2448,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   <React.Fragment>
                     <React.Fragment>{""}</React.Fragment>
                     {
-                      <p.PlasmicLink
+                      <PlasmicLink__
                         data-plasmic-name={"phoneNumber"}
                         data-plasmic-override={overrides.phoneNumber}
                         className={classNames(
@@ -2438,12 +2463,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         platform={"nextjs"}
                       >
                         {"+1 (512) 572-1800"}
-                      </p.PlasmicLink>
+                      </PlasmicLink__>
                     }
                     <React.Fragment>{""}</React.Fragment>
                   </React.Fragment>
                 </h4>
-                <p.Stack
+                <Stack__
                   as={"div"}
                   hasGap={true}
                   className={classNames(projectcss.all, sty.freeBox__gwgyg)}
@@ -2457,7 +2482,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   >
                     {"\u00a9Thela Media Group 2023"}
                   </div>
-                  <p.PlasmicLink
+                  <PlasmicLink__
                     data-plasmic-name={"link"}
                     data-plasmic-override={overrides.link}
                     className={classNames(
@@ -2471,8 +2496,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     platform={"nextjs"}
                   >
                     {"Privacy Policy"}
-                  </p.PlasmicLink>
-                </p.Stack>
+                  </PlasmicLink__>
+                </Stack__>
               </div>
             </div>
           </section>

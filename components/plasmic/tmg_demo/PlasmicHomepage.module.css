@@ -1646,7 +1646,7 @@
   justify-content: center;
   width: 100%;
   height: 226px;
-  max-width: 100%;
+  max-width: auto;
   flex-wrap: nowrap;
   align-content: stretch;
   overflow: visible;
@@ -1662,70 +1662,82 @@
   max-width: 100%;
   width: 100%;
   height: 226px;
-  min-width: 0;
+  min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
 .img___9H7Cb > picture > img {
   object-fit: cover;
 }
-.img___887Z0 {
+.img__knGbk {
   position: relative;
   object-fit: cover;
   max-width: 100%;
   width: 100%;
   height: 226px;
-  min-width: 0;
+  min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img___887Z0 > picture > img {
+.img__knGbk > picture > img {
   object-fit: cover;
 }
-.img__hiKFg {
+.img__t2Feh {
   position: relative;
   object-fit: cover;
   max-width: 100%;
   width: 100%;
   height: 226px;
-  min-width: 0;
+  min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__hiKFg > picture > img {
+.img__t2Feh > picture > img {
   object-fit: cover;
 }
-.img__jzsG4 {
+.img__hzVyu {
   position: relative;
   object-fit: cover;
   max-width: 100%;
   width: 100%;
   height: 226px;
-  min-width: 0;
+  min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__jzsG4 > picture > img {
+.img__hzVyu > picture > img {
   object-fit: cover;
 }
-.img__rgo9V {
+.img__vyIyn {
   position: relative;
   object-fit: cover;
   max-width: 100%;
   width: 100%;
   height: 226px;
-  min-width: 0;
+  min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__rgo9V > picture > img {
+.img__vyIyn > picture > img {
   object-fit: cover;
 }
-.img__cNCrj {
+.img__oHXsP {
   position: relative;
   object-fit: cover;
   max-width: 100%;
   width: 100%;
   height: 226px;
-  min-width: 0;
+  min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__cNCrj > picture > img {
+.img__oHXsP > picture > img {
+  object-fit: cover;
+}
+.img__gmFC {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  height: 226px;
+  min-width: 100%;
+  margin: 0px 0px 0px 25px;
+}
+.img__gmFC > picture > img {
   object-fit: cover;
 }
 .moveRight3 {
