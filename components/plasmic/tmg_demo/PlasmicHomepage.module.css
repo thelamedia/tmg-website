@@ -1556,87 +1556,66 @@
 }
 .img___8Wcku {
   position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
 .img___8Wcku > picture > img {
-  object-fit: cover;
+  object-fit: contain;
 }
-.img__f3Q7U {
+.img___81IdC {
   position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__f3Q7U > picture > img {
-  object-fit: cover;
+.img___81IdC > picture > img {
+  object-fit: contain;
 }
-.img__tYaa7 {
+.img__o94Z9 {
   position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__tYaa7 > picture > img {
-  object-fit: cover;
+.img__o94Z9 > picture > img {
+  object-fit: contain;
 }
-.img___098Rk {
+.img___6DdPp {
   position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img___098Rk > picture > img {
-  object-fit: cover;
+.img___6DdPp > picture > img {
+  object-fit: contain;
 }
-.img__gQzJl {
+.img__iR54F {
   position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__gQzJl > picture > img {
-  object-fit: cover;
+.img__iR54F > picture > img {
+  object-fit: contain;
 }
-.img__fik5H {
+.img___6UQo5 {
   position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__fik5H > picture > img {
-  object-fit: cover;
+.img___6UQo5 > picture > img {
+  object-fit: contain;
 }
-.img__woiOp {
+.img__qcOlo {
   position: relative;
-  object-fit: cover;
-  max-width: 100%;
-  width: 100%;
+  object-fit: contain;
   height: 226px;
-  min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__woiOp > picture > img {
-  object-fit: cover;
+.img__qcOlo > picture > img {
+  object-fit: contain;
 }
 .moveLeft {
   display: flex;
@@ -1659,8 +1638,6 @@
 .img___9H7Cb {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
-  width: 100%;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
@@ -1668,76 +1645,64 @@
 .img___9H7Cb > picture > img {
   object-fit: cover;
 }
-.img__knGbk {
+.img__cD5Jb {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
-  width: 100%;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__knGbk > picture > img {
+.img__cD5Jb > picture > img {
   object-fit: cover;
 }
-.img__t2Feh {
+.img__lzbGb {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
-  width: 100%;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__t2Feh > picture > img {
+.img__lzbGb > picture > img {
   object-fit: cover;
 }
-.img__hzVyu {
+.img__w2Rh {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
-  width: 100%;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__hzVyu > picture > img {
+.img__w2Rh > picture > img {
   object-fit: cover;
 }
-.img__vyIyn {
+.img__qVneu {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
-  width: 100%;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__vyIyn > picture > img {
+.img__qVneu > picture > img {
   object-fit: cover;
 }
-.img__oHXsP {
+.img___48Wwr {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
-  width: 100%;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__oHXsP > picture > img {
+.img___48Wwr > picture > img {
   object-fit: cover;
 }
-.img__gmFC {
+.img__njoC5 {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
-  width: 100%;
   height: 226px;
   min-width: 100%;
   margin: 0px 0px 0px 25px;
 }
-.img__gmFC > picture > img {
+.img__njoC5 > picture > img {
   object-fit: cover;
 }
 .moveRight3 {
@@ -1761,7 +1726,6 @@
 .img__ubfaZ {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
   width: 100%;
   height: 226px;
   min-width: 0;
@@ -1770,76 +1734,70 @@
 .img__ubfaZ > picture > img {
   object-fit: cover;
 }
-.img__o0Hn {
+.img__xktbt {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
   width: 100%;
   height: 226px;
   min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__o0Hn > picture > img {
+.img__xktbt > picture > img {
   object-fit: cover;
 }
-.img__wOryO {
+.img__kI0Fx {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
   width: 100%;
   height: 226px;
   min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__wOryO > picture > img {
+.img__kI0Fx > picture > img {
   object-fit: cover;
 }
-.img__qqJf {
+.img__oqQm {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
   width: 100%;
   height: 226px;
   min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__qqJf > picture > img {
+.img__oqQm > picture > img {
   object-fit: cover;
 }
-.img__kkxTk {
+.img__c4VLv {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
   width: 100%;
   height: 226px;
   min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__kkxTk > picture > img {
+.img__c4VLv > picture > img {
   object-fit: cover;
 }
-.img__naIqN {
+.img__lxcdh {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
   width: 100%;
   height: 226px;
   min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__naIqN > picture > img {
+.img__lxcdh > picture > img {
   object-fit: cover;
 }
-.img__wMzn4 {
+.img___6OZrv {
   position: relative;
   object-fit: cover;
-  max-width: 100%;
   width: 100%;
   height: 226px;
   min-width: 0;
   margin: 0px 0px 0px 25px;
 }
-.img__wMzn4 > picture > img {
+.img___6OZrv > picture > img {
   object-fit: cover;
 }
 .stats {
